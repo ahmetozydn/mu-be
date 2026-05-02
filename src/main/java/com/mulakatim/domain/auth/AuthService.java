@@ -45,6 +45,7 @@ public class AuthService {
         return buildAuthResponse(user);
     }
 
+    @Transactional
     public AuthResponse login(LoginRequest request) {
         User user = userRepository.findByEmail(request.email())
                 .orElseThrow(() -> ApiException.unauthorized("INVALID_CREDENTIALS", "E-posta veya sifre hatali."));
@@ -122,7 +123,6 @@ public class AuthService {
         return AuthResponse.of(accessToken, refreshToken, UserResponse.from(user));
     }
 
-    @Transactional
     private void storeRefreshToken(UUID userId, String refreshToken) {
         refreshTokenRepository.deleteByUserId(userId);
         RefreshToken entity = RefreshToken.builder()
