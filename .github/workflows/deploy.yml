@@ -51,4 +51,7 @@ jobs:
               --name interview-be \
               --network mynet \
               -p 8083:8080 \
-              -v /root/interview-be:/app \
+              interview-be
+            
+            # Clean up old unused images
+            # docker image prune -f
