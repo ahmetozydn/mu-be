@@ -7,16 +7,15 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.5</version>
+        <version>3.3.2</version>
         <relativePath/>
     </parent>
 
-    <groupId>com.mulakatim</groupId>
-    <artifactId>mulakatim-be</artifactId>
+    <groupId>com.kernelsoft</groupId>
+    <artifactId>spring-boot-application</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>mulakatim-be</name>
-    <description>mulakatim.com backend</description>
-
+    <name>spring-boot-application</name>
+    <description>spring-boot-application</description>
     <properties>
         <java.version>17</java.version>
         <jjwt.version>0.12.6</jjwt.version>
