@@ -50,7 +50,5 @@ jobs:
             docker run -d \
               --name interview-be \
               --network mynet \
-              -p 8080:8080 \
+              -p 8083:8080 \
               -v /root/interview-be:/app \
-              eclipse-temurin:17-jre-alpine \
-              java -jar /app/*.jar
