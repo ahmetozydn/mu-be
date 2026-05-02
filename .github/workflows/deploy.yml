@@ -42,6 +42,11 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
           script: |
+            cd /root/interview-be
+
+            # Build new image
+            docker build -t interview-be .
+            
             # Stop and remove old container if exists
             docker stop interview-be || true
             docker rm interview-be || true
