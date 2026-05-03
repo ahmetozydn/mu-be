@@ -151,7 +151,7 @@
       "Metinleri önce listeye çevirip sonra birleştirerek."
     ],
     "correctIndex": 1,
-    "explanation": "Kotlin'de `$` işareti ile değişkenleri, `${}` ile de karmaşık ifadeleri metin içine doğrudan gömebiliriz."
+    "explanation": "Kotlin'de `$` işareti ile değişkenleri, `$ {}` biçimiyle gösterilen süslü parantezli ifade yapısı ile de karmaşık ifadeleri metin içine doğrudan gömebiliriz."
   },
   {
     "category": "kotlin",
@@ -734,12 +734,12 @@
     "question": "Kotlin'de 'String Template' içindeki bir nesnenin metodunu çağırmak için hangisi doğrudur?",
     "options": [
       "\"Sonuç: $user.getName()\"",
-      "\"Sonuç: ${user.getName()}\"",
+      "\"Sonuç: $ {user.getName()}\"",
       "\"Sonuç: @user.getName()\"",
       "Sadece artı işareti ile."
     ],
     "correctIndex": 1,
-    "explanation": "Basit değişkenlerde `$` yeterlidir ama metod çağrısı veya işlem varsa süslü parantez `${}` zorunludur."
+    "explanation": "Basit değişkenlerde `$` yeterlidir ama metod çağrısı veya işlem varsa süslü parantezli `$ {}` gösterimi zorunludur."
   },
   {
     "category": "kotlin",

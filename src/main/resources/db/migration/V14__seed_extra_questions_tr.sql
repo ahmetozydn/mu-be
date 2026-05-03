@@ -3228,7 +3228,7 @@ UNION ALL
 
 WITH q AS (
   INSERT INTO questions (category_id, language, difficulty, question_text, explanation, correct_index, active)
-  VALUES ('kotlin', 'tr', 'junior', 'Kotlin''de metin birleştirme (String Interpolation) işlemi en şık nasıl yapılır?', 'Kotlin''de `$` işareti ile değişkenleri, `${}` ile de karmaşık ifadeleri metin içine doğrudan gömebiliriz.', 1, true)
+  VALUES ('kotlin', 'tr', 'junior', 'Kotlin''de metin birleştirme (String Interpolation) işlemi en şık nasıl yapılır?', 'Kotlin''de `$` işareti ile değişkenleri, `$ {}` biçimiyle gösterilen süslü parantezli ifade yapısı ile de karmaşık ifadeleri metin içine doğrudan gömebiliriz.', 1, true)
   RETURNING id
 )
 INSERT INTO question_options (question_id, option_index, option_text)
@@ -3816,13 +3816,13 @@ UNION ALL
 
 WITH q AS (
   INSERT INTO questions (category_id, language, difficulty, question_text, explanation, correct_index, active)
-  VALUES ('kotlin', 'tr', 'junior', 'Kotlin''de ''String Template'' içindeki bir nesnenin metodunu çağırmak için hangisi doğrudur?', 'Basit değişkenlerde `$` yeterlidir ama metod çağrısı veya işlem varsa süslü parantez `${}` zorunludur.', 1, true)
+  VALUES ('kotlin', 'tr', 'junior', 'Kotlin''de ''String Template'' içindeki bir nesnenin metodunu çağırmak için hangisi doğrudur?', 'Basit değişkenlerde `$` yeterlidir ama metod çağrısı veya işlem varsa süslü parantezli `$ {}` gösterimi zorunludur.', 1, true)
   RETURNING id
 )
 INSERT INTO question_options (question_id, option_index, option_text)
   SELECT id, 0, '"Sonuç: $user.getName()"' FROM q
 UNION ALL
-  SELECT id, 1, '"Sonuç: ${user.getName()}"' FROM q
+  SELECT id, 1, '"Sonuç: $ {user.getName()}"' FROM q
 UNION ALL
   SELECT id, 2, '"Sonuç: @user.getName()"' FROM q
 UNION ALL

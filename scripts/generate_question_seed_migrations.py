@@ -136,7 +136,7 @@ QUESTION_FILES = [
 
 
 def sql_escape(value: str) -> str:
-    return value.replace("'", "''")
+    return value.replace("${", "$ {").replace("'", "''")
 
 
 def q(value: str) -> str:
