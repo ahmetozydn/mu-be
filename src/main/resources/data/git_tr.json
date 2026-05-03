@@ -1,0 +1,702 @@
+[
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te `git add` komutu ile `git commit` komutu arasındaki temel fark nedir?",
+    "options": [
+      "`add` dosyaları yerel depoya kaydeder, `commit` ise uzak sunucuya (GitHub vb.) gönderir.",
+      "`add` değişiklikleri izleme (staging) alanına ekler; `commit` ise bu değişiklikleri bir versiyon olarak yerel depoya mühürler.",
+      "`add` dosyaları siler, `commit` ise silinen dosyaları geri getirir.",
+      "İki komut arasında fark yoktur, `add` komutu `commit` komutunun eski ismidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "`add` (staging) aşaması, hangi değişikliklerin pakete dahil edileceğini seçmemizi sağlar. `commit` ise bu seçilenleri kalıcı bir geçmiş kaydı haline getirir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir projedeki `.gitignore` dosyasının temel görevi nedir?",
+    "options": [
+      "Hatalı yazılan kodları otomatik olarak silmek.",
+      "Belirli dosya veya dizinlerin (Örn: `node_modules`, `.env`) Git tarafından izlenmesini ve depoya eklenmesini engellemek.",
+      "Uzak sunucudaki dosyaların yerel bilgisayara indirilmesini yasaklamak.",
+      "Kodun kimin tarafından yazıldığını gizlemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Log dosyaları, bağımlılık klasörleri veya hassas verilerin yanlışlıkla depoya (repository) gönderilmesini önlemek için `.gitignore` kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "`git merge` ve `git rebase` arasındaki en temel fark nedir?",
+    "options": [
+      "`merge` sadece bir kez yapılır, `rebase` sınırsız yapılabilir.",
+      "`merge` yeni bir 'merge commit' oluşturarak dalları birleştirir; `rebase` ise commit geçmişini yeniden yazarak değişiklikleri hedef dalın üzerine taşır ve doğrusal bir geçmiş sunar.",
+      "`rebase` verileri siler, `merge` verileri korur.",
+      "`merge` sadece yerel dallarda, `rebase` ise sadece uzak dallarda çalışır."
+    ],
+    "correctIndex": 1,
+    "explanation": "`merge` geçmişi olduğu gibi korur (branched history). `rebase` ise commitleri tek bir çizgi üzerinde birleştirerek daha temiz bir görünüm sağlar ancak ortak dallarda kullanımı risklidir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Çalıştığınız değişiklikleri henüz commit etmeden başka bir dala (branch) geçmeniz gerekirse, mevcut değişiklikleri kaybetmeden kenara kaldırmak için hangi komutu kullanırsınız?",
+    "options": [
+      "git stash",
+      "git delete --temporary",
+      "git pause",
+      "git hidden --save"
+    ],
+    "correctIndex": 0,
+    "explanation": "`git stash` o anki kirli çalışma dizinini (modified tracked files) geçici bir alana (stack) kaydeder. Daha sonra `git stash pop` ile bu değişiklikleri geri yükleyebilirsiniz."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Yanlışlıkla `git reset --hard` yaparak commit ettiğiniz önemli bir kodu sildiniz. Bu durumu kurtarmak ve silinen commit'in ID'sine ulaşmak için hangi komutu kullanırsınız?",
+    "options": [
+      "git reflog",
+      "git undo --all",
+      "git status --verbose",
+      "git log --deleted"
+    ],
+    "correctIndex": 0,
+    "explanation": "`reflog`, Git'in yerel depoda yaptığı tüm kafa (HEAD) hareketlerini kaydeder. Commit silinse bile reflog'da bir süre daha izi kalır ve oradan kurtarılabilir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Yüzlerce commit içeren bir projede, hangi commit'in bir hataya (bug) neden olduğunu bulmak için kullanılan 'Binary Search' mantığıyla çalışan komut hangisidir?",
+    "options": [
+      "git find-error",
+      "git log --search",
+      "git bisect",
+      "git check-history"
+    ],
+    "correctIndex": 2,
+    "explanation": "`git bisect`, bir 'iyi' (hatasız) ve bir 'kötü' (hatalı) commit işaretlemenizi ister. Ardından commitleri yarıya bölerek hatanın kaynağını adım adım tespit etmenizi sağlar."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "`git pull` komutu arka planda hangi iki Git komutunun birleşimi olarak çalışır?",
+    "options": [
+      "git fetch ve git merge",
+      "git push ve git checkout",
+      "git add ve git commit",
+      "git status ve git diff"
+    ],
+    "correctIndex": 0,
+    "explanation": "`fetch` uzak sunucudaki güncel bilgileri çeker; `merge` ise bu bilgileri o anki çalışma dalınızla birleştirir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "`git reset --hard` ile `git reset --soft` arasındaki en kritik fark nedir?",
+    "options": [
+      "`--hard` sadece dosyaları siler, `--soft` ise sadece commitleri siler.",
+      "`--soft` commitleri geri alır ama değişiklikleri izleme (staging) alanında tutar; `--hard` ise hem commitleri siler hem de çalışma dizinindeki tüm değişiklikleri tamamen yok eder.",
+      "`--hard` daha güvenli bir yöntemdir.",
+      "`--soft` sadece uzak sunucudaki commitleri etkiler."
+    ],
+    "correctIndex": 1,
+    "explanation": "`--soft` hata yapılan bir commit'in içeriğini koruyarak tekrar düzenleme imkanı verir. `--hard` ise dönüşü olmayan bir şekilde her şeyi belirtilen commit noktasına geri çeker."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git Hook'lar (Örn: pre-commit, pre-push) ne amaçla kullanılır?",
+    "options": [
+      "Git komutlarını daha hızlı yazmak için kullanılan kısayollardır.",
+      "Belirli Git eylemleri (commit etme, push yapma vb.) gerçekleşmeden önce veya sonra otomatik olarak çalışan özel scriptlerdir.",
+      "Dosyaları şifrelemek için kullanılan güvenlik araçlarıdır.",
+      "Uzak sunucudaki (Remote) depoyu silmek için kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hooks; örneğin commit öncesinde kodun lint kontrolünden geçmesini veya testlerin çalışmasını zorunlu tutmak gibi otomasyonlar için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Başka bir daldaki (branch) belirli bir tek commit'i, tüm dalı birleştirmeden mevcut dalınıza kopyalamak için hangi komutu kullanırsınız?",
+    "options": [
+      "git cherry-pick",
+      "git copy-commit",
+      "git import",
+      "git merge --single"
+    ],
+    "correctIndex": 0,
+    "explanation": "`cherry-pick`, sadece ihtiyacınız olan spesifik bir değişikliği (commit ID ile) mevcut dalınıza 'cımbızla çekip' getirmenizi sağlar."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te bir dosyanın o anki durumundaki değişiklikleri görmek için hangi komut kullanılır?",
+    "options": [
+      "git see",
+      "git diff",
+      "git watch",
+      "git check"
+    ],
+    "correctIndex": 1,
+    "explanation": "`git diff`, commit edilmemiş değişiklikleri satır bazlı olarak karşılaştırmalı gösterir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git revert` komutu ile `git reset` arasındaki temel fark nedir?",
+    "options": [
+      "`revert` daha hızlıdır.",
+      "`reset` geçmişi silerken; `revert` belirtilen commit'in tersi yönünde yeni bir commit oluşturarak geçmişi bozmadan değişikliği geri alır.",
+      "`revert` sadece dosyaları siler.",
+      "İkisi de tamamen aynıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ortak kullanılan (shared) dallarda geçmişi değiştirmemek için `revert` kullanılması önerilir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Squash Merge' yapmak ne anlama gelir?",
+    "options": [
+      "Tüm dosyaları sıkıştırarak paketlemek.",
+      "Bir daldaki tüm commitleri tek bir commit haline getirerek hedef dala birleştirmek; böylece geçmişi temiz tutmak.",
+      "Sadece hata düzeltmelerini birleştirmek.",
+      "Uzak sunucudaki tüm dalları silmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Özellikle çok sayıda küçük ve karmaşık commit içeren özellik dallarını (feature branches) ana dala temiz bir şekilde dahil etmek için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te projenin o anki commit geçmişini listelemek için hangi komut kullanılır?",
+    "options": [
+      "git history",
+      "git log",
+      "git show",
+      "git list"
+    ],
+    "correctIndex": 1,
+    "explanation": "`git log` komutu, en yeniden en eskiye doğru tüm commitleri ve bilgilerini gösterir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te bir dalın (branch) adını değiştirmek için hangi parametre kullanılır?",
+    "options": [
+      "-r",
+      "-m",
+      "-n",
+      "-d"
+    ],
+    "correctIndex": 1,
+    "explanation": "`git branch -m yeni-isim` komutu (move) ile mevcut dalın adı güncellenebilir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Dangling Commit' (Asılı Commit) nedir?",
+    "options": [
+      "Yanlışlıkla silinen bir dosyadır.",
+      "Herhangi bir dal (branch) veya etiket (tag) tarafından işaret edilmeyen, geçmişte 'kaybolmuş' commitlerdir.",
+      "Sadece internet yokken yapılan commitlerdir.",
+      "Sistemi yavaşlatan büyük bir committir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu commitler genellikle reset veya rebase sonrası oluşur ve bir süre sonra Git Garbage Collector tarafından temizlenir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te yeni bir dal (branch) oluşturup anında o dala geçmek için hangi komut kullanılır?",
+    "options": [
+      "git branch -n [isim]",
+      "git checkout -b [isim]",
+      "git switch -new [isim]",
+      "git create [isim]"
+    ],
+    "correctIndex": 1,
+    "explanation": "`-b` parametresi hem dalı oluşturur hem de o dala geçiş (checkout) yapar."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git remote -v` komutu neyi gösterir?",
+    "options": [
+      "Uzak sunucunun hızını.",
+      "Deponun bağlı olduğu uzak sunucu adreslerini (fetch ve push URL'lerini).",
+      "Git'in versiyon numarasını.",
+      "Sistemdeki tüm Git kullanıcılarını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Deponun hangi GitHub/GitLab adresiyle senkronize olduğunu doğrulamak için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Submodule' kavramı ne amaçla kullanılır?",
+    "options": [
+      "Büyük bir dosyayı parçalara bölmek için.",
+      "Bir Git deposunun içinde başka bir Git deposunu (ayrı bir proje veya kütüphane olarak) barındırmak için.",
+      "Sadece alt klasörleri izlemek için.",
+      "Kodun bir kısmını şifrelemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bağımsız bir kütüphaneyi projenize dahil etmek ve onun kendi versiyon yönetimini korumak için idealdir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te bir dosyanın her bir satırının en son kim tarafından ve hangi commit ile değiştirildiğini gösteren komut hangisidir?",
+    "options": [
+      "git who",
+      "git blame",
+      "git info",
+      "git trace"
+    ],
+    "correctIndex": 1,
+    "explanation": "`git blame`, dosyadaki her satırın tarihçesini ve sorumlusunu görmemizi sağlar."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git checkout .` (nokta) komutu ne yapar?",
+    "options": [
+      "Her şeyi commit eder.",
+      "Çalışma dizinindeki (working directory) tüm kaydedilmemiş değişiklikleri geri alarak dosyaları son commit haline döndürür.",
+      "Yeni bir dal oluşturur.",
+      "Uzak sunucudaki tüm dosyaları indirir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Yapılan deneysel değişiklikleri anında temizlemek için tehlikeli ama hızlı bir yöntemdir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Bare Repository' nedir ve normal depodan farkı nedir?",
+    "options": [
+      "Bare repository sadece şifreli dosyalar içerir.",
+      "Çalışma dizini (working directory) olmayan, sadece `.git` klasöründeki verileri barındıran ve genellikle merkezi sunucularda (GitHub gibi) depolama amaçlı kullanılan depodur.",
+      "Sadece tek bir commit içerebilen depodur.",
+      "Sadece salt okunur olan depodur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bare depolar üzerinde doğrudan kod yazılmaz; sadece başka depolardan push/pull işlemleri için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te `git status` komutu neyi ifade eder?",
+    "options": [
+      "Bilgisayarın o anki hızını.",
+      "Hangi dosyaların değiştirildiğini, hangilerinin izlendiğini ve staging alanına alındığını gösteren durum bilgisini.",
+      "Sadece hata mesajlarını.",
+      "Sistemdeki tüm dalların listesini."
+    ],
+    "correctIndex": 1,
+    "explanation": "İş akışının her aşamasında 'neredeyim' sorusuna yanıt veren en temel komuttur."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git tag` kavramı ne için kullanılır?",
+    "options": [
+      "Dosyaları isimlendirmek için.",
+      "Belirli commit noktalarına (Genellikle v1.0, v2.0 gibi sürüm isimleri) kalıcı etiketler/işaretçiler koymak için.",
+      "Hataları işaretlemek için.",
+      "Kullanıcıları gruplandırmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Etiketler, dallardan farklı olarak hareket etmezler; projenin belirli bir andaki versiyonunu 'dondurmak' için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Detached HEAD' durumu ne zaman oluşur?",
+    "options": [
+      "Bilgisayarın interneti kesildiğinde.",
+      "Bir dal (branch) yerine doğrudan spesifik bir commit ID'sine checkout yapıldığında (HEAD o an hiçbir dala bağlı değildir).",
+      "Sistem çöktüğünde.",
+      "Yanlış şifre girildiğinde."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu durumda yapılan commitler herhangi bir dala bağlı olmadığı için, başka bir dala geçildiğinde kaybolabilirler."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te uzak bir depoyu (remote repo) yerel bilgisayara ilk kez indirmek için hangi komut kullanılır?",
+    "options": [
+      "git copy",
+      "git clone",
+      "git download",
+      "git fetch"
+    ],
+    "correctIndex": 1,
+    "explanation": "`git clone` komutu deponun tüm geçmişini ve dosyalarını kopyalayarak yerel bir çalışma alanı oluşturur."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git fetch` komutu ne işe yarar?",
+    "options": [
+      "Dosyaları tamamen siler.",
+      "Uzak sunucudaki güncel commit ve dal bilgilerini indirir ama yerel çalışmanıza birleştirmez (merge yapmaz).",
+      "Dosyaları sıkıştırır.",
+      "Kullanıcı adını değiştirir."
+    ],
+    "correctIndex": 1,
+    "explanation": "`pull` yapmadan önce uzak tarafta neler olduğunu güvenli bir şekilde incelemek için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Three-way Merge' nedir?",
+    "options": [
+      "Üç farklı kişinin aynı anda merge yapmasıdır.",
+      "İki dalı birleştirirken, dalların ortak atasını (common ancestor) da dikkate alarak değişiklikleri otomatik harmanlayan algoritmadır.",
+      "Sadece üç dosyayı birleştiren sistemdir.",
+      "Veritabanı birleştirme tekniğidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Git, çakışmaları (conflict) önlemek için her iki dalın en son commit'ini ve ortak ayrıldıkları noktayı baz alır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te bir dalı (branch) silmek için hangi parametre kullanılır?",
+    "options": [
+      "-r",
+      "-d",
+      "-s",
+      "-x"
+    ],
+    "correctIndex": 1,
+    "explanation": "`git branch -d [isim]` komutu ile işi biten dallar temizlenebilir (Eğer merge edilmediyse `-D` gerekir)."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git commit --amend` komutu ne amaçla kullanılır?",
+    "options": [
+      "Hataları otomatik düzeltmek için.",
+      "En son yapılan commit'in mesajını değiştirmek veya commit'e unutulan dosyaları ekleyerek commit'i güncellemek için.",
+      "Tüm commit geçmişini silmek için.",
+      "Uzak sunucudaki commitleri geri almak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sadece yereldeki ve henüz push edilmemiş en son commit üzerinde 'makyaj' yapmak için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Gitflow' nedir?",
+    "options": [
+      "Git'in bir eklentisidir.",
+      "Büyük projelerde dalların (main, develop, feature, hotfix vb.) nasıl yönetileceğini tanımlayan popüler bir iş akışı modelidir.",
+      "İnternet hızını artıran bir protokoldür.",
+      "Sadece mobil uygulamalarda kullanılan bir kütüphanedir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Gitflow, ekiplerin paralel geliştirmeyi hatasız ve düzenli bir şekilde yapmasını sağlayan bir standartlar bütünüdür."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te bir dosyanın takibini (tracking) tamamen bırakmak ama dosyayı diskten silmemek için ne kullanılır?",
+    "options": [
+      "git rm --cached [dosya]",
+      "git delete --keep",
+      "git ignore [dosya]",
+      "git stop [dosya]"
+    ],
+    "correctIndex": 0,
+    "explanation": "Bu komut dosyayı Git index'inden siler ama fiziksel olarak bilgisayarınızda bırakır; genellikle yanlışlıkla eklenen dosyaları temizlemek için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git diff --staged` komutu neyi gösterir?",
+    "options": [
+      "Sadece silinen dosyaları.",
+      "Staging alanına (add yapılmış) alınmış ama henüz commit edilmemiş değişiklikleri.",
+      "İki uzak sunucu arasındaki farkı.",
+      "Hatalı kodları."
+    ],
+    "correctIndex": 1,
+    "explanation": "Commit butonuna basmadan önce tam olarak nelerin pakete dahil edildiğini son kez kontrol etmek için idealdir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Garbage Collection' (`git gc`) ne işe yarar?",
+    "options": [
+      "Hatalı kodları siler.",
+      "Gereksiz dosyaları temizleyerek, loose object'leri paketleyerek ve depoyu optimize ederek disk alanı kazanılmasını sağlar.",
+      "Sadece virüsleri temizler.",
+      "Uzak sunucuyu sıfırlar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Git genellikle bunu arka planda yapar ama büyük operasyonlar sonrası manuel çalıştırmak depoyu hızlandırabilir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te `git init` komutu ne işe yarar?",
+    "options": [
+      "Projeyi siler.",
+      "Mevcut bir dizini bir Git deposu (repository) haline getirerek versiyon takibini başlatır.",
+      "İnternet bağlantısını başlatır.",
+      "Kullanıcı adını kaydeder."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bir projeye Git ile başlamak için yazılan ilk komuttur; `.git` gizli klasörünü oluşturur."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te 'Origin' kelimesi genellikle neyi temsil eder?",
+    "options": [
+      "Kodun ilk yazıldığı bilgisayarı.",
+      "Klonlanan veya bağlanan ana uzak sunucu deponun (remote) varsayılan kısa adıdır.",
+      "Sadece GitHub sunucularını.",
+      "Deponun ilk commit'ini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Uzak sunucuya veri gönderirken (`git push origin main`) hangi sunucuya gidileceğini belirtmek için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Upstream Branch' kavramı nedir?",
+    "options": [
+      "Hızlandırılmış bir daldır.",
+      "Yerel bir dalın izlediği (track ettiği) ve senkronize olduğu uzak sunucudaki karşılık gelen daldır.",
+      "Sadece ana (main) daldır.",
+      "Veritabanı dalıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Upstream ayarlandığında, sadece `git pull` veya `git push` yazarak hangi dalın nereye gideceği Git tarafından bilinir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te `git branch` komutu (parametresiz) neyi listeler?",
+    "options": [
+      "Sadece silinen dalları.",
+      "Yerel depodaki tüm dalları ve o an hangisinde olduğunuzu.",
+      "Uzak sunucudaki tüm kullanıcıları.",
+      "Kod satırı sayılarını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Mevcut dalları görmek ve aralarında geçiş yapmadan önce kontrol etmek için kullanılır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te 'Conflict' (Çakışma) oluştuğunda dosyaların içinde görülen `<<<<<<< HEAD` işareti neyi belirtir?",
+    "options": [
+      "Hatanın bittiği yeri.",
+      "O anki (mevcut) dalınızdaki çakışan değişikliklerin başlangıcını.",
+      "Gelen dalın (incoming) değişikliklerini.",
+      "Dosyanın sonunu."
+    ],
+    "correctIndex": 1,
+    "explanation": "Git, çakışan kısımları bu işaretlerle böler; üst kısım sizin kodunuz, alt kısım gelen koddur."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Reference' (Ref) nedir?",
+    "options": [
+      "Bir dökümantasyon dosyasıdır.",
+      "Commit ID'lerine (SHA-1) işaret eden, dallar veya etiketler gibi insan tarafından okunabilen isimlerdir.",
+      "Sadece yazılımcıların isimleridir.",
+      "İnternet adresleridir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Her branch aslında `.git/refs/heads` altında saklanan ve sadece bir commit ID'sini işaret eden basit bir dosyadır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te bir committeki değişiklikleri görmek için hangi komut kullanılır?",
+    "options": [
+      "git show [commit_id]",
+      "git view [commit_id]",
+      "git open [commit_id]",
+      "git display [commit_id]"
+    ],
+    "correctIndex": 0,
+    "explanation": "`git show`, belirtilen commit'in metadata bilgilerini ve nelerin değiştiğini (diff) detaylı gösterir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git push` komutu ne işe yarar?",
+    "options": [
+      "Bilgisayarı kapatır.",
+      "Yerel depodaki commitleri uzak sunucuya (GitHub vb.) göndererek eşitlemeyi sağlar.",
+      "Dosyaları sıkıştırır.",
+      "Sadece hataları temizler."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ekip arkadaşlarınızın sizin değişikliklerinizi görebilmesi için push yapmanız gerekir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Interactive Rebase' (`-i`) ne amaçla kullanılır?",
+    "options": [
+      "Daha renkli bir arayüz için.",
+      "Geçmişteki birden fazla commit'i düzenlemek, silmek, isimlerini değiştirmek veya birleştirmek (squash) gibi gelişmiş tarihçe temizliği için.",
+      "Sadece internet hızını artırmak için.",
+      "Uygulamayı test etmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kodu push etmeden önce geçmişi tertemiz ve düzenli bir hale getirmek için senior geliştiricilerin en çok kullandığı araçtır."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te projedeki değişiklikleri kontrol etmek için `git log --oneline` ne sağlar?",
+    "options": [
+      "Kodun sadece ilk satırını gösterir.",
+      "Her commit'i tek bir satıra sığdırarak (ID ve mesaj) çok daha kompakt ve okunabilir bir özet sunar.",
+      "Hataları gizler.",
+      "Sadece bugün yapılanları gösterir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Yüzlerce commit arasında hızlıca gezinmek ve genel akışı görmek için idealdir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git merge --abort` komutu ne zaman kullanılır?",
+    "options": [
+      "Projeyi silmek için.",
+      "Karmaşık çakışmalar (conflict) oluştuğunda ve merge işlemini iptal edip her şeyi merge öncesi haline döndürmek istendiğinde.",
+      "İnternet kesildiğinde.",
+      "Yeni bir dal oluştururken."
+    ],
+    "correctIndex": 1,
+    "explanation": "Merge sırasında işler karışırsa güvenli bir 'panik butonu' görevi görür."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Fast-forward Merge' nedir?",
+    "options": [
+      "Hızlı internetle yapılan merge.",
+      "İki dal arasında hiç çatışma olmadığında ve hedef dalın (base) hiçbir yeni commit almadığı durumlarda, Git'in sadece işaretçiyi ileriye taşıyarak yaptığı merge türü.",
+      "Dosya kopyalama hızıdır.",
+      "Sadece video dosyalarında olur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu durumda ayrı bir 'merge commit' oluşmaz; geçmiş sanki tek bir dalda ilerlemiş gibi görünür."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te uzak sunucudaki bir dalı (branch) yerel bilgisayara çekmek için ne kullanılır?",
+    "options": [
+      "git get [isim]",
+      "git checkout [isim]",
+      "git download [isim]",
+      "git grab [isim]"
+    ],
+    "correctIndex": 1,
+    "explanation": "Eğer dal yerelde yoksa ama uzak sunucuda varsa, Git o ismi bulur ve otomatik olarak yerel bir kopyasını oluşturur."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git'te `git config --global user.name` komutu ne amaçla kullanılır?",
+    "options": [
+      "Bilgisayarın adını değiştirmek için.",
+      "Tüm Git commitlerinde görünecek olan varsayılan kullanıcı adını sisteme kaydetmek için.",
+      "Şifreleri saklamak için.",
+      "GitHub logosunu değiştirmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kurulum sonrası yapılan ilk ayarlardan biridir; commit'in kime ait olduğunu belirtir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Git'te 'Reverting a Merge' (Bir merge işlemini geri almak) neden zordur?",
+    "options": [
+      "Dosyalar çok büyük olduğu için.",
+      "Çünkü bir merge commit'in iki ebeveyni (parent) vardır; geri alırken Git'e hangi ebeveyn tarafında kalınacağı (`-m` parametresi ile) belirtilmelidir.",
+      "Sadece internet yokken zordur.",
+      "Git buna izin vermez."
+    ],
+    "correctIndex": 1,
+    "explanation": "Normal commitlerin tek atası varken, merge commitlerin tarihçesi çift kanallıdır; bu yüzden geri alma işlemi dikkat gerektirir."
+  },
+  {
+    "category": "git",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Git'te bir dosyanın o anki durumunu değil de sadece bir committeki halini görmek için ne kullanılır?",
+    "options": [
+      "git show [commit_id]:[dosya_yolu]",
+      "git view [dosya]",
+      "git open --at [id]",
+      "git restore [dosya]"
+    ],
+    "correctIndex": 0,
+    "explanation": "Dosyanın geçmişteki bir andaki içeriğini hızlıca incelemek veya kopyalamak için kullanılır."
+  }
+]

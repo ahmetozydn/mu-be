@@ -1,0 +1,142 @@
+[
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Swift'te `unowned` ve `weak` referanslar arasındaki temel fark nedir ve hangi durumda `unowned` kullanımı çalışma zamanı hatasına (crash) neden olur?",
+    "options": [
+      "`weak` referans sayısını artırmazken, `unowned` referans sayısını bir artırır.",
+      "`weak` sadece sınıflarda kullanılırken, `unowned` hem struct hem sınıflarda kullanılabilir.",
+      "`weak` nesne serbest bırakıldığında `nil` döner; `unowned` nesne serbest bırakıldığında bellekteki adrese erişmeye devam eder ve crash'e yol açar.",
+      "Her iki referans tipi de aynıdır, `unowned` sadece Objective-C uyumluluğu için vardır."
+    ],
+    "correctIndex": 2,
+    "explanation": "`weak` referanslar her zaman optional'dır ve nesne deallocate edildiğinde otomatik olarak `nil` olurlar. `unowned` ise opsiyonel değildir; nesne serbest bırakıldıktan sonra erişilmeye çalışılırsa uygulama crash olur (dangling pointer)."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Android'de bir Fragment'ın View hiyerarşisi yok edildiğinde ancak Fragment instance'ı bellekte tutulmaya devam ettiğinde hangi lifecycle metodu çağrılır?",
+    "options": [
+      "onDetach()",
+      "onDestroy()",
+      "onDestroyView()",
+      "onStop()"
+    ],
+    "correctIndex": 2,
+    "explanation": "`onDestroyView`, Fragment'ın UI'ı (view) sistem tarafından temizlendiğinde çağrılır. Fragment instance'ı hala mevcuttur ve başka bir View oluşturulabilir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "React Native'in yeni mimarisinde (New Architecture) 'Bridge' yerine gelen JSI (JavaScript Interface) yapısının en önemli avantajı nedir?",
+    "options": [
+      "Uygulamanın JavaScript bundle boyutunu %50 oranında küçültmesi.",
+      "Verilerin JSON serileştirmesine ihtiyaç duymadan, JavaScript ve Native tarafı arasında senkron ve doğrudan iletişim sağlaması.",
+      "Tüm UI bileşenlerinin otomatik olarak native bileşenlere dönüştürülmesini sağlaması.",
+      "JavaScript kodunun doğrudan makine koduna (Binary) derlenmesini sağlaması."
+    ],
+    "correctIndex": 1,
+    "explanation": "JSI, JavaScript'in C++ host objelerine doğrudan referans tutmasını sağlar. Bu sayede verilerin JSON üzerinden serileştirilmesine (Bridge) gerek kalmadan senkron iletişim kurulabilir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Flutter'da aynı tipteki widget'lardan oluşan bir listede, elemanların yerleri değiştirildiğinde (reordering) state'in doğru elemanla eşleşmesini sağlamak için ne kullanılmalıdır?",
+    "options": [
+      "Widget'lara benzersiz bir `Key` atamak.",
+      "`setState()` metodunu listenin en başında çağırmak.",
+      "`InheritedWidget` kullanarak state'i global hale getirmek.",
+      "Widget'ları `const` olarak tanımlamak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Aynı tipteki widget'ların kimliğini korumak için `Key` (genellikle `ValueKey` veya `ObjectKey`) kullanılır. Bu sayede element tree, hangi widget'ın hangi state ile eşleştiğini takip edebilir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Android manifest dosyasında bir Activity için `launchMode='singleTask'` olarak ayarlanırsa ne olur?",
+    "options": [
+      "Her başlatıldığında yeni bir instance oluşturulur ve mevcut stack'e eklenir.",
+      "Instance varsa mevcut olan kullanılır, üzerindeki tüm Activity'ler temizlenir ve `onNewIntent` tetiklenir.",
+      "Activity her zaman yeni bir task içinde başlatılır ve başka hiçbir Activity ile aynı task'ı paylaşmaz.",
+      "Sadece sistem belleği yetersiz olduğunda mevcut instance'ı kullanır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eğer sistemde bu Activity'nin bir instance'ı varsa, yeni bir tane oluşturulmaz; bunun yerine mevcut instance ön plana getirilir ve `onNewIntent()` çağrılır. Mevcut instance'ın üzerindeki tüm Activity'ler stack'ten temizlenir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "iOS'te bir UIView'in `frame` ve `bounds` özellikleri arasındaki temel fark nedir?",
+    "options": [
+      "`frame` superview koordinatlarını, `bounds` ise view'in kendi yerel koordinatlarını kullanır.",
+      "`frame` sadece boyutu, `bounds` ise sadece konumu ifade eder.",
+      "`frame` animasyonlar için kullanılır, `bounds` statik yerleşim içindir.",
+      "Cihaz döndürüldüğünde sadece `bounds` değişir, `frame` sabit kalır."
+    ],
+    "correctIndex": 0,
+    "explanation": "`frame`, view'in kendi superview'ının koordinat sistemindeki yerini ve boyutunu temsil eder. `bounds` ise view'in kendi yerel koordinat sistemindeki yerini ve boyutunu temsil eder."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin Coroutines ile State management yaparken `StateFlow`'u `SharedFlow`'dan ayıran en kritik özellik nedir?",
+    "options": [
+      "`StateFlow` sadece UI thread'inde çalışırken, `SharedFlow` arka planda çalışabilir.",
+      "`StateFlow` cold stream iken, `SharedFlow` hot stream'dir.",
+      "`StateFlow` veri akışını durduramazken, `SharedFlow` durdurabilir.",
+      "`StateFlow` her zaman bir başlangıç değeri tutar ve yeni abonelere sadece en son güncel değeri iletir."
+    ],
+    "correctIndex": 3,
+    "explanation": "`StateFlow` her zaman bir başlangıç değerine (initial state) ihtiyaç duyar ve sadece son değeri saklar (replay: 1). `SharedFlow` ise geçmiş değerleri saklayabilir ve başlangıç değeri zorunlu değildir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Mobil uygulamalarda 'Man-in-the-Middle' (MitM) saldırılarını önlemek için kullanılan SSL Pinning yönteminin en büyük operasyonel riski nedir?",
+    "options": [
+      "Uygulamanın ağ isteklerini %20 oranında yavaşlatması.",
+      "Sunucu sertifikası güncellendiğinde uygulamanın yeni sertifikayı tanımayarak tüm istekleri reddetmesi.",
+      "Kullanıcının cihazındaki internet kotasını daha hızlı tüketmesi.",
+      "Sadece Wi-Fi bağlantılarında çalışıp mobil veride çalışmaması."
+    ],
+    "correctIndex": 1,
+    "explanation": "SSL Pinning, sunucu sertifikası veya public key'i uygulama içine gömdüğü için, sertifika yenilendiğinde uygulama güncellenmezse bağlantı hataları oluşur ve uygulama çalışmaz hale gelir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "iOS'te `DispatchQueue.main.async` yerine `DispatchQueue.main.sync` kullanmanın en büyük riski nedir?",
+    "options": [
+      "Uygulamanın daha fazla pil tüketmesine neden olması.",
+      "UI güncellemelerinin 1 saniye gecikmeli yapılması.",
+      "Main thread üzerinde çağrıldığında uygulamanın kilitlenmesine (Deadlock) neden olması.",
+      "Bellek sızıntısına (Memory Leak) yol açması."
+    ],
+    "correctIndex": 2,
+    "explanation": "Eğer `main.sync` zaten main thread üzerinde çalışırken çağrılırsa 'Deadlock' (kilitlenme) oluşur. Çünkü thread bitmek için kendisinin bitmesini beklemeye başlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Google Play'in kullandığı Android App Bundle (.aab) formatının standart APK formatına göre temel avantajı nedir?",
+    "options": [
+      "Uygulamanın root'lu cihazlarda çalışmasını engellemesi.",
+      "Tüm dillerin ve ekran çözünürlüklerinin tek bir dosya içinde tutulması.",
+      "Uygulamanın kodlarını otomatik olarak şifrelemesi.",
+      "Cihaz özelliklerine göre optimize edilmiş, daha küçük boyutlu APK'ların dinamik olarak oluşturulmasını sağlaması."
+    ],
+    "correctIndex": 3,
+    "explanation": "AAB, kullanıcının cihaz mimarisine (CPU), ekran yoğunluğuna ve diline göre optimize edilmiş, sadece gerekli kaynakları içeren dinamik bir APK oluşturulmasını sağlar."
+  }
+]

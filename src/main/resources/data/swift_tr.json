@@ -1,0 +1,842 @@
+[
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te `struct` ile `class` arasındaki en temel fark aşağıdakilerden hangisidir?",
+    "options": [
+      "`struct` referans tipi, `class` değer tipidir.",
+      "`struct` miras alabilir, `class` alamaz.",
+      "`struct` değer tipidir, `class` referans tipidir.",
+      "`struct` sadece UI kodunda, `class` sadece ağ kodunda kullanılır."
+    ],
+    "correctIndex": 2,
+    "explanation": "`struct` kopyalanarak taşınan bir value type'tır. `class` ise aynı instance'a birden fazla referansın bakabildiği reference type'tır; bu fark mutasyon, thread safety ve performans davranışını doğrudan etkiler."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te `let` ile tanımlanan bir değişken için aşağıdakilerden hangisi doğrudur?",
+    "options": [
+      "Her zaman runtime'da sabitlenir ve asla kopyalanmaz.",
+      "İlk atamadan sonra yeniden atanamaz.",
+      "Sadece sayısal tiplerde kullanılabilir.",
+      "Sadece `class` instance'ları için geçerlidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "`let`, binding'in yeniden atanmasını engeller. Ancak referans tipi bir nesnenin iç durumu yine de değişebilir; sabit olan şey referansın kendisidir, nesnenin tüm alanları değil."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Optional bir `String` değeri güvenli biçimde açmak için en yaygın yaklaşım hangisidir?",
+    "options": [
+      "Her durumda `as! String` kullanmak.",
+      "Değeri doğrudan kullanıp `nil` gelirse ignore etmek.",
+      "`if let` veya `guard let` ile optional binding yapmak.",
+      "Optional'ı önce `Int`'e çevirip sonra `String` yapmak."
+    ],
+    "correctIndex": 2,
+    "explanation": "`if let` ve `guard let`, `nil` ihtimalini derleme zamanı modeliyle uyumlu şekilde ele alır. Force unwrap olan `!` ise değer gerçekten `nil` ise uygulamayı crash ettirebilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi `guard` kullanımının temel avantajını en doğru anlatır?",
+    "options": [
+      "Dallanmayı azaltıp erken çıkış sağlayarak akışı daha okunabilir hale getirmesi.",
+      "Sadece performansı artırmak için kullanılması.",
+      "Sadece döngüler içinde çalışması.",
+      "Optional'ları otomatik olarak non-optional sınıfa çevirmesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "`guard`, ön koşul sağlanmıyorsa erken çıkış yapar ve happy path'i sola yaslar. Özellikle iç içe `if` bloklarını azaltarak okunabilirliği artırır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te `enum` yapısının birçok dilden daha güçlü olmasının önemli sebeplerinden biri nedir?",
+    "options": [
+      "Sadece integer ham değerleri desteklemesi.",
+      "Associated value taşıyabilmesi ve `switch` ile exhaustiveness kontrolü sunması.",
+      "Sadece global scope'ta tanımlanabilmesi.",
+      "Runtime'da otomatik inheritance sağlaması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Swift `enum`'ları sadece sabit liste değildir; associated value ile veri taşıyabilir. Ayrıca `switch` üzerinde tüm case'lerin ele alınıp alınmadığı derleme zamanında kontrol edilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir `switch` ifadesinde tüm olası durumları kapsama zorunluluğu Swift'e hangi faydayı sağlar?",
+    "options": [
+      "Kodun sadece debug modda çalışmasını sağlar.",
+      "Bellek kullanımını otomatik düşürür.",
+      "Eksik case nedeniyle oluşabilecek mantık hatalarının bir kısmını derleme zamanında yakalar.",
+      "Tüm `switch` bloklarını `if`'e dönüştürür."
+    ],
+    "correctIndex": 2,
+    "explanation": "Exhaustive `switch`, olası durumların unutulmasını zorlaştırır. Özellikle `enum` ile birlikte çalışırken yeni case eklendiğinde etkilenmiş kodu compiler üzerinden görmek büyük avantajdır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi Swift'te force unwrap (`!`) kullanımının temel riskidir?",
+    "options": [
+      "Derleme süresini her zaman ciddi biçimde uzatır.",
+      "Optional değer `nil` ise runtime crash oluşturur.",
+      "Sadece `String` tiplerinde yanlış sonuç üretir.",
+      "ARC'yi tamamen devre dışı bırakır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Force unwrap, geliştiricinin 'bu değer kesin dolu' iddiasıdır. Bu varsayım yanlışsa uygulama runtime'da beklenmedik şekilde sonlanır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te `Array` üzerinde `map` fonksiyonunun temel amacı nedir?",
+    "options": [
+      "Dizinin eleman sayısını her zaman azaltmak.",
+      "Diziyi sıralamak.",
+      "Her elemanı dönüştürerek yeni bir koleksiyon üretmek.",
+      "Sadece `nil` elemanları silmek."
+    ],
+    "correctIndex": 2,
+    "explanation": "`map`, mevcut koleksiyonun her elemanına dönüşüm uygular ve sonuçlardan yeni bir koleksiyon döner. Kaynak koleksiyonu yerinde değiştirmek zorunda değildir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi `map` ile `compactMap` arasındaki farkı doğru açıklar?",
+    "options": [
+      "`compactMap`, dönüşüm sonrası `nil` sonuçları filtreler.",
+      "`map`, sadece sayısal koleksiyonlarda çalışır.",
+      "`compactMap`, koleksiyonu sıralı hale getirir.",
+      "`map`, optional üretemez."
+    ],
+    "correctIndex": 0,
+    "explanation": "`map` tüm sonuçları korur; sonuç tipi optional olabilir. `compactMap` ise optional sonuçlar içinden `nil` olanları atıp unwrap edilmiş değerleri döner."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te `protocol` kullanımının temel motivasyonu aşağıdakilerden hangisidir?",
+    "options": [
+      "Sadece UI dosyalarını daha kısa yazmak.",
+      "Davranış sözleşmesi tanımlayarak gevşek bağlı ve test edilebilir tasarımlar kurmak.",
+      "Her `class` için otomatik initializer üretmek.",
+      "Kodun sadece iOS'ta derlenmesini sağlamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Protocol, bir tipin ne yapması gerektiğini tarif eder; nasıl yapacağını değil. Bu sayede dependency injection, mocking ve farklı implementasyonlar arasında esnek tasarım kurmak kolaylaşır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te `defer` bloğu ne zaman çalışır?",
+    "options": [
+      "Fonksiyonun girişinde hemen çalışır.",
+      "Sadece hata fırlatılırsa çalışır.",
+      "Scope'tan çıkmadan hemen önce çalışır.",
+      "Sadece ana thread üzerinde çalışır."
+    ],
+    "correctIndex": 2,
+    "explanation": "`defer`, scope kapanırken yürütülür. Erken `return` veya hata senaryolarında temizlik işlemlerini tek yerde toplamak için faydalıdır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Hata fırlatabilen bir Swift fonksiyonunu çağırırken `try?` kullanmak ne anlama gelir?",
+    "options": [
+      "Hata oluşursa uygulamayı crash ettirmek.",
+      "Hata olursa sonucu `nil` yapıp hatayı yutmak.",
+      "Fonksiyonu arka planda çalıştırmak.",
+      "Hatanın loglanmasını compiler'a bırakmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "`try?`, throwing fonksiyonun sonucunu optional'a çevirir. Hata detayını kaybedersiniz; bu yüzden sadece gerçekten hata nedeninin önemli olmadığı akışlarda kullanılmalıdır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir `struct` instance'ının metodu içinde kendi stored property'lerini değiştirebilmek için neden `mutating` gerekir?",
+    "options": [
+      "Çünkü tüm `struct` metodları varsayılan olarak `static`'tir.",
+      "Çünkü value type üzerinde iç durum değişimi açıkça işaretlenmelidir.",
+      "Çünkü ARC sadece `mutating` metodlarda çalışır.",
+      "Çünkü `mutating`, metodu otomatik thread-safe yapar."
+    ],
+    "correctIndex": 1,
+    "explanation": "`struct` value type olduğu için kendi kopyası üzerinde değişiklik yaptığını compiler'a açıkça bildirmek gerekir. `mutating`, bu niyeti belirtir ve immutable instance'larda değişikliği engeller."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Swift'te computed property ile stored property arasındaki temel fark nedir?",
+    "options": [
+      "Computed property bellek ayırmaz; getter/setter ile değeri dinamik üretir.",
+      "Stored property sadece `class` içinde tanımlanabilir.",
+      "Computed property bir kez hesaplandıktan sonra zorunlu olarak cache'lenir.",
+      "Stored property asla `let` olamaz."
+    ],
+    "correctIndex": 0,
+    "explanation": "Stored property gerçek bir değer saklar. Computed property ise ihtiyaç anında hesaplanır; istenirse farklı bir backing store üzerinden çalışabilir ama varsayılan olarak kendisi veri saklamaz."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Property observer olarak `didSet` kullanırken hangi nüans önemlidir?",
+    "options": [
+      "Observer sadece `lazy` property'lerde çalışır.",
+      "`didSet`, initializer tamamlanmadan önce her atamada kesin çalışır.",
+      "`didSet`, yeni değer atandıktan sonra tetiklenir ve eski değere `oldValue` ile erişilemez.",
+      "`didSet`, değer atandıktan sonra çalışır ve önceki değere `oldValue` ile erişilebilir."
+    ],
+    "correctIndex": 3,
+    "explanation": "`didSet`, atama sonrası çalışır. Gerekirse eski değeri `oldValue` üzerinden karşılaştırabilirsiniz; ancak initialization fazındaki davranışın normal set işlemlerinden farklı olabileceğini bilmek gerekir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Swift'te `lazy var` ne zaman anlamlı bir tercih olur?",
+    "options": [
+      "Değerin oluşturulması maliyetliyse ve her instance için her zaman gerekmiyorsa.",
+      "Property'yi immutable yapmak istiyorsanız.",
+      "Thread safety'yi otomatik elde etmek istiyorsanız.",
+      "Property'nin compile-time constant olmasını istiyorsanız."
+    ],
+    "correctIndex": 0,
+    "explanation": "`lazy`, ilk erişime kadar oluşturmayı erteler. Bu, maliyetli oluşturma işlemlerinde gereksiz iş yapmayı önleyebilir; ancak çoklu thread erişiminde ekstra senkronizasyon ihtiyacını ortadan kaldırmaz."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdaki durumlardan hangisinde `weak` referans kullanmak en uygun tercihtir?",
+    "options": [
+      "Sahiplik ilişkisi olmayan ve karşı taraf serbest bırakıldığında otomatik `nil` olabilen geri referanslarda.",
+      "Değerin ömür boyu bellekten silinmemesi gerektiğinde.",
+      "Value type kopyalarını küçültmek için.",
+      "Closure'ların daha hızlı çalışması için."
+    ],
+    "correctIndex": 0,
+    "explanation": "`weak`, retain cycle kırmak için kullanılır ve daima optional'dır. Özellikle delegate gibi sahiplik ilişkisinin zayıf olması gereken senaryolarda doğru tercihtir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "`unowned` ile `weak` arasındaki kritik fark nedir?",
+    "options": [
+      "`unowned` optional olmak zorundadır, `weak` zorunda değildir.",
+      "`weak` sadece `struct` için kullanılabilir.",
+      "`unowned`, referansın yaşamı boyunca geçerli kalacağını varsayar ve `nil` olamaz.",
+      "`weak`, ARC tarafından takip edilmez."
+    ],
+    "correctIndex": 2,
+    "explanation": "`weak` referans otomatik olarak `nil` olabilir ve bu yüzden optional'dır. `unowned` ise karşı tarafın sizden önce yok olmayacağı varsayımıyla kullanılır; bu varsayım bozulursa erişim runtime crash'e gider."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi closure capture list kullanmanın temel nedenlerinden biridir?",
+    "options": [
+      "Closure'ları generic yapıya dönüştürmek.",
+      "Bellek yönetimini kontrol edip `self` gibi referansların güçlü tutulmasını engellemek.",
+      "Closure'ı synchronous hale getirmek.",
+      "Switch-case exhaustiveness sağlamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Closure, çevresindeki referansları yakalayabilir ve bu durum retain cycle üretebilir. Capture list ile `[weak self]` veya `[unowned self]` kullanmak bu sahipliği bilinçli hale getirir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Swift'te extension kullanmanın önemli faydalarından biri nedir?",
+    "options": [
+      "Mevcut tipe inheritance yoluyla stored property eklemek.",
+      "Var olan tipe davranış ekleyip kodu sorumluluklara göre organize etmek.",
+      "Private üyeleri otomatik public yapmak.",
+      "Type'ı runtime'da farklı sınıfa dönüştürmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Extension, mevcut tipe method, computed property, protocol conformance gibi eklemeler yapar. Stored property ekleyememesi önemli bir kısıttır; bu yüzden inheritance ile karıştırılmamalıdır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Protocol extension ile default implementasyon vermenin ana trade-off'u nedir?",
+    "options": [
+      "Kod tekrarını azaltır ama hangi implementasyonun çağrılacağını özellikle protocol type üzerinden kullanımda dikkatli düşünmek gerekir.",
+      "Uygulamayı her zaman yavaşlatır.",
+      "ARC'yi devre dışı bırakır.",
+      "Sadece Objective-C uyumlu protocol'lerde kullanılabilir."
+    ],
+    "correctIndex": 0,
+    "explanation": "Default implementasyon tekrarları azaltır. Ancak static dispatch ve witness table davranışları nedeniyle, özellikle somut tip yerine protocol türü üzerinden çağrı yapıldığında beklenen metodun hangisi olduğu nüanslı olabilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Generics kullanımının Swift kod tabanına en büyük katkısı hangisidir?",
+    "options": [
+      "Her veri tipini otomatik olarak `Any`'e dönüştürmesi.",
+      "Type safety'yi koruyarak tekrar kullanılabilir soyut yapılar kurması.",
+      "Kodun yalnızca runtime'da tip kontrolü yapmasını sağlaması.",
+      "Tüm fonksiyonları async hale getirmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Generic yapılar, aynı algoritmayı farklı tiplerle kullanmanızı sağlar. `Any` tabanlı çözümlere göre daha güvenli ve derleme zamanı doğrulaması sunar."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi `some Protocol` kullanımını en doğru açıklar?",
+    "options": [
+      "Her çağrıda farklı ve ilişkisiz tipler dönmek için kullanılır.",
+      "Opaque type olarak somut tipi gizler ama compiler o somut tipi bilir ve type safety korunur.",
+      "Yalnızca Objective-C bridging için gereklidir.",
+      "Protocol inheritance'ı kapatır."
+    ],
+    "correctIndex": 1,
+    "explanation": "`some Protocol`, somut tipi API yüzeyinden saklarken derleyicinin o tipi bilmesini sağlar. Bu, `any Protocol` kullanımından farklı olarak performans ve type ilişkileri açısından daha güçlü olabilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "`any Protocol` kullanımının önemli sonucu aşağıdakilerden hangisidir?",
+    "options": [
+      "Existential kutulama nedeniyle bazı durumlarda ek soyutlama ve dispatch maliyeti getirebilmesi.",
+      "Her zaman `some Protocol`'den daha hızlı olması.",
+      "Sadece enum'larla kullanılabilmesi.",
+      "Protocol method'larını compile-time'da tamamen ortadan kaldırması."
+    ],
+    "correctIndex": 0,
+    "explanation": "`any`, existential bir kapsayıcıdır ve farklı somut tipleri tek protocol tipi altında taşır. Bunun bedeli bazı generic optimizasyonların kaybı ve ek dispatch/boxing maliyeti olabilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Swift'te `Result<Success, Failure>` tipinin pratik faydası nedir?",
+    "options": [
+      "Hata yönetimini string mesajlara indirgeyip standardize etmesi.",
+      "Başarılı ve başarısız sonucu tek tip altında modelleyerek akışı daha açık hale getirmesi.",
+      "Yalnızca ağ isteklerinde kullanılabilmesi.",
+      "Throwing fonksiyonları tamamen gereksiz kılması."
+    ],
+    "correctIndex": 1,
+    "explanation": "`Result`, iki olası çıktıyı tip sistemi içinde ifade eder. Özellikle callback tabanlı ya da senkron olmayan akışlarda başarı ve hata durumlarını explicit hale getirir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir closure parametresini `@escaping` olarak işaretlemek neyi ifade eder?",
+    "options": [
+      "Closure'ın sadece hata durumunda çalışacağını.",
+      "Closure'ın fonksiyon scope'u bittikten sonra da saklanıp çağrılabileceğini.",
+      "Closure'ın mutlaka ana thread'de çalışacağını.",
+      "Closure'ın ARC'den muaf olduğunu."
+    ],
+    "correctIndex": 1,
+    "explanation": "`@escaping`, closure'ın o anki fonksiyon çağrısından daha uzun yaşayacağını belirtir. Bu durumda yakalanan referanslar için bellek yönetimi ve retain cycle riski daha dikkatli ele alınmalıdır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi Swift erişim belirleyicileri için doğrudur?",
+    "options": [
+      "`private`, aynı dosyadaki tüm tiplere otomatik erişim verir.",
+      "`fileprivate`, erişimi aynı dosya ile sınırlar.",
+      "`internal`, sadece tanımlandığı type içinde kullanılabilir.",
+      "`public`, başka modüllerde subclass edilmeyi otomatik açar."
+    ],
+    "correctIndex": 1,
+    "explanation": "`fileprivate` dosya sınırında görünürlük verir. `private` daha dar kapsamdadır; `public` ile `open` arasında da özellikle subclass/override yetenekleri açısından önemli fark vardır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "`public` ile `open` arasındaki farkın en kritik kısmı nedir?",
+    "options": [
+      "`public` üyeler başka modüllerden kullanılamaz.",
+      "`open`, başka modüllerden subclass ve override izni verir; `public` bunu vermez.",
+      "`open` sadece enum'lar için geçerlidir.",
+      "`public`, runtime'da daha yavaştır."
+    ],
+    "correctIndex": 1,
+    "explanation": "`public` görünürlük sağlar ama genişletilebilirlik garantisi vermez. Framework API tasarımında `open` kullanımı, dış modüllere davranışı özelleştirme kapısı açtığı için daha güçlü ve daha riskli bir sözdür."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Swift'te `Codable` kullanırken ağdan gelen JSON alan adları modelde farklı isimlendirilmişse en yaygın çözüm hangisidir?",
+    "options": [
+      "JSON key'leri değiştirmek için sunucuyu zorlamak.",
+      "Modeli `NSObject`'ten türetmek.",
+      "`CodingKeys` tanımlayarak property ile JSON key eşlemesi yapmak.",
+      "Tüm property'leri optional yapıp mapping'i atlamak."
+    ],
+    "correctIndex": 2,
+    "explanation": "`CodingKeys`, API sözleşmesi ile uygulama içi isimlendirme arasında net ve sürdürülebilir bir köprü kurar. Tüm alanları optional yapmak ise veri kontratı hatalarını maskeleyebilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir `Decodable` modelde zorunlu bir alan API'den gelmiyorsa varsayılan davranış nedir?",
+    "options": [
+      "Alan otomatik boş string olur.",
+      "Decoder ilgili anahtar için hata fırlatır.",
+      "Model oluşturulur ama log'a warning düşer.",
+      "Eksik alanlar otomatik ignore edilir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Non-optional ve varsayılan değeri olmayan bir property için eksik key, decoding hatasına yol açar. Bu davranış veri sözleşmesindeki kırılmaları erken fark etmek açısından değerlidir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Swift'te `Error` protocol'ü ile custom hata tipleri tanımlamanın faydası nedir?",
+    "options": [
+      "Tüm hataları tek bir string içinde birleştirmek.",
+      "Alan bazlı ve durum bazlı hata semantiğini tip güvenli şekilde modellemek.",
+      "Hataları derleme zamanında tamamen ortadan kaldırmak.",
+      "Sadece UI katmanında çalışmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Custom hata tipleri, farklı başarısızlık nedenlerini birbirinden ayırır. Bu sayede üst katmanlar her senaryoya uygun geri bildirim veya retry stratejisi uygulayabilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "DispatchQueue ile çalışırken UI güncellemelerinin genellikle ana thread'e alınmasının sebebi nedir?",
+    "options": [
+      "Arka plan queue'ları `String` işleyemez.",
+      "Apple framework'lerinin büyük bölümü UI erişimini main thread ile sınırlar.",
+      "Main thread her zaman en hızlı thread'dir.",
+      "Arka plan thread'lerinde ARC çalışmaz."
+    ],
+    "correctIndex": 1,
+    "explanation": "UIKit ve birçok Apple UI API'si thread-safe değildir. UI güncellemesini arka planda yapmak yarış durumlarına ve öngörülemez davranışlara yol açabileceği için ana thread kuralı kritiktir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir concurrent queue üzerinde paylaşılan mutable state'e kontrolsüz erişimin en olası sonucu nedir?",
+    "options": [
+      "Compiler'ın otomatik sıraya koyması.",
+      "Deterministik olarak daha hızlı çalışması.",
+      "Race condition nedeniyle tutarsız veri veya çökme oluşması.",
+      "ARC'nin bellek sızıntısını sıfırlaması."
+    ],
+    "correctIndex": 2,
+    "explanation": "Birden fazla thread aynı mutable veriyi senkronizasyon olmadan değiştirirse sonuç çalışma zamanına göre değişebilir. Bu tür hatalar zor yeniden üretildiği için özellikle tehlikelidir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Swift Concurrency'de `Task` kullanmanın GCD'ye göre önemli avantajlarından biri hangisidir?",
+    "options": [
+      "Thread kavramını tamamen yok etmesi.",
+      "Yapısal eşzamanlılık ve iptal gibi kavramları dil seviyesinde modellemesi.",
+      "Sadece ağ katmanında çalışması.",
+      "Closure capture sorunlarını otomatik bitirmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Swift Concurrency, async/await ve structured concurrency ile iş akışını daha anlaşılır hale getirir. Task hiyerarşisi ve cancellation desteği, dağınık callback veya queue yönetimine göre daha güvenli bir model sunar."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir async fonksiyon içinde uzun süren iş sırasında `Task.isCancelled` kontrolü yapmak neden önemlidir?",
+    "options": [
+      "Cancellation'ın sadece log amaçlı olduğunu göstermek için.",
+      "İptal edilmiş işi gereksiz yere sürdürmeyip kaynak tüketimini azaltmak için.",
+      "ARC'yi manuel tetiklemek için.",
+      "Fonksiyonu otomatik synchronous yapmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Cancellation kooperatiftir; sistem sizin yerinize her işi durdurmaz. Uzun veya parçalı işlerde iptal durumunu kontrol etmek CPU, ağ ve pil maliyetini gereksiz yere artırmamanızı sağlar."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "ARC kullanan bir Swift uygulamasında bellek sızıntısı oluşmasının tipik nedeni aşağıdakilerden hangisidir?",
+    "options": [
+      "Compiler'ın tüm `struct`'ları heap'te tutması.",
+      "Güçlü referans döngüsü nedeniyle nesnelerin reference count'larının sıfıra inememesi.",
+      "Tüm `optional`'ların bellekte kalıcı olması.",
+      "Sadece `enum` kullanımının yüksek olması."
+    ],
+    "correctIndex": 1,
+    "explanation": "ARC bellek yönetimini otomatikleştirir ama sahiplik grafiğini sizin yerinize doğru tasarlamaz. İki nesne birbirini güçlü tutarsa sayaçlar sıfırlanamaz ve `deinit` çağrılmaz."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Retain cycle incelemesinde bir view controller'ın `deinit`'inin çağrılmaması size ilk olarak neyi düşündürmelidir?",
+    "options": [
+      "Controller'ın çok hızlı açılıp kapandığını.",
+      "Muhtemel bir güçlü referans döngüsü veya uzun ömürlü tutucu nesne olduğunu.",
+      "Compiler'ın optimizasyonu kapattığını.",
+      "JSON decoding hatası yaşandığını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bir controller ekrandan çıktıktan sonra hâlâ serbest bırakılmıyorsa, yaşam döngüsünü gereksiz uzatan bir sahiplik ilişkisi vardır. Closure, timer, delegate veya subscription zincirleri genelde ilk şüphelilerdir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi closure içinde `[weak self]` kullanırken yapılan yaygın hatalardan biridir?",
+    "options": [
+      "`self`'i her yerde zayıf almak zorunda olduğunu varsayıp iş mantığını gereksiz optional zincirine boğmak.",
+      "Closure'ı `@escaping` işaretlemek.",
+      "Main thread'e dönmek.",
+      "Protocol kullanmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "`weak self` her durumda otomatik doğru çözüm değildir. Sahiplik ilişkisinin gerçekten zayıf olması gerekip gerekmediği düşünülmeden her yere uygulanırsa kod okunabilirliği düşer ve beklenmedik no-op davranışlar oluşabilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir performans problemi analizinde, büyük `Array` kopyalarının beklenenden fazla maliyet üretmesinin olası nedeni nedir?",
+    "options": [
+      "Swift koleksiyonlarının hiçbir zaman kopyalanmaması.",
+      "Copy-on-write optimizasyonunun mutasyon anında gerçek kopyaya dönüşebilmesi.",
+      "Array'in sadece stack'te tutulması.",
+      "ARC'nin value type'larda tamamen kapalı olması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Swift koleksiyonları çoğu durumda copy-on-write kullanır. Okuma paylaşımı ucuz olabilir, ancak birden fazla referans altında mutasyon yapılınca gerçek veri kopyası oluşur ve bu maliyet büyük veri setlerinde görünür hale gelir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aynı veri modelinin hem UI hem ağ hem de persistence katmanında doğrudan kullanılması büyük kod tabanlarında neden risklidir?",
+    "options": [
+      "Çünkü Swift aynı dosyada üç type tanımlamaya izin vermez.",
+      "Katmanlar arası coupling artar ve bir kontrat değişikliği gereksiz yere geniş alana yayılır.",
+      "ARC sadece tek katmanda çalışır.",
+      "Struct'lar üçten fazla modülde kullanılamaz."
+    ],
+    "correctIndex": 1,
+    "explanation": "Tek model ile her problemi çözmeye çalışmak kısa vadede hızlı görünür ama sorumluluk sınırlarını bulanıklaştırır. API, domain ve storage ihtiyaçları ayrıştıkça değişiklik maliyeti ve regressions artar."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Modüler bir Swift kod tabanında erişim seviyelerini gereğinden geniş tanımlamanın en önemli sakıncası nedir?",
+    "options": [
+      "Compiler'ın her modülü debug modda çalıştırması.",
+      "İç detayların API yüzeyine sızması ve refactor maliyetinin artması.",
+      "Tüm protocol'lerin `NSObjectProtocol`'e dönüşmesi.",
+      "JSON decode performansının düşmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Geniş erişim seviyeleri, iç implementasyon detaylarını dış modüllerin bağımlı olduğu sözleşmeye dönüştürür. Sonrasında bu detayları değiştirmek kırıcı hale gelir ve mimari sınırlar zayıflar."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Swift Concurrency'de `actor` kullanımının temel amacı nedir?",
+    "options": [
+      "Tüm I/O işlemlerini senkron yapmak.",
+      "Paylaşılan mutable state erişimini izole ederek data race riskini azaltmak.",
+      "ARC'nin yerine geçmek.",
+      "Protocol extension'ları zorunlu kılmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Actor'lar kendi iç durumlarına eşzamanlı erişimi kontrollü hale getirir. Bu, manuel lock yönetimine göre daha güvenli bir model sunar; yine de actor sınırları ve await noktaları iyi tasarlanmalıdır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir actor içindeki state'i güncellerken uzun süren await zincirlerini aynı metodun içine koymanın riski nedir?",
+    "options": [
+      "Actor'ın otomatik olarak `struct`'a dönüşmesi.",
+      "Reentrancy nedeniyle actor state'i beklenenden farklı ara durumlarda gözlemlenebilir hale gelmesi.",
+      "ARC'nin actor'larda kapatılması.",
+      "JSON parsing'in devre dışı kalması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Actor izolasyonu güçlüdür ama await noktaları actor'ın başka işlere geçmesine izin verebilir. Bu yüzden kritik state geçişlerinde işlem adımlarını ve invariant'ları dikkatle tasarlamak gerekir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Ağ katmanında tüm hataları tek bir `unknown` case'ine indirgemek neden kötü bir tasarım olabilir?",
+    "options": [
+      "Çünkü compiler `enum` kullanmayı yasaklar.",
+      "Retry, kullanıcı mesajı ve telemetry gibi kararlar için gerekli ayrımı kaybettirir.",
+      "Sadece performansı düşürdüğü için.",
+      "URLSession böyle hataları kabul etmediği için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Timeout, decoding, authentication ve server-side hata farklı aksiyon gerektirir. Hepsini tek bir sepete atmak, üst katmanların doğru ürün davranışı üretmesini zorlaştırır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir repository katmanında `async throws` API tasarlarken hangi yaklaşım daha sürdürülebilirdir?",
+    "options": [
+      "Her hatayı `fatalError` ile sonlandırmak.",
+      "Alan odaklı hata tipleri ve net sorumluluk sınırlarıyla üst katmana anlamlı failure bilgisi taşımak.",
+      "Tüm metodları `@MainActor` yapmak.",
+      "Her sonucu `String` olarak dönmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Repository API'si sadece veri çekmek değil, hata semantiğini de taşır. Anlamlı ve katmana uygun hata modeli, UI davranışı ile loglama/izleme kararlarını sağlıklı kurmanızı sağlar."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi `Task.detached` kullanımında dikkat edilmesi gereken kritik bir noktadır?",
+    "options": [
+      "Her zaman parent task'in cancellation ve priority bilgisini korur.",
+      "Yapısal eşzamanlılık bağlamından koptuğu için yaşam döngüsü ve context aktarımı bilinçli yönetilmelidir.",
+      "Sadece UI thread'inde çalışır.",
+      "Detached task içinde capture edilen tüm nesneler `weak` olur."
+    ],
+    "correctIndex": 1,
+    "explanation": "`Task.detached`, parent-child ilişkisinden bağımsız çalışır. Bu yüzden cancellation, task-local değerler ve öncelik aktarımı gibi beklentileriniz varsa normal `Task` ile arasındaki farkı net bilmeniz gerekir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir Swift framework'ünde ABI ve source compatibility konuları neden önemlidir?",
+    "options": [
+      "Çünkü sadece oyun uygulamalarında çalışır.",
+      "Dış tüketicilere sunulan API değişikliklerinin binary uyumluluk ve yükseltme maliyetini etkilediği için.",
+      "ARC'nin sürüme göre değiştiği için.",
+      "Enum'ların artık compile edilmediği için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Özellikle dağıtılan binary framework'lerde API yüzeyi sadece bugünün değil yarının da sözleşmesidir. Düşünmeden yapılan imza değişiklikleri, tüketici uygulamalarda kırıcı etki yaratabilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Büyük bir SwiftUI veya UIKit kod tabanında state değişimlerinin dağınık biçimde birden fazla kaynaktan yönetilmesi hangi probleme en çok yol açar?",
+    "options": [
+      "Compiler'ın protocol'leri silmesine.",
+      "Veri akışının izlenmesini zorlaştırarak hatalı UI senkronizasyonlarına ve debug maliyetine.",
+      "Sadece build süresinin kısalmasına.",
+      "ARC'nin zorunlu kapanmasına."
+    ],
+    "correctIndex": 1,
+    "explanation": "State'in tekil ve anlaşılır kaynaklardan yönetilmesi, UI tutarlılığı için kritiktir. Dağınık mutasyon noktaları ise yan etkileri ve regresyonları anlamayı zorlaştırır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi `Sendable` kavramının Swift Concurrency içindeki rolünü en doğru anlatır?",
+    "options": [
+      "Bir tipin ağ üzerinden JSON'a çevrilebildiğini gösterir.",
+      "Bir tipin eşzamanlı bağlamlar arasında güvenli taşınabilirliğine dair compiler'a sinyal verir.",
+      "Sadece Objective-C sınıfları için kullanılır.",
+      "Her reference type'ı otomatik immutable yapar."
+    ],
+    "correctIndex": 1,
+    "explanation": "`Sendable`, concurrency sınırlarını geçen verilerin güvenliğini modellemek için kullanılır. Özellikle mutable reference type'larda bu sözleşmenin sağlanması derin tasarım kararı gerektirir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir cache katmanında `class` yerine `actor` veya senkronize edilmiş erişim tercih edilmesinin temel nedeni nedir?",
+    "options": [
+      "Çünkü `class` içinde dictionary tutulamaz.",
+      "Paylaşılan mutable state'in çoklu task/thread erişiminde yarış durumuna açık olması.",
+      "`actor`'ların bellek kullanmaması.",
+      "`class`'ların async fonksiyon desteklememesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Cache gibi yapılar genelde birden fazla akış tarafından okunup yazılır. Senkronizasyon yoksa aynı anahtar üzerinde tutarsız state veya bozuk veri gözlemlenebilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te `nil coalescing` operatörü (`??`) ne işe yarar?",
+    "options": [
+      "İki sayıyı toplayıp ortalamasını almak için.",
+      "Optional değer `nil` ise yedek bir varsayılan değer kullanmak için.",
+      "Closure'ı iptal etmek için.",
+      "Bir diziyi sıralamak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "`??`, optional değer doluysa onu, boşsa sağ taraftaki varsayılanı döner. Bu sayede basit fallback senaryoları daha temiz ifade edilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi `forEach` ile klasik `for-in` döngüsü arasındaki önemli farklardan biridir?",
+    "options": [
+      "`forEach` içinde `break` ve `continue` doğal biçimde kullanılamaz.",
+      "`for-in` sadece optional dizilerde çalışır.",
+      "`forEach` her zaman daha hızlıdır.",
+      "`for-in` closure kabul etmez."
+    ],
+    "correctIndex": 0,
+    "explanation": "`forEach` bir closure alır ve klasik döngü kontrol anahtar sözcükleriyle aynı davranmaz. Erken çıkış veya akış kontrolü gerekiyorsa `for-in` çoğu zaman daha uygundur."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te type inference'ın temel faydası nedir?",
+    "options": [
+      "Her durumda tip yazımını yasaklaması.",
+      "Compiler'ın bağlamdan tipi çıkararak kodu daha kısa ama yine de tip güvenli tutması.",
+      "Runtime'da tip kontrolünü tamamen kapatması.",
+      "Sadece sayısal işlemlerde çalışması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Type inference tekrar eden tip bildirimlerini azaltır. Ancak karmaşık ifadelerde okunabilirlik veya derleme süresi için bazen açık tip vermek hâlâ daha doğru tercih olabilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir fonksiyon parametresine varsayılan değer vermek hangi faydayı sağlar?",
+    "options": [
+      "Fonksiyonu override edilemez hale getirir.",
+      "Sık kullanılan çağrı senaryolarını sadeleştirirken esnekliği korur.",
+      "Parametreyi otomatik optional yapar.",
+      "Fonksiyonu generic hale getirir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Varsayılan parametreler, gereksiz overload ihtiyacını azaltabilir. Ancak çok fazla varsayılan davranış API'nin niyetini bulanıklaştırıyorsa okunabilirlik zarar görebilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te named parameters kullanmanın API tasarımına katkısı nedir?",
+    "options": [
+      "Çağrı noktasında niyeti daha anlaşılır hale getirmesi.",
+      "Fonksiyonların sadece tek parametre almasını sağlaması.",
+      "Performansı otomatik artırması.",
+      "Tüm metodları throwing yapması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Argument label'lar, özellikle aynı tipten birden fazla parametre olduğunda anlamı netleştirir. Bu, yanlış parametre sırası gibi hataları azaltmaya yardımcı olur."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi `Set` kullanımının `Array`'e göre daha uygun olduğu bir senaryodur?",
+    "options": [
+      "Eleman sırasının kritik olduğu listeleme ekranı.",
+      "Aynı değerin birden çok kez tutulmasının istendiği durum.",
+      "Benzersiz elemanları hızlı üyelik kontrolüyle tutmak istediğiniz durum.",
+      "Index bazlı erişimin zorunlu olduğu durum."
+    ],
+    "correctIndex": 2,
+    "explanation": "`Set`, benzersiz elemanlar için tasarlanmıştır ve üyelik kontrolünde genellikle daha uygundur. Sıralı sunum veya tekrar eden elemanlar gerekiyorsa `Array` daha doğru olabilir."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Swift'te `Dictionary` erişiminde dönen sonucun optional olmasının nedeni nedir?",
+    "options": [
+      "Çünkü sözlükler sadece `String` anahtar kabul eder.",
+      "İstenen anahtarın sözlükte bulunmama ihtimali vardır.",
+      "ARC sözlüklerde çalışmadığı için.",
+      "Tüm sözlükler ağdan geldiği için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bir key mevcut olmayabilir; bu yüzden erişim sonucu `Value?` tipindedir. Bu, eksik veri durumunun açıkça ele alınmasını zorunlu kılar."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi `static` ile tanımlanan bir üye için doğrudur?",
+    "options": [
+      "Her instance için ayrı kopyası üretilir.",
+      "Type seviyesinde paylaşılır ve instance oluşturmadan erişilebilir.",
+      "Sadece protocol içinde kullanılabilir.",
+      "Mutlaka immutable olmak zorundadır."
+    ],
+    "correctIndex": 1,
+    "explanation": "`static` üyeler tipe aittir, instance'a değil. Bu yüzden ortak sayaçlar, yardımcı metodlar veya sabitler için sık kullanılır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Dependency Injection yaklaşımının Swift projelerinde önemli olmasının temel sebebi nedir?",
+    "options": [
+      "Compiler uyarılarını tamamen kaldırması.",
+      "Bağımlılıkları dışarıdan vererek test edilebilirliği ve modülerliği artırması.",
+      "ARC'yi devre dışı bırakması.",
+      "Tüm nesneleri singleton yapması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bağımlılığı içeride üretmek yerine dışarıdan almak, somut implementasyona sıkı bağlılığı azaltır. Bu, özellikle unit testlerde mock/fake nesneler kullanmayı kolaylaştırır."
+  },
+  {
+    "category": "swift",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir servis nesnesini global singleton yapmak hangi teknik riski artırır?",
+    "options": [
+      "Tip güvenliğini tamamen bozar.",
+      "Gizli bağımlılıklar ve paylaşılan mutable state nedeniyle test izolasyonunu zorlaştırır.",
+      "Struct kullanımını yasaklar.",
+      "JSON parse işlemlerini engeller."
+    ],
+    "correctIndex": 1,
+    "explanation": "Singleton bazı yerlerde pragmatik olabilir ama aşırı kullanımı bağımlılık grafiğini görünmez hale getirir. Testler arası state sızıntısı ve yaşam döngüsü kontrolü zorlaşır."
+  }
+]

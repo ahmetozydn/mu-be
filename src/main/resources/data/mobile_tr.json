@@ -1,0 +1,828 @@
+[
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Mobil uygulamalarda kullanılan 'DP' (Density-independent Pixels) birimi ile 'PX' (Pixel) arasındaki temel fark nedir?",
+    "options": [
+      "DP sadece font boyutları için kullanılır, PX ise tüm görsel öğeler için.",
+      "PX sabit bir ekran noktasını temsil ederken, DP farklı ekran yoğunluklarında (density) görselin aynı boyutta görünmesini sağlar.",
+      "DP, PX'e göre her zaman iki kat daha fazla yer kaplar.",
+      "Modern mobil cihazlarda PX kullanımı tamamen kaldırılmıştır, sadece DP kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "PX (Pixel) cihazın fiziksel noktasını temsil eder ve yoğunluğu yüksek ekranlarda görselin küçük görünmesine neden olur. DP ise bu farkı normalize ederek farklı cihazlarda tutarlı bir fiziksel boyut sunar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "MVVM (Model-View-ViewModel) mimarisinde, ViewModel'in View (Activity/ViewController) hakkında doğrudan referans tutmaması neden kritik bir kuraldır?",
+    "options": [
+      "ViewModel'in daha hızlı çalışmasını sağlamak için.",
+      "View'in bellekte serbest bırakılmasını (garbage collection) engelleyerek 'Memory Leak' oluşmasına neden olabileceği için.",
+      "ViewModel sadece veritabanı işlemlerinden sorumlu olduğu için.",
+      "Apple ve Google'ın uygulama mağazalarında bu durum yasaklandığı için."
+    ],
+    "correctIndex": 1,
+    "explanation": "ViewModel, View'ın lifecycle'ından (yaşam döngüsü) daha uzun yaşayabilir. Eğer ViewModel, yok edilmiş bir View'a referans tutursa, o View bellekten temizlenemez ve sızıntı (leak) oluşur."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızda bir 'Deep Link' mekanizması kurgularken, güvenlik açısından en büyük risk aşağıdakilerden hangisidir?",
+    "options": [
+      "Deep link'lerin uygulamanın açılış hızını yavaşlatması.",
+      "Kullanıcının internet kotasının deep link üzerinden gelen veriyle aşılması.",
+      "Link üzerinden gelen parametrelerin (id, token vb.) doğrulanmadan işlem yapılması sonucu yetkisiz veri erişimi.",
+      "Deep link'lerin sadece belirli Android versiyonlarında çalışması."
+    ],
+    "correctIndex": 2,
+    "explanation": "Deep link'ler dış dünyaya açık kapılardır. Gelen parametreler (örneğin 'user_id=5') uygulama içinde kontrol edilmeden (validation/authorization) kullanılırsa, kötü niyetli kişiler başkalarının verilerine erişebilir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Mobil uygulamalarda 'Optimistic UI' güncelleme yaklaşımı ne anlama gelir?",
+    "options": [
+      "Uygulamanın sadece internet hızı çok yüksekken çalışması.",
+      "Sunucudan yanıt gelmeden önce işlemin başarılı olacağı varsayılarak UI'ın anında güncellenmesi.",
+      "Kullanıcıya sürekli hata mesajı göstererek en kötü senaryoya hazırlamak.",
+      "UI bileşenlerinin sadece 'dark mode'da çalışması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Optimistic UI, bir butona (Örn: Beğen) basıldığında, sunucu sonucu beklenmeden UI'ın değiştirilmesidir. Bu, uygulamanın çok daha hızlı ve akıcı hissedilmesini sağlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Uygulama mağazalarında (App Store/Play Store) 'Binary Size'ın (Uygulama boyutu) yüksek olması kullanıcı tarafında en çok neyi etkiler?",
+    "options": [
+      "Uygulamanın işlemci (CPU) kullanımını.",
+      "Uygulamanın ekran parlaklığını.",
+      "İndirme/Yükleme oranlarını (Conversion Rate) ve kullanıcıların yüklemeden vazgeçme olasılığını.",
+      "Uygulamanın sadece Wi-Fi ile çalışmasını."
+    ],
+    "correctIndex": 2,
+    "explanation": "Yüksek uygulama boyutu, özellikle interneti kısıtlı veya depolama alanı az olan kullanıcıların uygulamayı indirmekten vazgeçmesine neden olur."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir mobil uygulamada resim listelerken (Image List) 'Memory Cache' ve 'Disk Cache' arasındaki temel fark nedir?",
+    "options": [
+      "Memory cache RAM'de tutulur ve çok hızlıdır; Disk cache cihaz hafızasında tutulur ve uygulama kapatılsa da silinmez.",
+      "Memory cache bulutta (Cloud), Disk cache ise sadece SD kartta tutulur.",
+      "Disk cache daha hızlıdır çünkü doğrudan donanıma erişir.",
+      "İkisi arasında teknik bir fark yoktur, sadece isimleri farklıdır."
+    ],
+    "correctIndex": 0,
+    "explanation": "Memory cache (RAM) uygulama açıkken anlık erişim için kullanılır. Disk cache ise internetten indirilen resimlerin uygulama kapansa da tekrar indirilmemesi için kalıcı olarak saklandığı yerdir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızın 'Cold Start' (Soğuk Başlatma) süresini ölçtüğünüzde sürenin çok uzun olduğunu fark ettiniz. Bu süreyi kısaltmak için yapılabilecek en etkili mühendislik dokunuşu nedir?",
+    "options": [
+      "Uygulamanın açılışındaki Splash Screen süresini artırmak.",
+      "Application sınıfındaki tüm üçüncü parti kütüphanelerin (SDK) initialization işlemlerini 'lazy load' veya arka plan thread'ine taşımak.",
+      "Uygulamayı tamamen Native'den React Native'e taşımak.",
+      "Daha yüksek çözünürlüklü ikonlar kullanmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Cold start sırasında main thread'i bloklayan ağır işlemler (SDK init, ağır veritabanı sorguları vb.) başlangıç süresini uzatır. Bunların ertelenmesi veya asenkron yapılması süreyi belirgin şekilde kısaltır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir mobil uygulamada 'Local Storage' olarak SQLite yerine SharedPreferences (Android) veya UserDefaults (iOS) ne zaman tercih edilmelidir?",
+    "options": [
+      "Milyonlarca satırlık veri saklanacaksa.",
+      "Resim ve video gibi büyük dosyaları saklamak için.",
+      "Kullanıcı ayarları, login durumu veya küçük anahtar-değer (Key-Value) çiftleri için.",
+      "Veritabanı şifreleme zorunlu olduğunda."
+    ],
+    "correctIndex": 2,
+    "explanation": "SharedPreferences/UserDefaults, küçük ve basit ayar verilerini saklamak için optimize edilmiştir. Kompleks ve büyük veriler için SQLite tabanlı çözümler (Room/Core Data) kullanılmalıdır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Modüler (Modular) uygulama mimarisinin, büyük ekiplerde 'Build Time' (Derleme süresi) ve geliştirme hızı üzerindeki en büyük avantajı nedir?",
+    "options": [
+      "Uygulamanın kod satırı sayısını azaltması.",
+      "Sadece üzerinde değişiklik yapılan modülün ve etkilenenlerin derlenmesini (Incremental Build) sağlayarak zaman kazandırması.",
+      "Uygulamanın daha fazla RAM kullanmasını sağlaması.",
+      "Tasarımcıların koda daha kolay erişmesini sağlaması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Modüler yapı, kod tabanını bağımsız parçalara ayırır. Bu sayede bir geliştirici bir modülü değiştirdiğinde tüm uygulamanın baştan derlenmesine gerek kalmaz, sadece ilgili kısımlar güncellenir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Uygulama arka planda (Background) çalışırken 'Battery Drain' (Pil tüketimi) sorununu önlemek için hangisi en doğru yaklaşımdır?",
+    "options": [
+      "Sürekli (Infinite) bir while döngüsü ile sunucuyu kontrol etmek.",
+      "Arka plan işlemlerini işletim sisteminin önerdiği (WorkManager veya BackgroundTasks) scheduler yapıları ile yönetmek.",
+      "İşlemciyi (CPU) sürekli en yüksek frekansta tutmak.",
+      "Kullanıcıya sürekli telefonunu şarjda tutması gerektiğini söylemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Modern işletim sistemleri arka plan işlemlerini kısıtlar. OS tarafından sağlanan scheduler yapıları, pilleri korumak için işlemleri toplu halde (batch) veya uygun koşullarda (Şarjda/Wi-Fi'da) çalıştırır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Mobil uygulamalarda 'Dark Mode' desteği eklerken renklerin dinamik olarak değişmesini sağlayan temel mekanizma nedir?",
+    "options": [
+      "Kullanıcının her seferinde renkleri elle seçmesi.",
+      "Sistem tarafından sağlanan renk paletlerini (Semantic Colors) veya tema dosyalarını kullanmak.",
+      "Uygulamanın ekran parlaklığını otomatik kısmak.",
+      "Sadece siyah ve beyaz renklerini kullanmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "İşletim sistemleri, o anki tema moduna göre (Light/Dark) değişen renk tanımlarına izin verir. Bu sayede tek bir renk ismi farklı modlarda farklı değerler alabilir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir mobil uygulamanın 'Uygulama Mağazası'na (App Store/Play Store) gönderilmeden önce imzalanması (Signing) ne işe yarar?",
+    "options": [
+      "Uygulamanın dosya boyutunu küçültür.",
+      "Uygulamanın geliştiricisini doğrular ve kodun değiştirilmediğinden emin olunmasını sağlar.",
+      "Uygulamayı otomatik olarak başka dillere çevirir.",
+      "Uygulamanın sadece belirli bir ülkede çalışmasını sağlar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dijital imzalama, uygulamanın kim tarafından oluşturulduğunu kanıtlar ve güvenlik duvarlarının uygulamaya güvenmesini sağlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Mobil cihazlarda 'Push Notification' (Bildirim) mekanizması genel olarak nasıl çalışır?",
+    "options": [
+      "Uygulama her saniye sunucuya istek atarak yeni mesaj var mı diye sorar.",
+      "Cihaz ile işletim sistemi servisi (FCM veya APNs) arasında kurulan sürekli bir bağlantı üzerinden sunucudan veri itilir.",
+      "Sadece telefon şarja takıldığında bildirimler gelir.",
+      "Bildirimler sadece SMS üzerinden gönderilir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Pil tasarrufu için uygulamalar sürekli açık kalmaz. Bunun yerine Google (FCM) veya Apple (APNs) servisleri üzerinden merkezi bir bildirim kanalı kullanılır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir mobil uygulamada 'Splash Screen' (Açılış Ekranı) kullanımının temel amacı nedir?",
+    "options": [
+      "Kullanıcıya zorla reklam göstermek.",
+      "Uygulama arka planda yüklenirken kullanıcıya görsel bir geri bildirim vermek.",
+      "Uygulamanın daha fazla pil tüketmesini sağlamak.",
+      "Kullanıcının internet paketini bitirmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Splash screen, uygulamanın ilk yüklenme sürecindeki boşluğu doldurarak kullanıcı deneyimini iyileştirir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Mobil uygulamalarda 'API' (Application Programming Interface) terimi en basit haliyle neyi ifade eder?",
+    "options": [
+      "Telefonun ekran parlaklık ayarını.",
+      "Uygulamanın sunucuyla konuşmasını sağlayan standart kurallar ve yöntemler bütününü.",
+      "Uygulamanın ikon tasarımını.",
+      "Kullanıcının telefon rehberini."
+    ],
+    "correctIndex": 1,
+    "explanation": "API, mobil uygulamanızın dış dünyadaki verilerle (sunucu, hava durumu servisi vb.) güvenli ve standart bir şekilde iletişim kurmasını sağlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir mobil uygulamada 'Unit Test' yazmanın en büyük faydası nedir?",
+    "options": [
+      "Kodun daha hızlı derlenmesini sağlamak.",
+      "Uygulamanın en küçük parçalarının (fonksiyon, sınıf vb.) doğru çalıştığından emin olmak.",
+      "Tasarımı daha güzel hale getirmek.",
+      "Uygulama boyutunu küçültmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Unit testler, kodda yapılan değişikliklerin mevcut özellikleri bozup bozmadığını anında anlamamızı sağlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Mobil uygulamalarda 'Crash' (Çökme) ne demektir?",
+    "options": [
+      "Uygulamanın çok hızlı çalışması.",
+      "Kodun beklenmedik bir hata alarak işletim sistemi tarafından sonlandırılması.",
+      "Telefonun şarjının bitmesi.",
+      "İnternetin kesilmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Crash, yazılımdaki bir hata (sıfıra bölme, null pointer vb.) nedeniyle uygulamanın aniden kapanması durumudur."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Mobil geliştirme dünyasında 'Native' uygulama ne anlama gelir?",
+    "options": [
+      "Sadece web tarayıcısı içinde çalışan uygulama.",
+      "O platformun kendi ana dili ve araçlarıyla (Android için Kotlin/Java, iOS için Swift) geliştirilen uygulama.",
+      "Sadece internet olmadan çalışan uygulama.",
+      "Bilgisayarda çalışan mobil uygulama simülatörü."
+    ],
+    "correctIndex": 1,
+    "explanation": "Native uygulamalar, cihazın donanımına ve işletim sistemine en yüksek performansta ve doğrudan erişim sağlayan uygulamalardır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Mobil uygulamalarda 'Keyboard' (Klavye) açıldığında ekranın kayması veya giriş alanının görünür kalması neden önemlidir?",
+    "options": [
+      "Kullanıcının yazdığı yeri görmesini sağlayarak deneyimi iyileştirmek için.",
+      "Klavyenin rengini değiştirmek için.",
+      "Uygulamanın daha az yer kaplaması için.",
+      "Pil ömrünü uzatmak için."
+    ],
+    "correctIndex": 0,
+    "explanation": "Klavye ekranın bir kısmını kapladığı için giriş alanının (TextField) klavye altında kalmaması kullanıcı deneyimi için kritiktir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "'App Lifecycle' (Uygulama Yaşam Döngüsü) kavramı neyi ifade eder?",
+    "options": [
+      "Telefonun kaç yıl kullanılacağını.",
+      "Uygulamanın açılma, arka plana geçme, durdurulma ve kapanma gibi durumlarını.",
+      "Uygulamanın sadece yüklenme süresini.",
+      "Uygulamanın kaç kez indirildiğini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Lifecycle, işletim sisteminin uygulamayı hangi aşamalarda yönettiğini ve geliştiricinin bu aşamalarda (Örn: Arka plana geçerken veriyi kaydetme) neler yapabileceğini tanımlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Mobil uygulamalarda 'Image Compression' (Resim Sıkıştırma) neden yapılır?",
+    "options": [
+      "Resimlerin daha renkli görünmesi için.",
+      "Uygulama boyutunu düşürmek ve ağ üzerinden veriyi daha hızlı transfer etmek için.",
+      "Resimlerin çözünürlüğünü artırmak için.",
+      "Sadece siyah-beyaz resimler oluşturmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Yüksek çözünürlüklü resimler hem cihaz belleğini yorar hem de indirme süresini uzatır. Sıkıştırma ile kaliteyi koruyarak boyut küçültülür."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir mobil uygulamada 'Hard-coded' metin kullanmak yerine 'Strings' dosyası kullanmanın temel avantajı nedir?",
+    "options": [
+      "Kodun daha hızlı yazılmasını sağlamak.",
+      "Uygulamaya kolayca yeni dil seçenekleri (Localization) ekleyebilmek.",
+      "Uygulama ikonunu değiştirmek.",
+      "Sadece büyük harf kullanabilmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Metinleri merkezi bir dosyada tutmak, kodun içine girmeden tüm metinleri değiştirmeyi ve farklı diller için çeviriler eklemeyi kolaylaştırır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Mobil uygulamalarda 'Icon' (İkon) tasarlarken neden farklı çözünürlüklerde (hdpi, xxhdpi, @2x, @3x vb.) dosyalar üretilir?",
+    "options": [
+      "Uygulamanın rengini değiştirmek için.",
+      "Farklı ekran yoğunluklarına sahip cihazlarda ikonun net ve keskin görünmesini sağlamak için.",
+      "Uygulama boyutunu kasten artırmak için.",
+      "Sadece belirli markalarda çalışması için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Düşük yoğunluklu bir ikonu yüksek çözünürlüklü bir ekranda gösterirseniz bulanık görünür. Bu yüzden her ekran tipi için uygun boyut sağlanır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Uygulama içinde 'Webview' kullanımı ne anlama gelir?",
+    "options": [
+      "Uygulamanın sadece internetle çalışması.",
+      "Uygulamanın içine küçük bir tarayıcı penceresi gömerek web içeriklerini göstermek.",
+      "Uygulamanın kamerasını açmak.",
+      "Uygulamayı bir web sitesine dönüştürmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Webview, mobil uygulama içinden bir web sayfasını (Örn: Kullanım Koşulları sayfası) kullanıcıyı uygulamadan çıkarmadan göstermeye yarar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Mobil uygulamalarda 'Dependency Injection' (Bağımlılık Enjeksiyonu) kullanmanın ana amacı nedir?",
+    "options": [
+      "Uygulama boyutunu küçültmek.",
+      "Kodun bağımlılıklarını dışarıdan sağlayarak test edilebilirliği ve kodun esnekliğini artırmak.",
+      "Veritabanı işlemlerini hızlandırmak.",
+      "İnternet bağlantısını kontrol etmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "DI, sınıfların kendi bağımlılıklarını yaratması yerine dışarıdan almasını sağlar. Bu sayede test yaparken gerçek sınıflar yerine 'mock' (sahte) sınıflar kolayca enjekte edilebilir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir mobil uygulamada 'REST API' üzerinden veri çekerken JSON formatının XML yerine tercih edilmesinin en büyük teknik sebebi nedir?",
+    "options": [
+      "JSON'ın daha renkli olması.",
+      "JSON'ın daha hafif (less verbose) olması ve mobil cihazlarda parse edilmesinin (ayrıştırılmasının) daha hızlı olması.",
+      "XML'in sadece masaüstü bilgisayarlarda çalışması.",
+      "JSON'ın otomatik olarak şifrelenmiş olması."
+    ],
+    "correctIndex": 1,
+    "explanation": "JSON, XML'e göre çok daha az karakter içerir (tag karmaşası yoktur), bu da ağ trafiğini azaltır ve işlemci tarafından daha kolay işlenir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "'Race Condition' terimi mobil geliştirme bağlamında neyi ifade eder?",
+    "options": [
+      "Uygulamanın açılış hız yarışı.",
+      "İki veya daha fazla thread'in aynı veriye aynı anda erişmeye çalışması sonucu oluşan tutarsızlık durumu.",
+      "İnternet hızının düşük olması.",
+      "Uygulamanın sadece spor oyunlarında hata vermesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin iki farklı arka plan işlemi aynı anda bir değişkeni güncellemeye çalışırsa, sonuç hangi işlemin önce bittiğine göre değişir ve bu hatalara yol açar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Mobil uygulamalarda 'Image Loading Library' (Glide, Picasso, Kingfisher, SDWebImage vb.) kullanmanın en önemli avantajı nedir?",
+    "options": [
+      "Resimlerin rengini otomatik değiştirmek.",
+      "Bellek (Memory) yönetimi, otomatik önbelleğe alma (caching) ve resim boyutlandırmayı kendiliğinden yapması.",
+      "Sadece belirli formatlardaki resimleri göstermesi.",
+      "Uygulamanın ikonunu değiştirmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Büyük resimlerin listelerde (List/Grid) kaydırılırken anında yüklenmesi ve belleği şişirmemesi için bu kütüphaneler karmaşık işlemleri (caching, downsampling) arka planda halleder."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Uygulamanızda 'Sensitive Data' (Şifre, Token vb.) saklamak için hangi yöntem en güvenlidir?",
+    "options": [
+      "Veriyi düz metin (Plain text) olarak bir veritabanında saklamak.",
+      "Android Keystore veya iOS Keychain gibi sistem düzeyindeki şifreli alanları kullanmak.",
+      "Veriyi uygulamanın içindeki bir değişkende saklamak.",
+      "Veriyi 'Strings' dosyasına yazmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sistem düzeyindeki güvenli alanlar, veriyi donanım destekli şifreleme ile saklar ve uygulamanız dışındaki süreçlerin bu veriye erişmesini engeller."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir mobil uygulamada 'Main Thread' (UI Thread) üzerinde çok uzun süren bir işlem (Örn: 10 saniyelik veritabanı sorgusu) yapıldığında ne olur?",
+    "options": [
+      "Uygulama daha hızlı çalışır.",
+      "Uygulama arayüzü donar (unresponsive) ve sistem 'ANR' (Application Not Responding) hatası verebilir.",
+      "İnternet hızı artar.",
+      "Ekran parlaklığı artar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kullanıcı arayüzü (UI) main thread üzerinden güncellenir. Eğer bu thread meşgul edilirse, kullanıcı dokunuşları algılanmaz ve uygulama donmuş gibi görünür."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Mobil uygulamalarda 'Error Handling' (Hata Yönetimi) yaparken neden sadece kullanıcıya 'Bir hata oluştu' mesajı göstermek yeterli değildir?",
+    "options": [
+      "Çünkü kullanıcı hatayı kendi tamir etmek ister.",
+      "Kullanıcının ne yapması gerektiğini anlaması için hatanın türüne göre (Örn: İnternet yok, Sunucu hatası vb.) yönlendirme yapılması gerektiği için.",
+      "Mesajın rengi kırmızı olmadığı için.",
+      "Hata mesajları sadece İngilizce olması gerektiği için."
+    ],
+    "correctIndex": 1,
+    "explanation": "İyi bir hata yönetimi, hatayı sınıflandırır (network, auth, validation) ve kullanıcıya çözüm yolu sunar (Örn: İnterneti kontrol et, Tekrar dene)."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Uygulamanızda 'Offline Support' (Çevrimdışı Destek) eklerken verilerin yerelde saklanması için en çok hangi yapı tercih edilir?",
+    "options": [
+      "Sadece RAM üzerinde değişkenlerde tutmak.",
+      "SQLite tabanlı bir yerel veritabanı (Room, Realm, Core Data) kullanmak.",
+      "Veriyi her seferinde buluta göndermek.",
+      "Veriyi bir .txt dosyasına yazmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Yerel veritabanları, verinin yapılandırılmış bir şekilde saklanmasını, filtrelenmesini ve internet geldiğinde sunucuyla senkronize edilmesini kolaylaştırır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Mobil uygulamalarda 'Pagination' (Sayfalama) mekanizmasının temel amacı nedir?",
+    "options": [
+      "Uygulamanın tasarımını daha karmaşık hale getirmek.",
+      "Büyük veri setlerini (Örn: 10.000 ürün) parça parça yükleyerek bellek kullanımını ve ağ trafiğini optimize etmek.",
+      "Sadece 10 sayfa veri gösterilmesine izin vermek.",
+      "İnternet hızını yapay olarak artırmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Tüm veriyi tek seferde çekmek hem cihazı kasar hem de kullanıcıyı bekletir. Pagination ile kullanıcı kaydırdıkça yeni veriler yüklenir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Uygulamanızda 'Third-party SDK' (Örn: Facebook SDK, Firebase SDK) eklerken en çok neye dikkat etmelisiniz?",
+    "options": [
+      "SDK'nın ikonunun rengine.",
+      "SDK'nın uygulama boyutu (binary size), güvenlik ve performans üzerindeki etkisine.",
+      "SDK'nın isminin uzunluğuna.",
+      "Sadece en eski SDK versiyonlarını kullanmaya."
+    ],
+    "correctIndex": 1,
+    "explanation": "Her SDK uygulamaya ek bir yük getirir. Gereksiz veya kötü optimize edilmiş bir SDK, uygulamanın çökmesine veya yavaşlamasına neden olabilir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Mobil geliştirmede 'Analytics' (Analitik) araçları (Örn: Firebase Analytics) neden kullanılır?",
+    "options": [
+      "Kullanıcının telefonundaki diğer uygulamaları görmek için.",
+      "Kullanıcıların uygulama içinde hangi özellikleri kullandığını ve nerede sorun yaşadığını anlamak için.",
+      "Uygulamayı otomatik olarak güncellemek için.",
+      "Pil durumunu ölçmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Analitik verileri, hangi ekranların popüler olduğunu veya kullanıcıların hangi aşamada uygulamadan çıktığını göstererek ürün geliştirmeye yön verir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir mobil uygulamada 'Memory Leak' (Bellek Sızıntısı) oluştuğunu nasıl anlarsınız?",
+    "options": [
+      "Uygulamanın rengi değişirse.",
+      "Uygulama kullanıldıkça RAM kullanımı sürekli artıyor ve bir süre sonra uygulama çöküyorsa (Out of Memory).",
+      "İnternet hızı düşüyorsa.",
+      "Sadece şarj kablosu takılıyken hata veriyorsa."
+    ],
+    "correctIndex": 1,
+    "explanation": "Memory leak, artık ihtiyaç duyulmayan objelerin bellekten silinememesi durumudur. Profiler araçları ile RAM grafiğindeki anormal artışlar izlenerek tespit edilir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Mobil uygulamalarda 'Code Obfuscation' (Kod Karıştırma) işlemi neden yapılır?",
+    "options": [
+      "Kodun daha hızlı çalışması için.",
+      "Uygulamanın kaynak kodunun tersine mühendislik (reverse engineering) ile kolayca okunmasını zorlaştırmak için.",
+      "Koddaki hataları otomatik silmek için.",
+      "Kodun daha güzel görünmesi için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Obfuscation, sınıf ve fonksiyon isimlerini anlamsız karakterlere dönüştürerek uygulamanın çalınmasını veya güvenlik açıklarının bulunmasını zorlaştırır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir mobil uygulamada 'Feature Toggle' (Özellik Bayrağı) kullanımı ne işe yarar?",
+    "options": [
+      "Uygulamanın dilini değiştirmeye.",
+      "Yeni bir özelliği uygulama güncellenmeden sunucu tarafında açıp kapatabilmeye.",
+      "Kullanıcının şifresini değiştirmeye.",
+      "Telefonu yeniden başlatmaya."
+    ],
+    "correctIndex": 1,
+    "explanation": "Feature toggle, riskli bir özelliği kademeli olarak kullanıcılara açmak veya bir sorun anında özelliği anında devre dışı bırakmak için kullanılır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Mobil uygulamalarda 'UI Testing' (Örn: Espresso, XCUITest) yazmanın temel zorluğu nedir?",
+    "options": [
+      "Kod yazmanın çok kolay olması.",
+      "Testlerin 'flaky' (tutarsız) olabilmesi ve asenkron işlemlerin (network gibi) senkronizasyon gerektirmesi.",
+      "Sadece gerçek cihazlarda çalışması.",
+      "Tasarımın bozulmasına neden olması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Arayüz testleri ağ hızı, animasyonlar ve cihaz hızı gibi dış etkenlerden etkilenir. Bu yüzden bazen geçip bazen kalabilirler (flaky)."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil bir uygulamada 'Vector' (SVG/PDF/VectorDrawable) formatındaki görsellerin 'Bitmap' formatına göre en büyük mimari avantajı nedir?",
+    "options": [
+      "Daha fazla renk derinliği sunmaları.",
+      "Matematiksel tanımlandıkları için çözünürlükten bağımsız (resolution independent) olmaları ve farklı ekran yoğunlukları için ayrı dosyalar gerektirmemeleri.",
+      "Sadece siyah-beyaz ekranlarda çalışmaları.",
+      "GPU kullanımını tamamen ortadan kaldırmaları."
+    ],
+    "correctIndex": 1,
+    "explanation": "Vektörler her boyutta keskin kalır ve çok az yer kaplar. Ancak çok karmaşık çizimler (Örn: Fotoğraf) CPU yükü artacağı için vektör olarak tercih edilmez."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızın 'Binary Size'ını düşürmek için 'Dynamic Delivery' (veya App Bundles/On-demand) yaklaşımını kullandığınızda mimaride ne değişir?",
+    "options": [
+      "Uygulamanın hızı her cihazda aynı kalır.",
+      "Uygulama parçalara (module) ayrılır ve bazı özellikler sadece kullanıcı ihtiyaç duyduğunda (indirildiğinde) yüklenir.",
+      "Uygulama sadece web üzerinden çalışmaya başlar.",
+      "Tüm resimler silinir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dynamic delivery, tüm kodun tek seferde indirilmesi yerine, örneğin sadece 'Ödeme' modülünün ödeme sayfasına girildiğinde indirilmesini sağlayarak ilk yükleme boyutunu düşürür."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil bir uygulamada 'Background Sync' işlemi sırasında sistemin uygulamayı sonlandırmasını (OS termination) önlemek için en güvenilir mimari çözüm nedir?",
+    "options": [
+      "Uygulamayı sürekli 'foreground' modunda tutmak.",
+      "OS'in sağladığı 'Background Task' API'larını kullanarak süre istemek veya kısıtlı sürede işi bitirmek için optimize etmek.",
+      "Kullanıcıya ekranı kapatmamasını söylemek.",
+      "Sürekli ses çalmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "İşletim sistemleri arka planda kaynak tüketen uygulamaları agresif şekilde kapatır. Resmi API'lar üzerinden sistemle konuşmak, işin yarım kalma riskini azaltır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızda 'Scalability' (Ölçeklenebilirlik) hedefliyorsanız, 'Singleton' pattern'i kullanırken en çok neye dikkat etmelisiniz?",
+    "options": [
+      "Singleton sınıfının ismine.",
+      "Singleton'ın global state tutması nedeniyle 'State pollution' (durum kirliliği) yaratması ve unit testleri zorlaştırması riskine.",
+      "Uygulamanın ikonuna.",
+      "Sadece tek bir thread'de çalışmasına."
+    ],
+    "correctIndex": 1,
+    "explanation": "Singleton'lar bellekten uygulama kapanana kadar silinmez. Yanlış kullanımda farklı modüller arasında gizli bağımlılıklar ve test edilemez kod blokları oluştururlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil cihazlarda 'TLS/SSL Certificate Pinning' kullanmanın, mülkiyetin (ownership) sizde olmadığı ağlarda (Örn: Herkese açık Wi-Fi) sağladığı en büyük güvenlik avantajı nedir?",
+    "options": [
+      "İnternet hızını artırması.",
+      "Cihaza güvenilmeyen bir sertifika yüklenerek trafiğin izlenmesini (MitM saldırısı) engellemesi.",
+      "Uygulamanın dilini değiştirmesi.",
+      "Pil ömrünü uzatması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Certificate Pinning ile uygulama sadece sizin sunucunuzun özel sertifikasını tanır. Aradaki saldırgan sahte bir sertifika kullansa bile uygulama bağlantıyı reddeder."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Büyük ölçekli bir mobil projede 'Design System' (Tasarım Sistemi) uygulamanın mühendislik tarafındaki karşılığı nedir?",
+    "options": [
+      "Sadece renkleri bir dosyada toplamak.",
+      "Atomik bileşenler (Atomic Design) yaratarak UI'ın tutarlılığını sağlamak ve kod tekrarını minimize etmek.",
+      "Daha fazla kütüphane kullanmak.",
+      "Sadece tasarımcıların koda erişmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Design System, butonlardan giriş alanlarına kadar her şeyin standartlaştırılmış kod bileşenleri haline getirilmesidir. Bu, hem UI geliştirmeyi hızlandırır hem de hatayı azaltır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızda 'Multi-threading' kullanırken 'Deadlock' oluşmasını nasıl engellersiniz?",
+    "options": [
+      "Thread sayısını bire indirerek.",
+      "Kaynaklara erişim sırasını standardize ederek ve lock (kilit) mekanizmalarını minimumda tutarak.",
+      "İnterneti kapatarak.",
+      "Uygulamayı her 5 dakikada bir yeniden başlatarak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Deadlock, iki thread'in birbirinin elindeki kaynağı bırakmasını beklemesi durumudur. İyi tasarlanmış asenkron yapılar ve doğru thread yönetimi ile önlenir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil mülakatlarda sıkça sorulan 'Solid' prensiplerinden 'Interface Segregation'ın mobil geliştirme pratiğindeki örneği nedir?",
+    "options": [
+      "Tüm özellikleri tek bir büyük Interface'e koymak.",
+      "Bir 'Listener' veya 'Delegate' yapısını çok fazla metodla şişirmek yerine, özelleşmiş ve küçük arayüzlere bölmek.",
+      "Sadece sınıflar kullanmak.",
+      "Uygulamanın arayüzünü (UI) gizlemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Adayın gereksiz metodları implemente etmek zorunda kalmaması için interface'ler mümkün olduğunca küçük ve amaca yönelik tutulmalıdır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızın 'Security Audit' (Güvenlik Denetimi) sırasında 'Hardcoded API Keys' bulgusu çıktı. Bu riskli anahtarları korumak için en profesyonel yaklaşım nedir?",
+    "options": [
+      "Anahtarları kodun içinde şifreli bir değişkende tutmak.",
+      "Anahtarları build zamanında enjekte etmek (Secret management) veya sunucu tarafında bir proxy üzerinden yönetmek.",
+      "Anahtarları silmek.",
+      "Anahtarları sadece .txt dosyasında tutmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kodun içine gömülen anahtarlar ne kadar karmaşık görünse de 'decompile' edilerek kolayca çalınabilir. Dinamik veya dış kaynaklı yönetim daha güvenlidir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil uygulamalarda 'Memory Profiling' yaparken 'Heap Dump' analizi size neyi gösterir?",
+    "options": [
+      "Uygulamanın ne kadar hızlı çalıştığını.",
+      "Belli bir andaki bellek kullanım detaylarını, hangi objenin ne kadar yer kapladığını ve neden silinemediğini.",
+      "İnternet trafiğinin detaylarını.",
+      "İşlemcinin (CPU) o anki sıcaklığını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Heap dump, bellek sızıntılarını bulmak için en güçlü araçtır. Hangi objelerin gereksiz yere bellekte tutulduğunu 'leak path' üzerinden gösterir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızda 'Clean Architecture' uygularken 'Domain' katmanının diğer katmanlardan (Data/UI) bağımsız olması neden istenir?",
+    "options": [
+      "Domain katmanının daha az yer kaplaması için.",
+      "İş mantığının (Business Logic) teknolojik değişikliklerden (Örn: Veritabanı veya API değişimi) etkilenmemesi ve saf kod olarak test edilebilmesi için.",
+      "Domain katmanının sadece Android'de çalışması için.",
+      "Kodun daha yavaş derlenmesi için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eğer iş mantığınız veritabanı kütüphanesine bağımlıysa, kütüphane değiştiğinde tüm uygulama bozulur. Bağımsızlık, sürdürülebilirliği sağlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil uygulamalarda 'App Thinning' (veya Slicing) teknolojisi neyi ifade eder?",
+    "options": [
+      "Uygulamanın tasarımını inceltmeyi.",
+      "Cihazın sadece kendi mimarisine ve ekran çözünürlüğüne uygun olan kısımları indirmesini sağlayarak paket boyutunu optimize etmeyi.",
+      "Pil tüketimini azaltmayı.",
+      "Uygulamayı daha basit hale getirmeyi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin x64 işlemcili bir iPad, uygulamanın x32 (arm) kısımlarını indirmez. Bu, kullanıcıya sadece ihtiyacı olan veriyi sunar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızda 'Functional Programming' (Örn: Higher-order functions) kullanmanın mobil state yönetimine en büyük katkısı nedir?",
+    "options": [
+      "Daha az kod satırı yazılması.",
+      "State'in 'immutable' (değiştirilemez) olmasını teşvik ederek yan etkileri (side-effects) azaltması ve debugging'i kolaylaştırması.",
+      "Uygulamanın daha renkli görünmesi.",
+      "İnternet hızını artırması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Değiştirilemez state yapıları, verinin nerede ve ne zaman değiştiğini takip etmeyi çok daha kolaylaştırır, thread güvenliğini artırır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil mülakatlarda sorulan 'Reactive Programming' (RxSwift, RxJava, Flow) yaklaşımının temel 'Stream' mantığı nedir?",
+    "options": [
+      "Veriyi sadece bir kez çekip bırakmak.",
+      "Veriyi zaman içinde akan bir dizi olay (event stream) olarak görüp, bu akışa abone olarak değişimleri anlık takip etmek.",
+      "Sadece video stream işlemleri için kullanmak.",
+      "Uygulamanın internetini kesmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Reaktif yaklaşım, kullanıcı bir input girdiğinde veya bir veri güncellendiğinde tüm UI'ın bu akışa göre otomatik güncellenmesini sağlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızda 'Accessibility' (Erişilebilirlik - TalkBack/VoiceOver) desteği vermenin mühendislik tarafındaki karşılığı sadece etiket (label) eklemek midir?",
+    "options": [
+      "Evet, sadece metinleri eklemek yeterlidir.",
+      "Hayır; hiyerarşik odak yönetimi, kontrast oranları ve dinamik font boyutlarına uyum gibi teknik gereksinimleri de kapsar.",
+      "Sadece görme engelli kullanıcılar için bir ayardır.",
+      "Erişilebilirlik sadece web siteleri için geçerlidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Erişilebilirlik, uygulamanın her türlü kullanıcı (motor bozukluğu, düşük görme vb.) için mantıksal bir akışla ve doğru araçlarla kullanılabilir olmasıdır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil mülakatlarda 'Native vs Cross-platform' sorusuna bir Senior adayın vermesi gereken en dengeli yanıt nedir?",
+    "options": [
+      "Native her zaman en iyisidir, diğerleri çöp.",
+      "Cross-platform her zaman daha ucuzdur, Native gereksizdir.",
+      "Projenin karmaşıklığı, donanım ihtiyacı, bütçe ve ekip yetkinliğine göre yapılan trade-off analizine göre karar verilmelidir.",
+      "Karar sadece müşterinin isteğine bağlıdır."
+    ],
+    "correctIndex": 2,
+    "explanation": "Her iki yaklaşımın da avantajı (hız, performans, maliyet) vardır. Senior aday, teknoloji fanatikliği yapmak yerine iş ihtiyacına göre rasyonel seçim yapmalıdır."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir mobil uygulamada 'Performance Bottleneck' (Performans Darboğazı) tespiti için en etkili yöntem hangisidir?",
+    "options": [
+      "Kodu satır satır okumak.",
+      "Profiler araçları ile CPU, Memory, Network ve GPU grafiklerini eş zamanlı inceleyip anormallikleri saptamak.",
+      "Uygulamayı daha hızlı bir telefonda denemek.",
+      "Kodu baştan yazmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Profilleme, sorunun gerçek kaynağını (Örn: Çok fazla render, sızıntı yapan thread vb.) verilerle kanıtlamamızı sağlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızın 'Global Launch' (Dünya geneli lansman) öncesi 'Localization' (Yerelleştirme) stratejisinde sadece metin çevirisi yapmak yeterli midir?",
+    "options": [
+      "Evet, İngilizceye çevirmek yeterlidir.",
+      "Hayır; tarih/saat formatları, para birimleri, RTL (Sağdan sola yazı) desteği ve kültürel içerik uyumu da yönetilmelidir.",
+      "Sadece bayrak ikonlarını değiştirmek yeterlidir.",
+      "Yerelleştirme sadece büyük uygulamalar içindir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Arapça gibi sağdan sola (RTL) dillerde UI'ın tamamen aynalanması (mirrored) gerekir. Bu, sadece metin çevirisiyle çözülemeyecek bir mühendislik işidir."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil geliştirmede 'CI/CD' (Sürekli Entegrasyon/Dağıtım) süreçlerinin (Örn: Fastlane) ekibe kazandırdığı en somut değer nedir?",
+    "options": [
+      "Kodun daha kaliteli olmasını sağlamak.",
+      "Testlerin otomatik koşulması, beta sürümlerinin dağıtımı ve markete gönderim süreçlerinin insan hatasından arındırılıp otomatikleşmesi.",
+      "Geliştiricilerin daha az çalışmasını sağlamak.",
+      "Uygulamanın daha renkli olmasını sağlamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Manuel markete gönderim süreci hataya çok açıktır. Otomasyon, her commit sonrası kodun doğruluğundan emin olunmasını ve hızlı teslimatı sağlar."
+  },
+  {
+    "category": "mobile",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Uygulamanızda 'Micro-interactions' (Mikro etkileşimler) eklerken performansın düşmemesi için mühendislik tarafında neye dikkat etmelisiniz?",
+    "options": [
+      "Animasyonların çok uzun sürmesine.",
+      "Animasyonların ana thread (Main Thread) yerine GPU hızlandırmalı (Hardware acceleration) çalışmasına ve gereksiz 'layout pass' tetiklememesine.",
+      "Sadece GIF kullanılmasına.",
+      "Animasyonların siyah-beyaz olmasına."
+    ],
+    "correctIndex": 1,
+    "explanation": "Ağır animasyonlar main thread'i meşgul ederse uygulama 'takılıyor' gibi görünür. Akıcı bir deneyim için verimli rendering teknikleri şarttır."
+  }
+]

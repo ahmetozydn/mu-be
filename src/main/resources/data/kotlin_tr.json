@@ -1,0 +1,842 @@
+[
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de `val` ve `var` anahtar kelimeleri arasındaki temel fark nedir?",
+    "options": [
+      "`val` sadece sayılar için kullanılır, `var` metinler için.",
+      "`val` değiştirilemez (read-only) bir referans tanımlarken, `var` değeri sonradan değiştirilebilen bir değişken tanımlar.",
+      "`var` daha hızlı çalışır çünkü bellek yönetimi daha basittir.",
+      "İkisi de tamamen aynıdır, sadece yazım tercihi farkı vardır."
+    ],
+    "correctIndex": 1,
+    "explanation": "`val` (value) bir kez atandıktan sonra tekrar atanamaz (final gibi). `var` (variable) ise çalışma zamanında istenildiği kadar güncellenebilir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'in en önemli özelliklerinden biri olan 'Null Safety' mekanizmasında, bir değişkenin `null` olabileceğini belirtmek için hangi işaret kullanılır?",
+    "options": [
+      "Değişken isminin başına `!` konur.",
+      "Tip tanımının sonuna `?` işareti eklenir (Örn: `String?`).",
+      "Sadece `null` anahtar kelimesi yazılır.",
+      "Kotlin'de değişkenler hiçbir zaman null olamaz."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kotlin derleyicisi varsayılan olarak null değerlere izin vermez. `?` işareti ile geliştirici, bu değerin boş olabileceğini açıkça kabul eder ve derleyiciyi uyarır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'deki 'Scope Functions' (let, run, with, apply, also) arasındaki farkları belirleyen en temel iki kriter nedir?",
+    "options": [
+      "Hangi thread üzerinde çalıştıkları ve bellek kullanım oranları.",
+      "Nesneye erişim biçimi (it veya this) ve geriye döndürdükleri sonuç (bağlam nesnesi veya lambda sonucu).",
+      "Sadece fonksiyonun isminin uzunluğu ve kullanım sıklığı.",
+      "Dahili veritabanı bağlantı yetenekleri."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin `apply` bağlam nesnesini (`this`) döndürürken, `let` lambda sonucunu döndürür ve nesneye `it` ile erişir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de 'Extension Functions' (Genişletme Fonksiyonları) ne sağlar?",
+    "options": [
+      "Uygulamanın ekran boyutunu genişletir.",
+      "Mevcut bir sınıfın (Örn: String, List) kaynak koduna dokunmadan ona yeni fonksiyonlar ekleme yeteneği kazandırır.",
+      "İnternet hızını artıran özel protokollerdir.",
+      "Sadece veritabanı tablolarını genişletmek için kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Extension functions sayesinde, örneğin `String` sınıfına `isValidEmail()` gibi metodlar ekleyerek sanki sınıfın kendi metoduymuş gibi kullanabiliriz."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin Coroutines'te `Dispatchers.Main`, `Dispatchers.IO` ve `Dispatchers.Default` arasındaki fark nedir?",
+    "options": [
+      "Main internet için, IO dosya sistemi için kullanılır.",
+      "Main UI işlemleri için, IO ağ/disk gibi giriş-çıkış işlemleri için, Default ise CPU yoğunluklu matematiksel işlemler için optimize edilmiştir.",
+      "Sadece isimleri farklıdır, arka planda aynı thread havuzunu kullanırlar.",
+      "Default her zaman en yavaş olanıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dispatcher'lar, iş yükünün türüne göre thread yönetimini optimize eder. Yanlış dispatcher kullanımı UI donmalarına veya düşük performansa yol açabilir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'de 'Sealed Class' kullanımının 'Enum' kullanımına göre en büyük mimari avantajı nedir?",
+    "options": [
+      "Sealed classlar daha az RAM kaplar.",
+      "Enumlar sadece sabit değerler tutarken; Sealed classlar her bir alt sınıfı (subclass) için farklı state'ler (veriler) ve instance'lar barındırabilir.",
+      "Sealed classlar sadece internet varken çalışır.",
+      "Sadece Sealed classlar `when` ifadesiyle kullanılabilir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sealed classlar 'kısıtlanmış hiyerarşi' sunar. Her bir state (Örn: Success, Error) kendi özel veri yapısına (data) sahip olabilir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de bir 'Data Class' tanımlandığında, derleyici otomatik olarak hangi metodları bizim yerimize oluşturur?",
+    "options": [
+      "Sadece `print()` metodunu.",
+      "`equals()`, `hashCode()`, `toString()`, `copy()` ve `componentN()` metodlarını.",
+      "Veritabanı bağlantı metodlarını.",
+      "Görsel arayüz render metodlarını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Data classlar veri saklamak için optimize edilmiştir. Derleyici bu standart metodları oluşturarak bizi 'boilerplate' kod yazmaktan kurtarır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'deki `lateinit var` ve `by lazy` arasındaki temel fark nedir?",
+    "options": [
+      "Lateinit sadece sayılar içindir.",
+      "Lateinit bir değişkenin sonradan initialize edileceğini vaat eder; by lazy ise değişkene ilk kez erişildiği anda atamanın yapılmasını (lazy initialization) sağlar.",
+      "By lazy sadece `var` ile kullanılır.",
+      "Arada hiçbir fark yoktur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Lateinit `var` ile kullanılır ve değeri siz atarsınız. By lazy ise `val` ile kullanılır ve değeri ilk erişimde otomatik hesaplanır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'de `inline` fonksiyon kullanmanın, özellikle lambda parametresi alan fonksiyonlarda sağladığı temel fayda nedir?",
+    "options": [
+      "Kodun daha şifreli görünmesini sağlar.",
+      "Fonksiyonun ve lambdanın çağrıldığı yere kopyalanmasını sağlayarak (inlining), runtime'da ekstra nesne oluşturma ve metod çağrısı maliyetini (overhead) ortadan kaldırır.",
+      "Uygulamanın dosya boyutunu küçültür.",
+      "Sadece matematiksel fonksiyonlarda hızı artırır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Yüksek seviyeli fonksiyonlarda (higher-order functions) her lambda bir nesne yaratır. `inline` bu maliyeti sıfıra indirerek performansı artırır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de 'Higher-Order Functions' (Yüksek Seviyeli Fonksiyonlar) terimi ne anlama gelir?",
+    "options": [
+      "Sadece işletim sistemi seviyesindeki fonksiyonlardır.",
+      "Parametre olarak başka bir fonksiyon alan veya geriye bir fonksiyon döndüren fonksiyonlardır.",
+      "Uygulamanın en üst satırında tanımlanan fonksiyonlardır.",
+      "Sadece matematiksel limit işlemlerini yapan fonksiyonlardır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kotlin'de fonksiyonlar 'first-class citizen'dır. Yani değişken gibi taşınabilir ve başka fonksiyonlara argüman olarak verilebilirler."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de metin birleştirme (String Interpolation) işlemi en şık nasıl yapılır?",
+    "options": [
+      "String.concat() metodunu kullanarak.",
+      "Metin içinde değişken adının başına `$` koyarak (Örn: \"Merhaba $name\").",
+      "Sadece `+` operatörü ile uç uca ekleyerek.",
+      "Metinleri önce listeye çevirip sonra birleştirerek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kotlin'de `$` işareti ile değişkenleri, `${}` ile de karmaşık ifadeleri metin içine doğrudan gömebiliriz."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de 'Elvis Operator' (`?:`) ne amaçla kullanılır?",
+    "options": [
+      "Görsel efektler eklemek için.",
+      "Bir değer `null` ise, alternatif (varsayılan) bir değer dönmek için.",
+      "Kodun içindeki hataları otomatik düzeltmek için.",
+      "Sadece müzik uygulamalarında kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `val length = s?.length ?: 0` ifadesinde, eğer `s` null ise sonuç 0 olur."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de bir fonksiyona varsayılan parametre (Default Argument) vermek ne sağlar?",
+    "options": [
+      "Fonksiyonun hızını artırır.",
+      "Fonksiyonu çağırırken bazı parametreleri boş geçebilmemizi ve kod tekrarından (overloading) kaçınmamızı sağlar.",
+      "Sadece internet bağlantısı varken çalışmasını sağlar.",
+      "Değişken isimlerini gizler."
+    ],
+    "correctIndex": 1,
+    "explanation": "Java'daki gibi 5 farklı overload yazmak yerine, `fun log(msg: String, level: Int = 1)` diyerek tek fonksiyonla işi çözebiliriz."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `companion object` kavramının temel görevi nedir?",
+    "options": [
+      "Nesneleri otomatik yedeklemek.",
+      "Bir sınıfa ait statik benzeri üyeleri (metod veya property) tutmak ve bunlara sınıf ismi üzerinden erişilmesini sağlamak.",
+      "İki sınıfı birbirine arkadaş yapmak.",
+      "Sadece şifre saklamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kotlin'de `static` anahtar kelimesi yoktur. Bunun yerine sınıf seviyesindeki üyeler `companion object` içinde tanımlanır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `init` bloğu ne işe yarar?",
+    "options": [
+      "Uygulamayı internete bağlar.",
+      "Nesne (instance) oluşturulurken çalışan ve başlangıç hazırlıklarını (initialization) yapan kod bloğudur.",
+      "Sadece değişkenleri silmek için kullanılır.",
+      "Hataları yakalamak için kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Primary constructor parametre alabilir ama kod içeremez. Bu yüzden nesne yaratılırken çalışması gereken mantık `init` bloğuna yazılır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de 'Range' (Aralık) kavramı `for` döngüsünde nasıl kullanılır?",
+    "options": [
+      "list.start() ile.",
+      "1..10 gibi bir sözdizimi ile belirli bir aralıktaki sayılar üzerinde dönmek için.",
+      "Sadece alfabe sırasına göre.",
+      "Döngüleri tamamen durdurur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `for (i in 1..5)` ifadesi 1'den 5'e kadar (dahil) sayıları döner."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `any`, `all` ve `none` koleksiyon fonksiyonları neyi döner?",
+    "options": [
+      "Listenin tamamını.",
+      "Belirtilen koşula göre bir 'Boolean' (true/false) değer dönerler.",
+      "Listenin sadece ilk elemanını.",
+      "Hata mesajı dönerler."
+    ],
+    "correctIndex": 1,
+    "explanation": "Any (herhangi biri uyuyor mu?), All (tamamı uyuyor mu?), None (hiçbiri uymuyor mu?) kontrolleri yapar."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin Coroutines'te 'Structured Concurrency' prensibi neyi ifade eder?",
+    "options": [
+      "Kodun daha karmaşık yazılmasını.",
+      "Yeni coroutine'lerin belirli bir scope (kapsam) içinde başlatılarak, yaşam döngülerinin otomatik yönetilmesini ve sızıntıların (leaks) önlenmesini.",
+      "Tüm coroutine'lerin aynı anda başlamasını.",
+      "Veritabanı işlemlerinin sırayla yapılmasını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bir scope iptal edildiğinde (Örn: Ekran kapatıldığında), içindeki tüm alt coroutine'lerin de otomatik iptal edilmesi bu prensibin en güzel örneğidir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin Multiplatform (KMP) projelerinde `expect` ve `actual` anahtar kelimeleri ne amaçla kullanılır?",
+    "options": [
+      "Sadece hata ayıklama için.",
+      "Ortak modülde (common) bir API tanımı yapıp (expect), her platformda (iOS/Android) o platforma özel gerçeklemesini (actual) yazmak için.",
+      "Uygulamanın hızını ölçmek için.",
+      "Değişkenleri gizlemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin cihazın pil seviyesini okumak her platformda farklıdır. `expect` ile fonksiyonu tanımlar, Android ve iOS klasörlerinde `actual` ile kodunu yazarız."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'de 'Reified Type Parameters' (inline functions ile birlikte) neden kullanılır?",
+    "options": [
+      "Bellek miktarını artırmak için.",
+      "Runtime'da silinen (type erasure) generic tip bilgisini, inline fonksiyonlar içinde korunarak tip kontrolü (`is T`) yapabilmemizi sağladığı için.",
+      "Sadece dosya kopyalama işlemlerinde.",
+      "İnternet protokollerini belirlemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Normal generic'lerde `T::class.java` yapılamaz. Ancak `reified` keywordü ile tip bilgisine çalışma zamanında erişebiliriz."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de 'Smart Cast' özelliği nedir?",
+    "options": [
+      "Veritabanı tablolarını otomatik eşleştirme.",
+      "Derleyicinin tip kontrolü yapıldıktan sonra (`is` ile) değişkeni otomatik olarak o tipe dönüştürmesi (manuel cast gerektirmez).",
+      "Uygulamanın temasını akıllıca değiştirme.",
+      "Belleği akıllıca temizleme."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eğer `if (x is String)` kontrolü geçtiyse, blok içinde `x` otomatik olarak `String` gibi davranır; ekstra `(String)x` yazmaya gerek kalmaz."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `object` anahtar kelimesi ile tanımlanan bir yapı neyi ifade eder?",
+    "options": [
+      "Herhangi bir değişkeni.",
+      "Uygulama ömrü boyunca sadece tek bir örneği (instance) olan 'Singleton' bir yapıyı.",
+      "Dosya sistemi objesini.",
+      "Sadece internet ayarlarını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kotlin'de `object MySingleton {}` diyerek ek bir kod yazmadan thread-safe bir Singleton oluşturmuş olursunuz."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de bir sınıfa ait metodların varsayılan erişim belirleyicisi (Visibility Modifier) nedir?",
+    "options": [
+      "private",
+      "public",
+      "protected",
+      "internal"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kotlin'de her şey aksi belirtilmedikçe `public`'tir. Java'daki varsayılan (package-private) yerine Kotlin'de `internal` vardır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `sealed interface` ve `sealed class` arasındaki temel fark nedir?",
+    "options": [
+      "Interface daha hızlıdır.",
+      "Interface çoklu kalıtıma izin verir (bir sınıf birden fazla interface implemente edebilir), class ise tek kalıtıma dayanır.",
+      "Sadece classlar state tutabilir.",
+      "Interface sadece mobil cihazlarda çalışır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sealed hiyerarşilerde de aynı kurallar geçerlidir; interface'ler daha esnek bir yapı kurmamıza olanak tanır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin Coroutines'te 'Job' ve 'Deferred' arasındaki fark nedir?",
+    "options": [
+      "Deferred sadece hataları tutar.",
+      "Job bir işi temsil eder ve sonuç dönmez; Deferred ise bir sonuç dönen (awaitable) bir Job türüdür.",
+      "Job daha yavaştır.",
+      "Deferred sadece ağ isteklerinde kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "`launch` fonksiyonu bir Job dönerken, `async` fonksiyonu sonuç bekleyebileceğimiz bir `Deferred<T>` döner."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de `is` operatörü ne işe yarar?",
+    "options": [
+      "İki değişkeni karşılaştırır.",
+      "Bir nesnenin belirli bir tipte olup olmadığını (Type Check) kontrol eder.",
+      "Değişkenin değerini artırır.",
+      "İnternet bağlantısını kontrol eder."
+    ],
+    "correctIndex": 1,
+    "explanation": "Java'daki `instanceof` operatörünün Kotlin'deki karşılığıdır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de 'Primary Constructor' (Birincil Yapıcı) nerede tanımlanır?",
+    "options": [
+      "Sınıfın en sonunda.",
+      "Sınıf isminin hemen yanında, parantez içinde.",
+      "Sınıfın dışında ayrı bir dosyada.",
+      "Sadece metodların içinde."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `class User(val id: Int)` şeklinde sınıf deklarasyonu ile birlikte parametreler tanımlanır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'deki `crossinline` anahtar kelimesi lambda parametreleri için neyi garanti eder?",
+    "options": [
+      "Lambdanın her zaman paralel çalışacağını.",
+      "Inline fonksiyon içindeki lambdanın, çevrelendiği (enclosing) fonksiyondan erken çıkış (non-local return) yapamayacağını garanti eder.",
+      "Lambdanın bellekten silinmeyeceğini.",
+      "Sadece sayılarla işlem yapılacağını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eğer lambda başka bir scope içinde (Örn: iç içe fonksiyon) çağrılıyorsa, dış fonksiyonu kırmaması için `crossinline` ile korunur."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de listeler (List) varsayılan olarak nasıldır?",
+    "options": [
+      "Sadece sayılardan oluşur.",
+      "Immutable (Değiştirilemez); eğer eleman ekleyip silmek istiyorsanız `MutableList` kullanmalısınız.",
+      "Sınırsız boyuttadır.",
+      "Her zaman alfabetik sıralıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kotlin'de salt-okunur (read-only) ve değiştirilebilir (mutable) koleksiyon ayrımı, hata payını azaltan çok güçlü bir özelliktir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de 'Operator Overloading' (Operatör Aşırı Yükleme) nasıl yapılır?",
+    "options": [
+      "Sadece sistem dosyalarını değiştirerek.",
+      "`operator` anahtar kelimesi ile belirli metodları (Örn: plus, minus, invoke) tanımlayarak.",
+      "Yeni klavye kısayolları atayarak.",
+      "İşlemciye emir vererek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu sayede iki nesneyi (Örn: Point) `p1 + p2` şeklinde toplamak için `plus` metodunu overload edebiliriz."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin Coroutines'te `suspend` anahtar kelimesi tam olarak ne yapar?",
+    "options": [
+      "Bilgisayarı uyku moduna alır.",
+      "Fonksiyonun o anki thread'i bloklamadan çalışmasını durdurup (suspend), iş bittiğinde kaldığı yerden devam etmesini sağlar.",
+      "Veritabanı bağlantısını keser.",
+      "Metodu tamamen siler."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu özellik 'asenkron kodun senkronmuş gibi görünmesini' sağlar. Thread boşta kalır ve başka işler yapabilir; bu da ölçeklenebilirliği artırır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de 'Unit' tipi neyi ifade eder?",
+    "options": [
+      "Sayı birimlerini.",
+      "Herhangi bir anlamlı değer döndürmeyen fonksiyonların dönüş tipidir (Java'daki `void` dengi).",
+      "Uygulamanın bir modülünü.",
+      "İnternet hız ölçü birimini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kotlin'de her fonksiyon bir nesne döner. Değer dönmeyen fonksiyonlar aslında 'Unit' isimli tekil bir nesne dönerler."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `infix` fonksiyonların kullanımı ne sağlar?",
+    "options": [
+      "İnternet bağlantısını hızlandırır.",
+      "Fonksiyonu nokta ve parantez olmadan (Örn: `x step 2`) daha doğal bir dil gibi çağırmayı sağlar.",
+      "Sadece matematiksel işlemleri yapmayı.",
+      "Kodun şifrelenmesini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Infix fonksiyonlar sadece tek bir parametre alabilir ve bir sınıfın üyesi veya extension olmalıdırlar."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'de 'Property Delegation' (Örn: `by Delegates.observable`) ne amaçla kullanılır?",
+    "options": [
+      "Uygulama yetkilerini devretmek için.",
+      "Bir değişkenin (property) getter ve setter mantığını başka bir sınıfa devrederek kod tekrarını önlemek için.",
+      "Değişkenleri internet üzerinden paylaşmak için.",
+      "Bellek temizliğini geciktirmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin bir değer değiştiğinde otomatik log atmak veya UI güncellemek için delegation kullanılır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de bir dizeyi (string) büyük harfe çevirmek için hangi metod kullanılır?",
+    "options": [
+      "toUpper()",
+      "uppercase()",
+      "CAPS()",
+      "big()"
+    ],
+    "correctIndex": 1,
+    "explanation": "Modern Kotlin sürümlerinde `toUpperCase()` yerine daha standart olan `uppercase()` kullanımı önerilir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `apply` ve `also` scope fonksiyonları arasındaki temel fark nedir?",
+    "options": [
+      "Hız farkı.",
+      "`apply` bağlam nesnesini (`this`) döndürürken; `also` da bağlam nesnesini döndürür ama nesneye içerde `it` ismiyle erişilir.",
+      "`also` sadece listelerle çalışır.",
+      "İkisi de tamamen aynıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "`apply` genellikle nesne yapılandırmak (config) için, `also` ise yan etkileri (logging vb.) işlemek için tercih edilir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'de 'Inline Classes' (veya Value Classes) ne amaçla kullanılır?",
+    "options": [
+      "Satır arası kod yazmak için.",
+      "Runtime'da ekstra bir nesne oluşturma maliyeti olmadan, sadece tek bir değeri sarmalayan (wrapper) ve tip güvenliği sağlayan yapılar oluşturmak için.",
+      "Sadece CSS dosyalarını okumak için.",
+      "Uygulamayı küçültmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin `UserId(val value: Long)` yapısı, çalışma zamanında sadece bir `Long` gibi davranır ama kod yazarken hata yapmanızı engeller."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de bir fonksiyonun tek satırlık bir ifade olduğunu belirtmek için (Expression body) hangisi kullanılır?",
+    "options": [
+      "return { ... }",
+      "eşittir (`=`) sembolü.",
+      "Sadece köşeli parantez.",
+      "Fonksiyonu yazmamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `fun sum(a: Int, b: Int) = a + b` şeklinde çok daha kısa yazılabilir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `filter` ve `map` fonksiyonlarının farkı nedir?",
+    "options": [
+      "`filter` listeyi siler, `map` listeyi gösterir.",
+      "`filter` koşula uyan elemanları seçer; `map` ise her bir elemanı başka bir şekle/değere dönüştürür.",
+      "`map` sadece navigasyon uygulamalarında kullanılır.",
+      "İkisi de aynı işi yapar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: Sayıları filtreleyip (çift olanlar), sonra bu sayıların karesini almak (map) yaygın bir işlemdir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin Coroutines'te 'Exception Handling' (Hata Yönetimi) için `CoroutineExceptionHandler` ne zaman tetiklenmez?",
+    "options": [
+      "İnternet olmadığında.",
+      "`async` builder'ı ile başlatılan ve sonucu `await()` ile beklenen coroutine'lerde (hata await sırasında fırlatılır).",
+      "Sadece gece vakti.",
+      "Tüm hatalarda tetiklenir."
+    ],
+    "correctIndex": 1,
+    "explanation": "`launch` hataları anında yayarken (propagate), `async` hataları kapsüller ve siz sonucu istediğinizde ortaya çıkar."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de bir sınıfın miras alınabilmesi için (inheritance) sınıfın başına hangi anahtar kelime getirilmelidir?",
+    "options": [
+      "inherit",
+      "open",
+      "extend",
+      "base"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kotlin'de tüm sınıflar varsayılan olarak `final`'dır (miras alınamaz). Miras için `open` kelimesi şarttır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `backing field` (`field` anahtar kelimesi) ne amaçla kullanılır?",
+    "options": [
+      "Arka planda resim yüklemek için.",
+      "Bir property'nin özel getter veya setter metodları içinde, asıl veriyi tutan alana sonsuz döngüye girmeden erişmek için.",
+      "Veritabanı tablolarını gizlemek için.",
+      "Sadece statik değişkenlerde."
+    ],
+    "correctIndex": 1,
+    "explanation": "Setter içinde `this.property = value` yazarsanız setter'ı tekrar çağırıp sonsuz döngüye girersiniz. `field = value` bunu engeller."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'de 'Contract' API (Deneysel) neyi hedefler?",
+    "options": [
+      "Şirketler arasındaki hukuki sözleşmeleri.",
+      "Derleyiciye, bir fonksiyonun davranışları hakkında (Örn: Bu lambda sadece bir kez çalışacak) ek bilgi vererek, smart-cast gibi özelliklerin daha iyi çalışmasını sağlamak.",
+      "Kodun şifrelenmesini.",
+      "İnternet protokollerini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin `run` fonksiyonu içindeki bir değişken atamasının, dışarıda kesinlikle yapılmış olduğunu derleyicinin anlamasını sağlar."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de bir dize içindeki boşlukları temizleyen metod hangisidir?",
+    "options": [
+      "clear()",
+      "trim()",
+      "clean()",
+      "remove()"
+    ],
+    "correctIndex": 1,
+    "explanation": "`trim()` metod metnin başındaki ve sonundaki boşlukları temizler."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `require()` ve `check()` fonksiyonlarının farkı nedir?",
+    "options": [
+      "Hız farkı.",
+      "`require` fonksiyon parametrelerini (argument) kontrol etmek için kullanılır; `check` ise nesnenin o anki durumunu (state) kontrol etmek için kullanılır.",
+      "`check` sadece interneti kontrol eder.",
+      "İkisi de aynı hatayı (Exception) fırlatır."
+    ],
+    "correctIndex": 1,
+    "explanation": "`require` başarısız olursa `IllegalArgumentException`, `check` başarısız olursa `IllegalStateException` fırlatır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'de 'Flow' ve 'Channel' arasındaki temel fark nedir?",
+    "options": [
+      "Flow daha büyüktür.",
+      "Flow 'Cold' (Abone olunana kadar veri akmaz); Channel ise 'Hot' (Abone olunmasa da veri akışı olabilir veya veri orada bekler) bir yapıdadır.",
+      "Channel sadece mobil cihazlarda çalışır.",
+      "Flow sadece sayılar için kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Flow bir dizi (sequence) gibidir; her toplayıcı (collector) için işlemler baştan başlar. Channel ise bir boru (pipe) gibidir; veriyi paylaşır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de 'Triple' veri yapısı kaç tane eleman tutabilir?",
+    "options": [
+      "Sınırsız.",
+      "Tam olarak 3 tane (farklı tiplerde olabilir).",
+      "Sadece 2 tane.",
+      "Sadece bir tane."
+    ],
+    "correctIndex": 1,
+    "explanation": "Pair 2 eleman, Triple ise 3 eleman tutan, hafif veri taşıma yapılarıdır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `associateBy` ve `groupBy` arasındaki fark nedir?",
+    "options": [
+      "Hata mesajları farklıdır.",
+      "`associateBy` her bir anahtara karşılık TEK bir değer atar (son gelen kazanır); `groupBy` ise her bir anahtara karşılık bir LİSTE (list of values) oluşturur.",
+      "`groupBy` sadece isimlere göre sıralar.",
+      "İkisi de aynı sonucu döner."
+    ],
+    "correctIndex": 1,
+    "explanation": "Verileri ID'ye göre eşlemek istiyorsanız `associateBy`, kategorilere ayırmak istiyorsanız `groupBy` idealdir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'de 'Sealed Class' hiyerarşisinde 'exhaustive when' ne demektir?",
+    "options": [
+      "Yorucu bir döngü demektir.",
+      "Tüm alt sınıfların `when` ifadesi içinde ele alınmış olması zorunluluğudur; eğer biri eksikse ve `else` yoksa derleyici hata verir.",
+      "Sadece sayılarla yapılan kontroldür.",
+      "İnternet bağlantısının kopmasıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu özellik, yeni bir state eklendiğinde o state'in unutulmasını engeller ve güvenliği artırır."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de bir dizeyi (string) tam sayıya (int) çeviren metod hangisidir?",
+    "options": [
+      "convertToInt()",
+      "toInt()",
+      "makeNumber()",
+      "asInt()"
+    ],
+    "correctIndex": 1,
+    "explanation": "`\"123\".toInt()` şeklinde kullanılır. Eğer format hatalıysa hata fırlatır (Güvenli olanı `toIntOrNull()`'dur)."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de 'Destructuring Declarations' (Bileşenlerine Ayırma) ne sağlar?",
+    "options": [
+      "Dosyaları silmeyi.",
+      "Bir nesneyi (Örn: Data class veya Map) tek satırda birden fazla değişkene bölmeyi (Örn: `val (id, name) = user`).",
+      "Sadece resimleri küçültmeyi.",
+      "İnternet paketini bölmeyi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Data classların otomatik sunduğu `componentN` metodları sayesinde nesne içindeki verileri hızlıca dışarı çıkarabiliriz."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin Coroutines'te 'CoroutineContext' içindeki `plus` (`+`) operatörü ne yapar?",
+    "options": [
+      "İki sayıyı toplar.",
+      "İki farklı context öğesini (Örn: Dispatcher ve Job) birleştirerek yeni bir context oluşturur.",
+      "Sadece metinleri birleştirir.",
+      "Hataları toplar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `Dispatchers.IO + myJob` diyerek hem thread'i hem de yaşam döngüsünü belirleyen bir context oluşturulur."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de 'String Template' içindeki bir nesnenin metodunu çağırmak için hangisi doğrudur?",
+    "options": [
+      "\"Sonuç: $user.getName()\"",
+      "\"Sonuç: ${user.getName()}\"",
+      "\"Sonuç: @user.getName()\"",
+      "Sadece artı işareti ile."
+    ],
+    "correctIndex": 1,
+    "explanation": "Basit değişkenlerde `$` yeterlidir ama metod çağrısı veya işlem varsa süslü parantez `${}` zorunludur."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `flatBy` gibi görünüp aslında listenin listesini düzleştiren fonksiyonun adı nedir?",
+    "options": [
+      "unzip()",
+      "flatten()",
+      "level()",
+      "merge()"
+    ],
+    "correctIndex": 1,
+    "explanation": "`flatten()` fonksiyonu `List<List<T>>` yapısını tek bir `List<T>` haline getirir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin'de 'Variance' (in/out) anahtar kelimeleri generics'te ne sağlar?",
+    "options": [
+      "Bellek miktarını sınırlar.",
+      "Generic tipler arasındaki alt-üst tip ilişkisini (Subtyping) yöneterek, veriyi sadece okumaya (out) veya sadece yazmaya (in) izin vermeyi sağlar.",
+      "İşlemci hızını artırır.",
+      "Dosya formatlarını belirler."
+    ],
+    "correctIndex": 1,
+    "explanation": "`List<out T>` sadece veri çıkışı (read) sağlayabilir; bu sayede `List<String>` tipi `List<Any>` olarak güvenle kullanılabilir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de `when` ifadesi Java'daki hangi yapının daha gelişmiş halidir?",
+    "options": [
+      "if-else",
+      "switch-case",
+      "for döngüsü",
+      "try-catch"
+    ],
+    "correctIndex": 1,
+    "explanation": "`when` sadece sabitleri değil, aralıkları, tipleri ve karmaşık koşulları da kontrol edebilir; ayrıca bir değer döndürebilir (expression)."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `private set` ne amaçla kullanılır?",
+    "options": [
+      "Property'i tamamen gizlemek için.",
+      "Bir property'nin dışarıdan okunabilmesini (public get) ama sadece sınıf içinden değiştirilebilmesini (private set) sağlamak için.",
+      "Verileri şifrelemek için.",
+      "Daha hızlı set etmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Veri tutarlılığını korumak ve 'encapsulation' sağlamak için çok sık kullanılan bir yöntemdir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Kotlin Coroutines'te `yield()` fonksiyonu ne amaçla kullanılır?",
+    "options": [
+      "Döngüyü tamamen durdurmak için.",
+      "O an çalışan coroutine'in işlemciyi gönüllü olarak bırakarak, aynı thread üzerindeki diğer coroutine'lere şans vermesini sağlamak için.",
+      "Sadece hata anında çalışır.",
+      "İnternet hızını düşürmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Özellikle çok uzun süren CPU hesaplamalarında sistemin donmamasını ve diğer görevlerin de ilerlemesini sağlar."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Kotlin'de `any` anahtar kelimesi (tip olarak) neyi ifade eder?",
+    "options": [
+      "Hiçbir şeyi.",
+      "Kotlin'deki tüm sınıfların en tepesindeki ana sınıfı (Java'daki `Object` dengi).",
+      "Sadece sayıları.",
+      "Sadece internetten gelen verileri."
+    ],
+    "correctIndex": 1,
+    "explanation": "Her nesne bir `Any`'dir; ancak `Any?` hem nesne hem de null olabilir."
+  },
+  {
+    "category": "kotlin",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kotlin'de `it` anahtar kelimesi lambdalarda ne zaman otomatik tanımlanır?",
+    "options": [
+      "Hiçbir zaman.",
+      "Eğer bir lambda sadece tek bir parametre alıyorsa ve parametreye isim verilmediyse.",
+      "Sadece listelerle çalışırken.",
+      "Hata oluştuğunda."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `list.map { it.name }` kullanımı, `list.map { user -> user.name }` kullanımının kısa halidir."
+  }
+]

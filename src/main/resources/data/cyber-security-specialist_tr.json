@@ -1,0 +1,842 @@
+[
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi phishing saldırısının en tipik örneğidir?",
+    "options": [
+      "Yetkili bir kurum gibi davranıp kullanıcıdan parola veya kart bilgisi istemek.",
+      "Sunucu odasındaki kabloları değiştirmek.",
+      "Veritabanını yatay ölçeklemek.",
+      "Yedekleri farklı diske taşımak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Phishing, kullanıcıyı güvenilir bir kurum veya kişi olduğuna inandırarak hassas bilgi toplamayı hedefler. Teknik açık yerine insan güvenini suistimal ettiği için fark edilmesi zor olabilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Güçlü bir parolanın temel özelliği aşağıdakilerden hangisidir?",
+    "options": [
+      "Kullanıcının doğum tarihini içermesi.",
+      "Birden çok sistemde aynı parolanın kullanılması.",
+      "Tahmin edilmesi zor, uzun ve benzersiz olması.",
+      "Kısa ama sık değiştiriliyor olması."
+    ],
+    "correctIndex": 2,
+    "explanation": "Uzun ve benzersiz parolalar brute force ve credential stuffing riskini azaltır. Parolanın başka sistemlerle paylaşılmaması da ihlal etkisini sınırlar."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "MFA (Multi-Factor Authentication) kullanımının temel faydası nedir?",
+    "options": [
+      "Parolayı tamamen gereksiz hale getirmesi.",
+      "Tek bir bilginin çalınması durumunda hesabın ele geçirilmesini zorlaştırması.",
+      "Sistemdeki tüm açıkları otomatik kapatması.",
+      "Ağ trafiğini şifrelemeden güvenli hale getirmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "MFA, kullanıcıdan iki veya daha fazla farklı kanıt ister. Parola sızsa bile ikinci faktör olmadan erişim sağlanması zorlaşır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi malware için doğru bir tanımdır?",
+    "options": [
+      "Yalnızca ağ performansını ölçen yazılımlar.",
+      "Sadece yedekleme amacıyla çalışan servisler.",
+      "Sisteme zarar vermek, veri çalmak veya yetkisiz işlem yapmak için tasarlanmış zararlı yazılımlar.",
+      "Log toplama ajanlarının genel adı."
+    ],
+    "correctIndex": 2,
+    "explanation": "Malware, trojan, ransomware, spyware gibi birçok türü kapsar. Ortak noktaları sistem sahibinin çıkarına aykırı, gizli veya zararlı faaliyet yürütmeleridir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir URL'nin güvenli olup olmadığını değerlendirirken ilk dikkat edilmesi gerekenlerden biri hangisidir?",
+    "options": [
+      "Tarayıcı temasının rengi.",
+      "Alan adının beklenen kuruma gerçekten ait olup olmadığı.",
+      "Sayfadaki görsellerin çözünürlüğü.",
+      "Metin boyutunun büyük olması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Saldırganlar çoğu zaman meşru alan adına benzeyen sahte domain'ler kullanır. Yazım farkları, alt alan adları ve yanıltıcı URL yapıları bu yüzden dikkatle incelenmelidir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Antivirus yazılımının temel rolü nedir?",
+    "options": [
+      "Ağ gecikmesini azaltmak.",
+      "Sunucu donanımını otomatik onarmak.",
+      "Zararlı dosya ve davranışları tespit etmeye yardımcı olmak.",
+      "Veritabanı şemasını sürümlemek."
+    ],
+    "correctIndex": 2,
+    "explanation": "Antivirus tek başına yeterli savunma değildir, ancak bilinen imzalar veya şüpheli davranışlar üzerinden erken tespit sağlayabilir. Güncel tutulmadığında etkinliği hızla düşer."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi sosyal mühendislik saldırısına örnektir?",
+    "options": [
+      "Veritabanı index optimizasyonu yapmak.",
+      "Kendisini IT ekibi gibi tanıtıp kullanıcıdan doğrulama kodu istemek.",
+      "Sunucu kernel'ini güncellemek.",
+      "Şifreleri hash'lemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sosyal mühendislik, teknik açığı değil insan davranışını hedefler. İkna, korkutma veya acele ettirme gibi yöntemlerle kullanıcıdan normalde vermeyeceği bilgiler alınır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Patch management neden önemlidir?",
+    "options": [
+      "Tüm logları otomatik silmek için.",
+      "Bilinen güvenlik açıklarını kapatıp istismar riskini azaltmak için.",
+      "Sadece uygulama arayüzünü yenilemek için.",
+      "Şifrelemeyi gereksiz kılmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Birçok saldırı zaten bilinen ve yamalanmış açıklardan yararlanır. Yama yönetiminin zayıf olması saldırganlara gereksiz bir fırsat penceresi bırakır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi veri sızıntısı göstergesi olabilir?",
+    "options": [
+      "Beklenmedik saatlerde yüksek hacimli dış veri transferi görülmesi.",
+      "Sunucu saat diliminin UTC olması.",
+      "Çalışanların koyu tema kullanması.",
+      "Yedekleme süresinin kısa olması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Anomalik outbound trafik, veri dışarı çıkarma faaliyetinin işareti olabilir. Ancak bağlam önemlidir; bu nedenle normal davranış baseline'ı ile karşılaştırmak gerekir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi en az yetki (least privilege) ilkesini doğru açıklar?",
+    "options": [
+      "Kullanıcılara işlerini yapmaları için gereken minimum erişimi vermek.",
+      "Tüm çalışanlara admin erişimi tanımlamak.",
+      "Sadece dış kullanıcıların yetkilerini kısıtlamak.",
+      "Parolaları daha kısa yapmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Least privilege, bir hesabın ele geçirilmesi halinde zararın kapsamını sınırlar. Ayrıca yanlış yapılandırma ve iç tehdit riskini de azaltır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir dosyanın hash değerinin kontrol edilmesi hangi amaçla kullanılabilir?",
+    "options": [
+      "Dosya bütünlüğünü doğrulamak için.",
+      "Ağ yönlendirmesini değiştirmek için.",
+      "RAM miktarını artırmak için.",
+      "E-posta teslim süresini ölçmek için."
+    ],
+    "correctIndex": 0,
+    "explanation": "Hash karşılaştırması, dosyanın beklenmedik şekilde değişip değişmediğini görmek için kullanılır. Aynı hash her zaman güvenlik garantisi vermez ama bütünlük kontrolü için temel araçtır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi güvenli parola saklama yaklaşımına daha uygundur?",
+    "options": [
+      "Parolaları düz metin olarak veritabanında tutmak.",
+      "Parolaları geri döndürülebilir şekilde şifrelemek.",
+      "Parolaları salt ile birlikte güçlü bir hash algoritmasıyla saklamak.",
+      "Parolaları log dosyasına da yazmak."
+    ],
+    "correctIndex": 2,
+    "explanation": "Parolalar mümkünse geri döndürülebilir biçimde saklanmamalıdır. Salt ve uygun password hashing yaklaşımı, sızıntı halinde toplu kırma maliyetini artırır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir çalışan USB bellekten bilinmeyen bir dosya çalıştırmak istediğinde en doğru yaklaşım nedir?",
+    "options": [
+      "Dosyayı hemen yönetici yetkisiyle çalıştırmak.",
+      "Kaynağı doğrulamadan üretim sistemine kopyalamak.",
+      "Güvenliği doğrulanmamış dosyaları doğrudan çalıştırmamak ve gerekli kontrolleri yapmak.",
+      "Dosyayı e-posta ile herkese göndermek."
+    ],
+    "correctIndex": 2,
+    "explanation": "Taşınabilir medya, zararlı yazılım taşıma açısından yaygın bir vektördür. Güvenilmeyen ikili dosyaların üretim veya kurumsal cihazlarda doğrudan çalıştırılması ciddi risktir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi güvenlik olayı ile güvenlik açığı arasındaki farkı doğru açıklar?",
+    "options": [
+      "İkisi tamamen aynı şeydir.",
+      "Açık potansiyel zafiyeti, olay ise bu zafiyetin veya başka bir durumun güvenliği etkilemiş gerçekleşmesini ifade eder.",
+      "Olay sadece yasal konudur, açık sadece teknik konudur.",
+      "Açık yalnızca ağ cihazlarında bulunur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Vulnerability bir zayıflıktır; incident ise güvenliği etkileyen gerçekleşmiş durumdur. Her açık sömürülmeyebilir, her olayın sebebi de mutlaka tek bir açık olmayabilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Logların merkezi bir sistemde toplanmasının önemli bir faydası nedir?",
+    "options": [
+      "Her sunucuda saati farklı yapmak.",
+      "Olay korelasyonu ve adli analiz için görünürlük sağlamak.",
+      "Yamaları gereksiz kılmak.",
+      "MFA ihtiyacını kaldırmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dağınık loglar olayın bütününü görmeyi zorlaştırır. Merkezî toplama, sorgulama ve korelasyon kapasitesi incident response süresini ciddi şekilde iyileştirir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi SQL Injection riskini azaltmak için en doğru yaklaşımdır?",
+    "options": [
+      "Kullanıcı girdisini string birleştirerek sorguya eklemek.",
+      "Parametreli sorgular veya prepared statement kullanmak.",
+      "Sadece hata mesajlarını gizlemek.",
+      "Veritabanı sunucusunu yeniden başlatmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Parametreli sorgular veri ile komutu ayırır. Yalnızca girişte bazı karakterleri engellemek çoğu zaman yeterli değildir ve bypass edilebilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "XSS (Cross-Site Scripting) açığının temel etkisi nedir?",
+    "options": [
+      "Sunucunun fiziksel diskini bozmak.",
+      "Kurbanın tarayıcısında saldırganın script çalıştırabilmesi.",
+      "Yalnızca veritabanı şemasını değiştirmek.",
+      "Sadece DNS kayıtlarını silmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "XSS, oturum çalma, kullanıcı adına işlem yapma veya sahte arayüz gösterme gibi etkiler doğurabilir. Girdi temizleme ve output encoding bu yüzden önemlidir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "CSRF saldırısı hangi durumdan yararlanır?",
+    "options": [
+      "Kurbanın tarayıcısındaki geçerli oturum bilgisinin otomatik gönderilmesinden.",
+      "Sunucuda RAM eksikliğinden.",
+      "Sadece zayıf Wi-Fi sinyalinden.",
+      "Veritabanındaki index sayısının fazlalığından."
+    ],
+    "correctIndex": 0,
+    "explanation": "CSRF'de saldırgan, kurbanın hali hazırda oturum açmış olduğu uygulamaya istek yaptırır. CSRF token, SameSite ve kritik aksiyonlarda ek doğrulama bu yüzden kullanılır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir ağda lateral movement neyi ifade eder?",
+    "options": [
+      "Ağın fiziksel kablolarını yatay döşemeyi.",
+      "Saldırganın ilk erişimi aldıktan sonra diğer sistemlere yayılmasını.",
+      "Yedeklerin farklı veri merkezine taşınmasını.",
+      "DNS kayıtlarının kopyalanmasını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Lateral movement, ihlalin etkisini büyüten kritik aşamadır. Ağ segmentasyonu, kimlik güvenliği ve davranış analizi bu aşamayı sınırlamak için önemlidir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir SIEM sisteminin temel amacıdır?",
+    "options": [
+      "Uygulama UI tasarlamak.",
+      "Güvenlik loglarını toplayıp korele ederek tehdit görünürlüğü sağlamak.",
+      "Parolaları hash'lemek.",
+      "Sunucu sanallaştırmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "SIEM, farklı kaynaklardan gelen olayları bir araya getirip anlamlı alarm üretmeye çalışır. Tek başına yeterli değildir ama tespit ve soruşturma süreçlerinde merkezi bir rol oynar."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi 'defense in depth' yaklaşımını en iyi açıklar?",
+    "options": [
+      "Tek bir güvenlik kontrolüne tamamen güvenmek.",
+      "Birden çok bağımsız güvenlik katmanı ile saldırının ilerlemesini zorlaştırmak.",
+      "Sadece çevre güvenliğine yatırım yapmak.",
+      "Bütün sistemleri internete kapatmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hiçbir kontrol kusursuz değildir. Katmanlı savunma, bir kontrol aşıldığında diğerlerinin hala koruma veya tespit sağlayabilmesini amaçlar."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "EDR çözümünün antivirüsten önemli farklarından biri nedir?",
+    "options": [
+      "Yalnızca ofis yazılımlarında çalışması.",
+      "Uç nokta davranışını izleyip olay soruşturmasına daha fazla bağlam sunması.",
+      "Hiç log üretmemesi.",
+      "Yama yönetimi yerine geçmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "EDR araçları süreç ağacı, komut satırı ve davranış verisi gibi daha zengin telemetry sağlar. Bu da tespit ve olay müdahalesini yalnızca imza tabanlı yaklaşıma göre güçlendirir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir IAM politikasında kötü pratiktir?",
+    "options": [
+      "Belirli görevler için rol bazlı yetki tanımlamak.",
+      "Gerekmediği halde `*:*` benzeri geniş yetkiler vermek.",
+      "Yetkileri düzenli gözden geçirmek.",
+      "Ayrı servis hesapları kullanmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Aşırı geniş izinler, hesap ele geçirildiğinde saldırganın hareket alanını ciddi biçimde büyütür. IAM tasarımında ayrıntılı ve amaca yönelik yetkilendirme tercih edilmelidir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "TLS kullanımının ana amacı nedir?",
+    "options": [
+      "Veri aktarımında gizlilik ve bütünlük sağlamak.",
+      "Uygulamayı otomatik ölçeklemek.",
+      "SQL sorgularını hızlandırmak.",
+      "Dosya izinlerini yönetmek."
+    ],
+    "correctIndex": 0,
+    "explanation": "TLS, istemci ile sunucu arasındaki iletişimi korur. Yalnızca şifreleme değil, sertifika doğrulaması sayesinde karşı tarafın kimliğini de doğrulamaya yardımcı olur."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir web uygulamasında güvenli cookie yapılandırması için `HttpOnly` bayrağının temel faydası nedir?",
+    "options": [
+      "Cookie'nin yalnızca HTTP üzerinden gönderilmesini sağlamak yerine JavaScript erişimini kısıtlamak.",
+      "Cookie'yi tüm domain'lerle paylaşmak.",
+      "Şifrelemeyi kaldırmak.",
+      "Oturum süresini sonsuz yapmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "`HttpOnly`, tarayıcı tarafı script'lerin cookie'ye erişmesini engeller. Bu, özellikle XSS sonrası oturum çalma riskini azaltmada önemlidir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi secret yönetiminde daha doğru yaklaşımdır?",
+    "options": [
+      "API anahtarlarını kaynak koduna gömmek.",
+      "Secret'ları versiyon kontrol sistemine commit etmek.",
+      "Merkezi secret yönetimi kullanıp erişimi denetlemek ve döndürmek.",
+      "Tüm secret'ları ekip chat kanalında paylaşmak."
+    ],
+    "correctIndex": 2,
+    "explanation": "Secret'ların yaşam döngüsü yönetilmeli, erişimi izlenmeli ve gerektiğinde rotasyona tabi tutulmalıdır. Koda gömülü veya dağınık saklama ihlal durumunda etkileri büyütür."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir güvenlik tarama aracının çok sayıda bulgu üretmesi neden tek başına yeterli değildir?",
+    "options": [
+      "Çünkü bulguların bağlam, doğrulanma durumu ve iş etkisiyle birlikte önceliklendirilmesi gerekir.",
+      "Çünkü araçların hiçbir bulgusu doğru olmaz.",
+      "Çünkü yalnızca ağ katmanı önemlidir.",
+      "Çünkü CVE'ler artık kullanılmıyordur."
+    ],
+    "correctIndex": 0,
+    "explanation": "Ham bulgu listesi, gerçek risk yönetimi değildir. Yanlış pozitifler, maruziyet düzeyi ve sömürülebilirlik dikkate alınmadan doğru öncelik sırası kurulamaz."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Ransomware saldırılarında yedeklerin çevrimdışı veya izole tutulmasının önemi nedir?",
+    "options": [
+      "Saldırganın yedekleri de şifreleyip kurtarma seçeneğini yok etmesini zorlaştırmak.",
+      "Yedekleme hızını mutlaka düşürmek.",
+      "Ağ segmentasyonunu gereksiz kılmak.",
+      "MFA ihtiyacını ortadan kaldırmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Saldırganların hedefi çoğu zaman kurtarma seçeneklerini de devre dışı bırakmaktır. İzole yedekler iş sürekliliği açısından kritik son savunma hattıdır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi e-posta güvenliğinde DMARC'ın rolünü doğru açıklar?",
+    "options": [
+      "Uygulama loglarını sıkıştırmak.",
+      "Alan adı sahteciliğini azaltmak için SPF ve DKIM sonuçlarına dayalı politika uygulamak.",
+      "Sunucuda parolaları hash'lemek.",
+      "Tüm e-postaları otomatik şifrelemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "DMARC, domain sahiplerine sahtecilik karşısında nasıl davranılacağını tanımlama ve görünürlük kazanma imkanı verir. SPF ve DKIM ile birlikte çalışır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi güvenlikte false positive kavramını ifade eder?",
+    "options": [
+      "Gerçek tehdit olmadığı halde alarmın tehdit varmış gibi tetiklenmesi.",
+      "Gerçek tehdidin hiç log üretmemesi.",
+      "Alarmın sadece gece çalışması.",
+      "Yamanın başarıyla kurulması."
+    ],
+    "correctIndex": 0,
+    "explanation": "False positive oranı yüksek sistemler analist yorgunluğuna neden olur. Bu da gerçek tehditlerin gözden kaçmasına zemin hazırlayabilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi network segmentation'ın temel güvenlik faydasıdır?",
+    "options": [
+      "Saldırganın ağ içinde serbestçe hareket etmesini kolaylaştırması.",
+      "Tüm sistemleri tek broadcast domain'de toplaması.",
+      "Bir ihlal olduğunda yayılım alanını sınırlaması.",
+      "TLS ihtiyacını tamamen ortadan kaldırması."
+    ],
+    "correctIndex": 2,
+    "explanation": "Segmentasyon, erişimi ihtiyaç bazında sınırlar. Böylece tek bir sistemin ele geçirilmesi tüm ortama aynı kolaylıkla sıçrayamaz."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir zafiyet için CVSS puanının yüksek olması neyi garanti etmez?",
+    "options": [
+      "Teknik ciddiyetin yüksek olabileceğini.",
+      "Kurumsal bağlamda en yüksek önceliğe sahip olduğunu.",
+      "Maruziyet değerlendirmesi gerektiğini.",
+      "Yama kararının iş etkisine göre verilmesi gerektiğini."
+    ],
+    "correctIndex": 1,
+    "explanation": "CVSS teknik şiddeti özetler ama maruz kalan varlık, compensating control ve sömürülebilirlik bağlamını tek başına kapsamaz. Bu yüzden önceliklendirme yalnızca puana bakılarak yapılmamalıdır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi incident response sürecinde containment adımına örnektir?",
+    "options": [
+      "Etkilenen sistemi ağdan izole etmek.",
+      "Şirket logosunu güncellemek.",
+      "Yeni çalışanlara laptop siparişi vermek.",
+      "Veritabanını normalize etmek."
+    ],
+    "correctIndex": 0,
+    "explanation": "Containment, saldırının daha fazla yayılmasını veya zarar vermesini sınırlamayı amaçlar. Kök neden çözülmeden önce kontrollü izolasyon çoğu zaman kritik ilk aksiyondur."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir WAF'ın en uygun kullanım alanını tarif eder?",
+    "options": [
+      "Web trafiğinde belirli saldırı kalıplarını filtreleyerek ek koruma sağlamak.",
+      "İçeriden gelen her tehdidi kesin önlemek.",
+      "Yedekleme sisteminin yerine geçmek.",
+      "Disk şifrelemesi yapmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "WAF yararlı bir kontrol olabilir ancak güvenli kodun yerine geçmez. Kural tabanlı olduğu için bypass ve yanlış pozitif riskleri de dikkate alınmalıdır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Zero Trust yaklaşımının temel varsayımı nedir?",
+    "options": [
+      "Kurumsal ağ içindeki her şey varsayılan olarak güvenilirdir.",
+      "Kimlik, cihaz durumu ve bağlam doğrulanmadan hiçbir erişim varsayılan güvene dayanmaz.",
+      "Sadece VPN kullananlar güvensizdir.",
+      "Tüm güvenlik kararları yılda bir kez verilir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Zero Trust, ağ konumuna göre otomatik güven verilmesini reddeder. Erişim kararları sürekli doğrulama ve bağlamsal kontroller üzerinden değerlendirilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir kurumda vuln management programının yalnızca tarama raporu üretmesi neden yetersizdir?",
+    "options": [
+      "Çünkü risk kabulü, sahiplik, SLA ve düzeltme takibi olmadan gerçek iyileşme sağlanamaz.",
+      "Çünkü tarama yapmak tamamen gereksizdir.",
+      "Çünkü sadece fiziksel güvenlik önemlidir.",
+      "Çünkü CVE listeleri yanlış çalışır."
+    ],
+    "correctIndex": 0,
+    "explanation": "Etkili zafiyet yönetimi süreç işidir; bulgu üretmek sadece başlangıçtır. Sahiplik ve remediation takibi yoksa aynı açıklar raporlarda tekrar eder."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir SOC ekibinde alarm yorgunluğunu azaltırken tespit gücünü korumanın en doğru yaklaşımı hangisidir?",
+    "options": [
+      "Tüm alarmları kapatmak.",
+      "Korelasyon, tuning ve risk bazlı önceliklendirme ile yüksek sinyalli kurallar tasarlamak.",
+      "Sadece manuel log incelemek.",
+      "Yanlış pozitifleri olduğu gibi kabul etmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Amaç alarm sayısını kör şekilde azaltmak değil, analiste değer taşıyan sinyali artırmaktır. Tuning yapılmayan sistemlerde gerçek tehditler gürültü içinde kaybolur."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir bulut ortamında kontrol düzlemi (control plane) loglarının kritik olmasının temel nedeni nedir?",
+    "options": [
+      "Sadece disk kullanımını göstermeleri.",
+      "Kimlik, yetki ve kaynak değişikliklerini izleyerek kötüye kullanımın izini sürmeye yardımcı olmaları.",
+      "Web tasarımını iyileştirmeleri.",
+      "TLS sertifikası üretmeleri."
+    ],
+    "correctIndex": 1,
+    "explanation": "Cloud ihlallerinin önemli bölümü yanlış yapılandırma ve kimlik istismarıyla ilgilidir. Control plane logları, kimin hangi kaynağı ne zaman değiştirdiğini anlamak için vazgeçilmezdir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi supply chain saldırısı riskini en doğru özetler?",
+    "options": [
+      "Doğrudan yalnızca fiziksel depoları etkiler.",
+      "Güvenilen yazılım, bağımlılık veya sağlayıcı üzerinden dolaylı ihlal yaşanmasıdır.",
+      "Sadece ağ kablosu üreticilerini ilgilendirir.",
+      "Patch yönetimini gereksiz kılar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Tedarik zinciri saldırılarında hedef bazen doğrudan siz değil, güvendiğiniz bir üçüncü taraf olur. Bu da geleneksel perimeter odaklı savunmaları aşmayı kolaylaştırabilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir kırmızı takım egzersizi ile zafiyet taramasının farkı nedir?",
+    "options": [
+      "Red team, gerçek saldırgan davranışını daha uçtan uca simüle ederek tespit ve müdahale kapasitesini sınar.",
+      "İkisi tamamen aynıdır.",
+      "Zafiyet taraması daha geniş insan davranışı testi yapar.",
+      "Red team yalnızca rapor formatını değiştirir."
+    ],
+    "correctIndex": 0,
+    "explanation": "Vulnerability scanning potansiyel açıklara bakar; red team ise savunma katmanlarının pratikte nasıl aşıldığını test eder. Bu nedenle kapsamı teknikten operasyona daha geniş olabilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir kurumda ayrıcalıklı erişimlerin PAM yaklaşımıyla yönetilmesinin ana güvenlik faydası nedir?",
+    "options": [
+      "Ayrıcalıklı hesap kullanımını görünür, denetlenebilir ve kontrollü hale getirmesi.",
+      "Tüm kullanıcıların admin olmasını sağlaması.",
+      "MFA'yı kaldırması.",
+      "Patch ihtiyacını azaltması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Privileged access en yüksek etki alanlarından biridir. Oturum kaydı, kasalama ve just-in-time yetki gibi mekanizmalar kötüye kullanımı ve iz bırakmayan erişimi azaltır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir kurumun incident response planı yazılı ama hiç tatbikat yapılmıyorsa temel risk nedir?",
+    "options": [
+      "Planın gerçek olay anında işlemeyen varsayımlar içermesi ve ekip koordinasyonunun zayıf kalması.",
+      "Planın otomatik olarak yasal belgeye dönüşmesi.",
+      "Yedeklerin daha hızlı çalışması.",
+      "Alarm sayısının sıfıra inmesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "Tabletop veya teknik tatbikat yapılmadan planın uygulanabilirliği test edilmez. Gerçek olayda rol belirsizliği ve iletişim kopukluğu kayıp süreyi artırabilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi risk bazlı güvenlik önceliklendirmesini en iyi anlatır?",
+    "options": [
+      "En yüksek CVSS puanlı her bulguyu bağlamdan bağımsız ilk sıraya koymak.",
+      "Teknik ciddiyet, maruziyet, varlık kritikliği ve sömürülebilirliği birlikte değerlendirmek.",
+      "Yalnızca yöneticinin en çok ilgisini çeken konulara odaklanmak.",
+      "Tüm sistemleri eşit riske sahip kabul etmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Güvenlikte kaynaklar sınırlıdır; bu yüzden risk hesabı bağlamsal olmalıdır. Aynı açık, internete açık kritik bir sistemde çok daha yüksek öncelik taşıyabilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir bulut hesabında uzun ömürlü access key'ler yerine geçici kimlik bilgileri kullanmanın ana avantajı nedir?",
+    "options": [
+      "Sızıntı durumunda kötüye kullanım penceresini daraltmak ve merkezi kontrolü artırmak.",
+      "Log üretimini kapatmak.",
+      "Şifreleme ihtiyacını kaldırmak.",
+      "Yalnızca maliyet raporlamasını iyileştirmek."
+    ],
+    "correctIndex": 0,
+    "explanation": "Kısa ömürlü ve bağlama duyarlı kimlik bilgileri kalıcı anahtarlara göre daha güvenlidir. Rotasyon ve iptal süreçleri de operasyonel olarak daha yönetilebilir hale gelir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir kurumda güvenlik metriklerinin sadece kapatılan açık sayısına bakması neden yanıltıcı olabilir?",
+    "options": [
+      "Çünkü maruziyet süresi, kritik varlık kapsamı ve tespit kalitesi gibi daha anlamlı göstergeleri kaçırabilir.",
+      "Çünkü açıklar artık sayılmaz.",
+      "Çünkü yalnızca phishing metrikleri önemlidir.",
+      "Çünkü güvenlikte ölçüm yapılamaz."
+    ],
+    "correctIndex": 0,
+    "explanation": "Hacim metrikleri tek başına iyileşme resmi vermez. Gerçek olgunluk, risk azalımı ve tespit/müdahale etkinliği gibi daha derin ölçülerle anlaşılır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi tehdit modelleme çalışmasının en büyük değerlerinden biridir?",
+    "options": [
+      "Güvenlik düşüncesini tasarımın başına çekerek muhtemel saldırı yollarını erken görünür kılması.",
+      "Kod incelemesini tamamen gereksiz kılması.",
+      "Yalnızca uyumluluk raporu üretmesi.",
+      "Sadece ağ cihazları için uygulanabilmesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "Threat modeling, güvenliği sonradan eklenen kontrol olmaktan çıkarır. Tasarım aşamasında veri akışı, güven sınırları ve kritik varlıklar düşünülürse düzeltme maliyeti düşer."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir saldırı sonrası yalnızca IOC'leri engelleyip kök nedeni araştırmamanın temel sakıncası nedir?",
+    "options": [
+      "Saldırganın farklı artefaktlarla geri dönme ihtimalini bırakması.",
+      "Yedekleme süresini kısaltması.",
+      "Kullanıcı memnuniyetini otomatik artırması.",
+      "Ağ gecikmesini düşürmesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "IOC bloklama taktik düzeyde faydalıdır, ancak saldırı vektörü ve kalıcılık mekanizması anlaşılmazsa ihlal tekrarlanabilir. Eradication için kök neden analizi şarttır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir hesabın beklenmedik lokasyondan giriş denemesi neyin göstergesi olabilir?",
+    "options": [
+      "Normal bakım çalışmasının.",
+      "Şüpheli hesap erişimi veya kimlik bilgisi kötüye kullanımının.",
+      "Disk birleştirmenin.",
+      "Yedekleme optimizasyonunun."
+    ],
+    "correctIndex": 1,
+    "explanation": "Anomalik konum veya impossible travel gibi sinyaller tek başına kesin kanıt olmasa da güçlü uyarı işaretleridir. Diğer bağlamsal verilerle birlikte değerlendirilmelidir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi güvenli uzaktan çalışma pratiğine daha uygundur?",
+    "options": [
+      "Kurumsal cihaz ve güvenli erişim yöntemleri kullanmak.",
+      "Halka açık bilgisayardan kurumsal sistemlere admin erişimi vermek.",
+      "Parolaları tarayıcı not alanına yazmak.",
+      "MFA'yı kapatmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Uzaktan çalışmada cihaz güvenliği ve erişim kontrolü kritik hale gelir. Güvenilmeyen cihaz veya ağlardan kontrolsüz erişim riski ciddi biçimde artırır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir çalışanın hassas veriyi yanlış kişiye e-posta ile göndermesi en çok hangi kategoriye girer?",
+    "options": [
+      "Veri ihlali veya veri sızıntısı olayı.",
+      "DDoS saldırısı.",
+      "Fiziksel sabotaj.",
+      "Yedekleme başarısı."
+    ],
+    "correctIndex": 0,
+    "explanation": "Kötü niyet olmasa bile yetkisiz kişiye veri açıklanması güvenlik olayıdır. Etki değerlendirmesi ve bildirim süreçleri bağlama göre devreye girebilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi güvenlik farkındalığı eğitimlerinin temel amacıyla en uyumludur?",
+    "options": [
+      "Tüm teknik açıkları tek başına kapatmak.",
+      "Kullanıcıların yaygın saldırı kalıplarını tanıyıp doğru tepki vermesini sağlamak.",
+      "Firewall kurallarını otomatik yazmak.",
+      "SOC ekibini gereksiz kılmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eğitim, insan katmanındaki savunmayı güçlendirir ama teknik kontrollerin yerine geçmez. Özellikle phishing ve veri işleme farkındalığında önemli rol oynar."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "DDoS saldırısının temel amacı genellikle nedir?",
+    "options": [
+      "Hizmeti aşırı trafik ile erişilemez hale getirmek.",
+      "Parolaları hash'lemek.",
+      "Veritabanı normalizasyonu yapmak.",
+      "Kaynak kodu imzalamak."
+    ],
+    "correctIndex": 0,
+    "explanation": "DDoS her zaman veri çalmayı hedeflemez; çoğu durumda hizmet kesintisi yaratmaya odaklanır. İş sürekliliği ve erişilebilirlik açısından kritik bir tehdittir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir API için güvenlik açısından iyi bir pratiktir?",
+    "options": [
+      "Kimlik doğrulama ve yetkilendirmeyi her endpoint için açıkça uygulamak.",
+      "Tüm hatalarda detaylı stack trace döndürmek.",
+      "Rate limit kullanmamak.",
+      "Tüm endpoint'leri varsayılan olarak public yapmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "API güvenliği, sadece giriş yapmakla bitmez; her işlemin yetki bağlamında değerlendirilmesi gerekir. Ayrıca hata mesajları ve rate limit gibi kontroller de saldırı yüzeyini azaltır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi brute force saldırı riskini azaltmaya yardımcı olur?",
+    "options": [
+      "Başarısız denemelerde rate limit veya geçici kilitleme uygulamak.",
+      "Giriş denemelerini sonsuz bırakmak.",
+      "Parolaları düz metin saklamak.",
+      "MFA'yı devre dışı bırakmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Rate limiting ve lockout politikaları saldırganın çok sayıda deneme yapmasını pahalı hale getirir. Bunlar tek başına yeterli değildir ama önemli savunma katmanlarıdır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir uygulamada ayrıntılı hata mesajlarının kullanıcıya gösterilmesi neden riskli olabilir?",
+    "options": [
+      "Saldırgana sistem iç yapısı hakkında gereksiz bilgi verebilir.",
+      "Uygulamayı mutlaka daha hızlı yapar.",
+      "Şifrelemeyi otomatik açar.",
+      "TLS sertifikasını yeniler."
+    ],
+    "correctIndex": 0,
+    "explanation": "Verbose hata mesajları tablo adları, dosya yolları veya teknoloji yığını gibi ipuçları sağlayabilir. Kullanıcıya minimum gerekli bilgi verilirken ayrıntı iç loglarda tutulmalıdır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi güvenlik testinde false negative kavramını ifade eder?",
+    "options": [
+      "Gerçek bir tehdidin veya açığın sistem tarafından kaçırılması.",
+      "Tehdit yokken alarm verilmesi.",
+      "Yamanın doğru kurulması.",
+      "Logların arşivlenmesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "False negative, görünmeyen risk anlamına geldiği için özellikle tehlikelidir. Saldırının tespit edilmediği sistemlerde güvenlik ekipleri yanlış bir güven hissine kapılabilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir güvenlik kontrolünün compensating control olarak kullanılmasına örnektir?",
+    "options": [
+      "Asıl düzeltme hemen yapılamadığında riski azaltacak alternatif önlem devreye almak.",
+      "Hiçbir şey yapmadan riski görmezden gelmek.",
+      "Tüm logları silmek.",
+      "Yalnızca rapor yazıp aksiyon almamak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Compensating control kalıcı çözüm değildir, ancak maruziyeti geçici olarak azaltabilir. Bunun etkili olabilmesi için açıkça tanımlanmış ve izlenebilir olması gerekir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir güvenlik programında purple team çalışmasının ana değeri nedir?",
+    "options": [
+      "Kırmızı ve mavi ekip çıktılarının birbirini besleyerek tespit ve savunmayı iyileştirmesi.",
+      "Yalnızca yeni firewall almak.",
+      "SOC ekibini kapatmak.",
+      "Sadece phishing eğitimi vermek."
+    ],
+    "correctIndex": 0,
+    "explanation": "Purple team yaklaşımı saldırı simülasyonu ile savunma öğrenimini aynı döngüye alır. Böylece egzersizler yalnızca bulgu üretmek yerine savunma kapasitesini somut olarak artırır."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir şirkette güvenlik mimarisi kararlarının yalnızca uyumluluk checklist'ine göre verilmesinin riski nedir?",
+    "options": [
+      "Gerçek tehdit modeli ve iş bağlamı gözden kaçabilir.",
+      "Tüm kontroller otomatik mükemmel olur.",
+      "Risk tamamen ortadan kalkar.",
+      "Yalnızca belge sayısı azalır."
+    ],
+    "correctIndex": 0,
+    "explanation": "Uyumluluk gerekli olabilir ama güvenlikle eş anlamlı değildir. Checklist odaklı yaklaşım, gerçekten olası saldırı yollarına karşı yetersiz kalabilir."
+  },
+  {
+    "category": "cyber-security-specialist",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi tehdit avcılığı (threat hunting) faaliyetinin amacını en iyi açıklar?",
+    "options": [
+      "Alarm beklemeden ortamdaki gizli veya kaçmış tehdit izlerini proaktif aramak.",
+      "Sadece lisans yenileme yapmak.",
+      "Yedekleme cihazı satın almak.",
+      "Ağ topolojisini çizmekle sınırlı kalmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Threat hunting, yalnızca alarmlara reaktif tepki vermek yerine bilinmeyen veya tespit edilmemiş tehditleri arar. Bunun için hipotez, telemetry ve analist deneyimi birlikte kullanılır."
+  }
+]

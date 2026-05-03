@@ -1,0 +1,842 @@
+[
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "İlişkisel veritabanlarında 'Primary Key' (Birincil Anahtar) kavramının temel amacı nedir?",
+    "options": [
+      "Tablodaki her bir satırı (kaydı) benzersiz bir şekilde tanımlamak.",
+      "Tabloyu şifrelemek.",
+      "Verilerin daha renkli görünmesini sağlamak.",
+      "Sadece sayısal verileri saklamak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Primary Key, her tabloda mutlaka bulunması önerilen, boş (null) olamayan ve her kayıt için farklı olan eşsiz bir kimliktir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de bir tablodaki tüm verileri listelemek için kullanılan standart sorgu hangisidir?",
+    "options": [
+      "SHOW ALL FROM tablo_adi",
+      "SELECT * FROM tablo_adi",
+      "GET DATA tablo_adi",
+      "LIST tablo_adi"
+    ],
+    "correctIndex": 1,
+    "explanation": "`SELECT` veriyi seçmeyi, `*` tüm sütunları, `FROM` ise hangi tablodan alınacağını ifade eder."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'deki 'Inner Join' ve 'Left Join' arasındaki temel fark nedir?",
+    "options": [
+      "Inner join daha hızlıdır.",
+      "Inner Join sadece her iki tabloda eşleşen kayıtları getirir; Left Join ise soldaki tablonun tüm kayıtlarını ve sağdaki tablodan eşleşenleri getirir.",
+      "Left Join sadece sayıları birleştirir.",
+      "İkisi de tamamen aynıdır, sadece yazım farkı vardır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Left Join, eşleşme olmasa bile ana tablodaki verilerin kaybolmamasını (eşleşmeyen yerlerin null gelmesini) sağlar."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Veritabanlarında 'Index' (İndeks) kullanmanın en büyük avantajı ve dezavantajı nedir?",
+    "options": [
+      "Hızı artırır ama veriyi siler.",
+      "Arama (Select) sorgularını hızlandırır; ancak yazma (Insert/Update) işlemlerini yavaşlatır ve diskte ek yer kaplar.",
+      "Sadece güvenliği artırır.",
+      "Dezavantajı yoktur, her sütuna eklenmelidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "İndeksler bir kitabın fihristi gibidir; aramayı kolaylaştırır ama her sayfa eklendiğinde fihristi güncellemek vakit alır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı işlemlerinde (Transaction) kullanılan 'ACID' prensiplerinden 'Atomicity' neyi ifade eder?",
+    "options": [
+      "Verilerin atom parçaları gibi küçük olmasını.",
+      "Bir işlemin ya tamamen gerçekleşmesini ya da hata anında tamamen geri alınmasını (Hepsi ya da Hiçbiri).",
+      "Verilerin sadece bir kez yazılabilmesini.",
+      "Veritabanının nükleer saldırılara dayanıklı olmasını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin banka transferinde para hesaptan çıkıp karşıya gitmezse, işlem tamamen iptal edilmelidir (rollback); para arada kaybolamaz."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'Normalization' (Normalizasyon) süreçlerinin (1NF, 2NF, 3NF vb.) temel hedefi nedir?",
+    "options": [
+      "Veritabanını daha karmaşık hale getirmek.",
+      "Veri tekrarını (redundancy) önlemek ve veri tutarlılığını (integrity) sağlamak.",
+      "Sorgu yazmayı kolaylaştırmak.",
+      "Sadece Excel dosyalarıyla çalışmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Normalizasyon ile veriler mantıksal tablolar bölünür, böylece bir güncelleme yapıldığında sadece bir yerin değişmesi yeterli olur."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de verileri belirli bir kritere göre (Örn: Yaşı 18'den büyük olanlar) filtrelemek için hangi anahtar kelime kullanılır?",
+    "options": [
+      "IF",
+      "WHEN",
+      "WHERE",
+      "FILTER"
+    ],
+    "correctIndex": 2,
+    "explanation": "`WHERE` kelimesi, sorguya mantıksal koşullar ekleyerek sadece ilgili satırların gelmesini sağlar."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `GROUP BY` anahtar kelimesi ne amaçla kullanılır?",
+    "options": [
+      "Verileri alfabetik sıralamak için.",
+      "Belirli bir sütuna göre benzer verileri gruplayıp üzerlerinde toplu işlemler (Count, Sum, Avg vb.) yapmak için.",
+      "Kullanıcıları gruplara ayırmak için.",
+      "Hataları gizlemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: Şehirlere göre kaç kullanıcı olduğunu bulmak için şehre göre `GROUP BY` yapıp `COUNT(*)` alınır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "İlişkisel (RDBMS) ve NoSQL veritabanları arasındaki en temel mimari fark nedir?",
+    "options": [
+      "NoSQL veritabanları bedavadır.",
+      "RDBMS katı bir şemaya (tablo/sütun) ve SQL diline dayanırken; NoSQL genellikle esnek şemalı (doküman, key-value, graph) ve yatay ölçeklenebilir (horizontal scaling) yapıdadır.",
+      "RDBMS sadece bilgisayarlarda, NoSQL sadece bulutta çalışır.",
+      "İkisi de tamamen aynıdır, sadece isimleri farklıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "NoSQL (Örn: MongoDB, Cassandra) çok büyük ve hızlı değişen veriler için; RDBMS (Örn: PostgreSQL, MySQL) ise karmaşık ilişkiler ve veri tutarlılığı için idealdir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de 'Foreign Key' (Yabancı Anahtar) ne işe yarar?",
+    "options": [
+      "Başka bir veritabanına bağlanmak için.",
+      "İki tablo arasında ilişki kurarak veri bütünlüğünü sağlamak (Bir tablodaki değerin diğer tabloda karşılığı olmasını zorunlu tutmak) için.",
+      "Yabancı dildeki verileri saklamak için.",
+      "Tabloya şifre koymak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin 'Siparişler' tablosundaki 'MusteriID', 'Müşteriler' tablosuna Foreign Key ile bağlıysa, var olmayan bir müşteriye sipariş açılamaz."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de mevcut bir kaydı güncellemek için hangi komut kullanılır?",
+    "options": [
+      "CHANGE",
+      "MODIFY",
+      "UPDATE",
+      "REPLACE"
+    ],
+    "correctIndex": 2,
+    "explanation": "`UPDATE tablo_adi SET sutun = deger WHERE kosul` yapısı ile veriler güncellenir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `HAVING` ve `WHERE` arasındaki fark nedir?",
+    "options": [
+      "İkisi de tamamen aynıdır.",
+      "`WHERE` tek tek satırları filtreler; `HAVING` ise `GROUP BY` ile oluşturulmuş gruplanmış verileri filtrelemek için kullanılır.",
+      "`HAVING` daha hızlıdır.",
+      "`WHERE` sadece sayılarda kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin; maaş ortalaması 5000'den büyük olan departmanları bulmak için `HAVING AVG(maas) > 5000` kullanılır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'Deadlock' durumu nedir?",
+    "options": [
+      "Veritabanının internetinin kesilmesi.",
+      "İki veya daha fazla işlemin (transaction), birbirinin kilitlediği (lock) kaynakları sonsuza dek beklemesi durumu.",
+      "Verilerin tamamen silinmesi.",
+      "Şifrenin unutulması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Veritabanı yönetim sistemleri genellikle bu durumu saptar ve bir işlemi iptal ederek (abort) kilitlenmeyi çözer."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de verileri sıralamak (A'dan Z'ye veya küçükten büyüğe) için hangi komut kullanılır?",
+    "options": [
+      "SORT BY",
+      "ORDER BY",
+      "ARRANGE",
+      "LIST"
+    ],
+    "correctIndex": 1,
+    "explanation": "`ORDER BY sutun_adi` komutu varsayılan olarak küçükten büyüğe (ASC) sıralama yapar."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `DISTINCT` anahtar kelimesi ne işe yarar?",
+    "options": [
+      "Verileri şifreler.",
+      "Sorgu sonucundaki tekrar eden (duplicate) satırları kaldırarak sadece benzersiz kayıtları listeler.",
+      "Verileri siler.",
+      "Verileri kopyalar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin bir tabloda 10 tane 'Ankara' kaydı varsa, `SELECT DISTINCT sehir` sorgusu sadece 1 tane 'Ankara' döner."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanlarında 'Stored Procedure' kullanmanın avantajı nedir?",
+    "options": [
+      "Veritabanını daha yavaş çalıştırır.",
+      "SQL kodlarını sunucu tarafında saklayarak ağ trafiğini azaltır, güvenliği artırır ve karmaşık işlemlerin tekrar kullanılabilir olmasını sağlar.",
+      "Sadece yedekleme (backup) için kullanılır.",
+      "Görsel arayüz (UI) tasarlamaya yarar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Önceden derlenmiş (pre-compiled) oldukları için performans avantajı da sunabilirler."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de yeni bir tablo oluşturmak için hangi komut kullanılır?",
+    "options": [
+      "NEW TABLE",
+      "CREATE TABLE",
+      "MAKE TABLE",
+      "ADD TABLE"
+    ],
+    "correctIndex": 1,
+    "explanation": "`CREATE TABLE` komutu ile sütun isimleri ve veri tipleri tanımlanarak tablo yapısı kurulur."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `LIKE '%elma%'` ifadesi neyi bulur?",
+    "options": [
+      "Sadece 'elma' kelimesini.",
+      "İçinde herhangi bir yerinde 'elma' kelimesi geçen (Örn: elmalı, yeşil elma) tüm verileri.",
+      "Sadece 'elma' ile başlayanları.",
+      "Sadece 'elma' ile bitenleri."
+    ],
+    "correctIndex": 1,
+    "explanation": "`%` işareti (wildcard) herhangi bir karakter dizisi (boşluk dahil) anlamına gelir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'Trigger' (Tetikleyici) nedir?",
+    "options": [
+      "Veritabanını kapatan bir düğmedir.",
+      "Tablo üzerinde belirli bir olay (Insert, Update, Delete) gerçekleştiğinde otomatik olarak çalışan özel bir SQL kod bloğudur.",
+      "Hata ayıklama (debug) aracıdır.",
+      "Sadece verileri silmek için kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin bir sipariş silindiğinde, stok miktarını otomatik olarak artırmak için bir trigger kullanılabilir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de bir tabloya yeni bir veri (satır) eklemek için hangi komut kullanılır?",
+    "options": [
+      "ADD ROW",
+      "INSERT INTO",
+      "PUT",
+      "CREATE"
+    ],
+    "correctIndex": 1,
+    "explanation": "`INSERT INTO tablo_adi (sutunlar) VALUES (degerler)` yapısı kullanılır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `UNION` ve `UNION ALL` arasındaki fark nedir?",
+    "options": [
+      "`UNION` daha yavaştır.",
+      "`UNION` tekrar eden kayıtları birleştirip tekil gösterir; `UNION ALL` ise tüm kayıtları (tekrarlar dahil) birleştirir.",
+      "`UNION ALL` sadece sayıları toplar.",
+      "Arada fark yoktur."
+    ],
+    "correctIndex": 1,
+    "explanation": "`UNION` benzersiz kayıtları bulmak için ek bir işlem yaptığı için `UNION ALL`'dan daha yavaştır."
+  },
+  {
+    "database": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'View' (Görünüm) kavramı ne amaçla kullanılır?",
+    "options": [
+      "Veritabanının ekran görüntüsünü almak için.",
+      "Karmaşık sorguları basitleştirmek, güvenliği artırmak (sadece belirli sütunları göstermek) ve sanal bir tablo oluşturmak için.",
+      "Verileri fiziksel olarak başka bir diske kopyalamak için.",
+      "Sadece verileri sıralamak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "View'lar fiziksel olarak veri saklamaz, sadece kayıtlı bir sorguyu tablo gibi kullanmamızı sağlar."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de bir tabloyu içindeki verilerle birlikte tamamen silmek için hangi komut kullanılır?",
+    "options": [
+      "DELETE TABLE",
+      "DROP TABLE",
+      "REMOVE TABLE",
+      "CLEAR TABLE"
+    ],
+    "correctIndex": 1,
+    "explanation": "`DROP TABLE` tablo yapısını ve veriyi tamamen yok eder; `DELETE` ise sadece verileri (isteğe bağlı) siler."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `IN` operatörü ne işe yarar?",
+    "options": [
+      "Sadece içinde geçen kelimeleri arar.",
+      "Bir sütun değerinin, parantez içinde belirtilen listedeki değerlerden herhangi birine eşit olup olmadığını kontrol eder.",
+      "Sadece internet hızını ölçer.",
+      "Verileri şifreler."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `WHERE sehir IN ('Ankara', 'İstanbul', 'İzmir')` çok sayıda `OR` yazmaktan daha temizdir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'Execution Plan' (Yürütme Planı) neyi gösterir?",
+    "options": [
+      "Uygulamanın ne zaman güncelleneceğini.",
+      "Veritabanı motorunun bir sorguyu en verimli şekilde nasıl çalıştıracağını (hangi indexi kullanacağı, hangi sırayla tarayacağı vb.) gösteren plandır.",
+      "Sistemin yedekleme takvimini.",
+      "Kullanıcıların giriş saatlerini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sorgu performansını optimize etmek için Senior geliştiricilerin incelediği en temel dökümandır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de `COUNT()` fonksiyonu ne işe yarar?",
+    "options": [
+      "Sayıları toplar.",
+      "Belirtilen kritere uyan satır sayısını döner.",
+      "En büyük sayıyı bulur.",
+      "Sadece rakamları siler."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `SELECT COUNT(*) FROM Musteriler` sorgusu toplam müşteri sayısını verir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `NULL` değeri neyi temsil eder?",
+    "options": [
+      "Sıfır (0) sayısını.",
+      "Boş bir metni (empty string).",
+      "Verinin yokluğunu, atanmamış veya bilinmeyen bir durumu.",
+      "Hatalı veriyi."
+    ],
+    "correctIndex": 2,
+    "explanation": "NULL, sıfır veya boşluktan farklıdır; 'bilinmeyen değer' anlamına gelir. `IS NULL` ile kontrol edilir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "NoSQL veritabanlarında 'CAP Teoremi' neyi ifade eder?",
+    "options": [
+      "Veritabanının kapasite (Capacity) limitini.",
+      "Consistency (Tutarlılık), Availability (Erişilebilirlik) ve Partition Tolerance (Bölünme Toleransı) özelliklerinden sadece ikisinin aynı anda tam olarak sağlanabileceğini.",
+      "İşlemci hızını.",
+      "Siber saldırı korumasını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dağıtık sistem tasarımında sistemin hangi özellikten feragat edeceğini (trade-off) belirleyen temel kuraldır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de verileri ters sırada (Z'den A'ye veya büyükten küçüğe) sıralamak için hangi anahtar kelime kullanılır?",
+    "options": [
+      "BACK",
+      "REVERSE",
+      "DESC",
+      "DOWN"
+    ],
+    "correctIndex": 2,
+    "explanation": "`ORDER BY sutun_adi DESC` (Descending) şeklinde kullanılır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `BETWEEN` operatörü hangi aralıkları kapsar?",
+    "options": [
+      "Sadece başlangıç ve bitiş değerlerini.",
+      "Belirtilen iki değer arasındaki tüm değerleri (başlangıç ve bitiş değerleri dahil).",
+      "İki değer arasındaki her şeyi ama sınırları hariç.",
+      "Sadece çift sayıları."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `WHERE fiyat BETWEEN 10 AND 50` sorgusu 10 ve 50'yi de kapsar."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'Sharding' (Parçalama) tekniği ne amaçla kullanılır?",
+    "options": [
+      "Verileri şifrelemek için.",
+      "Büyük bir veritabanını daha küçük ve yönetilebilir parçalara bölerek farklı sunuculara dağıtmak (Yatay Ölçekleme) için.",
+      "Verileri yedeklemek için.",
+      "Gereksiz tabloları silmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Tek bir sunucunun gücünün yetmediği devasa veri setlerini yönetmek için kullanılır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de tablodaki verileri tamamen boşaltmak ama tablo yapısını korumak için hangi komut kullanılır?",
+    "options": [
+      "EMPTY TABLE",
+      "TRUNCATE TABLE",
+      "CLEAN TABLE",
+      "DELETE ALL"
+    ],
+    "correctIndex": 1,
+    "explanation": "`TRUNCATE` işlemi `DELETE`'e göre çok daha hızlıdır çünkü satır satır log tutmadan tüm sayfaları serbest bırakır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `COALESCE()` fonksiyonu ne işe yarar?",
+    "options": [
+      "İki tabloyu birleştirir.",
+      "Parametre olarak verilen listedeki ilk `NULL` olmayan (non-null) değeri döndürür.",
+      "Sayıları çarpar.",
+      "Hataları raporlar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Null değerlerin yerine varsayılan bir değer (Örn: `COALESCE(ad, 'İsimsiz')`) koymak için çok kullanışlıdır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı işlemlerinde 'Isolation Level' (Yalıtım Seviyesi) neyi kontrol eder?",
+    "options": [
+      "İnternet bağlantı hızını.",
+      "Aynı anda çalışan farklı işlemlerin (transaction) birbirlerinin yaptığı değişiklikleri ne zaman ve nasıl göreceğini (Örn: Read Committed).",
+      "Kullanıcı şifrelerini.",
+      "Yedekleme sıklığını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Yalıtım seviyesi arttıkça tutarlılık artar ama performans düşebilir; doğru seviyeyi seçmek bir Senior uzmanlık işidir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de veritabanındaki en büyük değeri bulmak için hangi fonksiyon kullanılır?",
+    "options": [
+      "BIGGEST()",
+      "HIGH()",
+      "MAX()",
+      "TOP()"
+    ],
+    "correctIndex": 2,
+    "explanation": "Örn: `SELECT MAX(fiyat) FROM Urunler` sorgusu en pahalı ürünü bulur."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `ALTER TABLE` komutu ne işe yarar?",
+    "options": [
+      "Tabloyu silmeye.",
+      "Mevcut bir tablonun yapısını (Sütun ekleme, silme, tip değiştirme vb.) değiştirmeye.",
+      "Tablodaki verileri aramaya.",
+      "Tabloyu yedeklemeye."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `ALTER TABLE Musteriler ADD Telefon VARCHAR(20)` ile tabloya yeni bir sütun eklenebilir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'WAL' (Write Ahead Logging) mekanizması ne amaçla kullanılır?",
+    "options": [
+      "Verileri daha hızlı okumak için.",
+      "Verideki her değişikliği asıl veri dosyasına yazmadan önce bir log dosyasına kaydederek, sistem çökmesi anında veri kaybını önlemek (Durability) için.",
+      "Sadece şifreleri saklamak için.",
+      "İnternet trafiğini izlemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Transaction logları sayesinde veritabanı crash sonrası 'recovery' (kurtarma) yapabilir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de veritabanındaki tüm sayıların ortalamasını almak için hangi fonksiyon kullanılır?",
+    "options": [
+      "MEAN()",
+      "AVERAGE()",
+      "AVG()",
+      "MID()"
+    ],
+    "correctIndex": 2,
+    "explanation": "`AVG(sutun_adi)` şeklinde kullanılır ve sayısal sütunların ortalamasını hesaplar."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `AS` anahtar kelimesi (Aliasing) ne işe yarar?",
+    "options": [
+      "Verileri şifrelemek için.",
+      "Sorgu sonucunda sütun veya tablo isimlerine geçici, daha okunabilir takma isimler vermek için.",
+      "Verileri silmek için.",
+      "Verileri kopyalamak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `SELECT ad AS Isim FROM Personel` sorgusunda başlık 'Isim' olarak görünür."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "NoSQL veritabanlarında 'Eventual Consistency' kavramı neyi ifade eder?",
+    "options": [
+      "Verilerin hiçbir zaman tutarlı olmayacağını.",
+      "Verideki bir değişikliğin anında değil, belirli bir süre sonra tüm sistemde (node'larda) aynı olacağını garanti eden gevşek tutarlık modelini.",
+      "Verilerin sadece geceleri güncellenmesini.",
+      "Sadece internet varken çalışmayı."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hızın (Availability) tutarlılıktan daha önemli olduğu büyük dağıtık sistemlerde (Örn: Sosyal medya beğenileri) tercih edilir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de bir tablodan belirli bir kaydı silmek için hangi komut kullanılır?",
+    "options": [
+      "REMOVE",
+      "DELETE FROM",
+      "CLEAR",
+      "DROP"
+    ],
+    "correctIndex": 1,
+    "explanation": "`DELETE FROM tablo_adi WHERE kosul` yapısı ile sadece istenen satırlar silinir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `EXISTS` operatörü ne amaçla kullanılır?",
+    "options": [
+      "Dosya olup olmadığını kontrol etmek için.",
+      "Bir alt sorgunun (subquery) herhangi bir sonuç dönüp dönmediğini (kaydın varlığını) kontrol etmek için.",
+      "Sadece rakamları saymak için.",
+      "Veritabanını başlatmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Genellikle `WHERE EXISTS (...)` şeklinde kullanılır ve alt sorgu bir satır bile dönse TRUE sonucunu verir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'Lock Escalation' nedir?",
+    "options": [
+      "Şifrenin her seferinde zorlaşması.",
+      "Sistemin binlerce satır bazlı kilit yerine, performansı korumak için tek bir büyük tablo bazlı kilit (lock) kullanmaya geçmesi durumu.",
+      "Kullanıcı yetkilerinin artırılması.",
+      "İnternet hızının artması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Çok fazla küçük kilit sistem belleğini yorduğunda, veritabanı motoru otomatik olarak kilidi büyütür ama bu durum diğer kullanıcıların beklemesine neden olabilir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de veritabanındaki en küçük değeri bulmak için hangi fonksiyon kullanılır?",
+    "options": [
+      "SMALLEST()",
+      "LOW()",
+      "MIN()",
+      "BOTTOM()"
+    ],
+    "correctIndex": 2,
+    "explanation": "`MIN(sutun_adi)` en küçük değeri döner."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `JOIN` yaparken `ON` ifadesi yerine `USING` ne zaman kullanılır?",
+    "options": [
+      "Hiçbir zaman kullanılmaz.",
+      "İki tabloda da birleştirilecek sütun isimleri tamamen aynı olduğunda daha kısa yazım için.",
+      "Sadece rakamları birleştirirken.",
+      "Hata ayıklarken."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `JOIN Musteriler USING (MusteriID)` hem daha kısa hem daha temizdir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanlarında 'Dirty Read' sorunu nedir?",
+    "options": [
+      "Veritabanının kirli görünmesi.",
+      "Bir işlemin (transaction), henüz commit edilmemiş (geri alınma ihtimali olan) başka bir işlemin verisini okuması durumu.",
+      "Verilerin yanlış formatta okunması.",
+      "Eski yedeklerin okunması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Isolation seviyeleri (Read Committed gibi) bu sorunu önlemek için yapılandırılır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de tüm sayıların toplamını almak için hangi fonksiyon kullanılır?",
+    "options": [
+      "TOTAL()",
+      "PLUS()",
+      "SUM()",
+      "ADD()"
+    ],
+    "correctIndex": 2,
+    "explanation": "`SUM(fiyat)` tüm fiyatları toplar."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `CASE WHEN` yapısı ne işe yarar?",
+    "options": [
+      "Sadece hataları yakalamaya.",
+      "Sorgu içinde mantıksal kontroller yaparak (if-else mantığı), veriyi farklı şekillerde etiketlemeye veya dönüştürmeye.",
+      "Tablo isimlerini değiştirmeye.",
+      "Sadece sayılarla işlem yapmaya."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: Puanı 50'den büyükse 'Geçti', değilse 'Kaldı' yazdırmak için kullanılır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'Materialized View' ve normal 'View' arasındaki fark nedir?",
+    "options": [
+      "Normal view daha hızlıdır.",
+      "Materialized View sorgu sonucunu fiziksel olarak diske kaydeder (cache gibi); normal View ise her çağrıldığında sorguyu baştan çalıştırır.",
+      "Materialized view sadece resimler içindir.",
+      "Arada fark yoktur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Büyük veri setlerinde performans için harikadır ama verinin güncelliğini korumak için periyodik yenileme (refresh) gerektirir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de bir sütuna 'NULL' değer girilmesini engellemek için hangi kısıtlama (constraint) kullanılır?",
+    "options": [
+      "STRICT",
+      "NOT NULL",
+      "REQUIRED",
+      "FIXED"
+    ],
+    "correctIndex": 1,
+    "explanation": "Tablo oluşturulurken belirtilir ve o alanın boş bırakılmasını veritabanı seviyesinde yasaklar."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `REPLACE()` fonksiyonu ne işe yarar?",
+    "options": [
+      "Veritabanını tamamen siler.",
+      "Bir metin içindeki belirli karakterleri başka karakterlerle değiştirmek için.",
+      "Sadece sayıları değiştirmek için.",
+      "Hataları gizlemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `REPLACE('Merhaba', 'a', 'e')` sonucu 'Merhebe' olur."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "NoSQL'de 'Base' (Basically Available, Soft state, Eventual consistency) modeli neyi hedefler?",
+    "options": [
+      "Veritabanını daha yavaş çalıştırmayı.",
+      "ACID prensiplerinin aksine; yüksek erişilebilirlik ve ölçeklenebilirlik için tutarlılıktan bir miktar ödün vermeyi.",
+      "Verileri sadece metin olarak saklamayı.",
+      "Sadece askeri sistemlerde çalışmayı."
+    ],
+    "correctIndex": 1,
+    "explanation": "Modern web devlerinin (Facebook, Amazon vb.) devasa yükleri yönetmek için kullandığı modeldir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de bir tablodan sadece ilk 5 kaydı çekmek için (PostgreSQL/MySQL'de) ne kullanılır?",
+    "options": [
+      "FIRST 5",
+      "TOP 5",
+      "LIMIT 5",
+      "GET 5"
+    ],
+    "correctIndex": 2,
+    "explanation": "`LIMIT 5` sorgunun sonuna eklenir; SQL Server'da ise `SELECT TOP 5` kullanılır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `LTRIM()` ve `RTRIM()` fonksiyonları ne amaçla kullanılır?",
+    "options": [
+      "Metinleri şifrelemek için.",
+      "Metnin solundaki veya sağındaki gereksiz boşlukları (whitespace) temizlemek için.",
+      "Metinleri birleştirmek için.",
+      "Metinleri bölmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kullanıcı girişlerindeki görünmez boşlukları temizleyerek veri kalitesini artırmak için kullanılır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Veritabanı 'Composite Key' (Bileşik Anahtar) nedir?",
+    "options": [
+      "Şifreli bir anahtardır.",
+      "Birden fazla sütunun birleşerek tek bir Primary Key gibi davranması durumudur.",
+      "Aynı anda iki veritabanını açan anahtardır.",
+      "Sadece tarihleri saklayan anahtardır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: Bir 'ÖğrenciDers' tablosunda, 'OgrenciID' ve 'DersID' ikilisi birlikte eşsiz bir kayıt oluşturur."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de bir sütuna girilen verinin belirli bir şarta uymasını zorunlu tutan kısıtlama hangisidir?",
+    "options": [
+      "RULE",
+      "CHECK",
+      "VALID",
+      "STRICT"
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `CHECK (yas >= 18)` kısıtlaması ile 18 yaş altı kayıt girişi engellenir."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `SUBSTRING()` fonksiyonu ne amaçla kullanılır?",
+    "options": [
+      "Veritabanını alt dallara ayırmak için.",
+      "Bir metin içerisinden belirli bir başlangıç noktasından itibaren istenen uzunlukta bir parçayı çekip almak için.",
+      "Sadece sayıları çarpmak için.",
+      "Hataları raporlamak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `SUBSTRING('Mülakatım', 1, 4)` sonucu 'Müla' olur."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "NoSQL'de 'Document-Oriented' veritabanlarının (Örn: MongoDB) en büyük avantajı nedir?",
+    "options": [
+      "Sadece kağıt dökümanları taraması.",
+      "Verileri JSON benzeri esnek bir formatta saklayarak, uygulama kodundaki nesne yapısıyla (Object) doğrudan uyumlu olması ve şema bağımsızlığı.",
+      "Sadece Excel dosyalarını saklaması.",
+      "İnternet hızını artırması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Join işlemlerinden kaçınarak (embedding) hızlı okuma sağlar ve yazılım geliştirme sürecini hızlandırır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "SQL'de iki metni (String) birleştirmek için (PostgreSQL/Oracle'da) hangi operatör kullanılır?",
+    "options": [
+      "+",
+      "&",
+      "||",
+      "++"
+    ],
+    "correctIndex": 2,
+    "explanation": "Örn: `ad || ' ' || soyad` tam ismi oluşturur; SQL Server'da ise `+` kullanılır."
+  },
+  {
+    "category": "database",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL'de `LENGTH()` veya `LEN()` fonksiyonu neyi döner?",
+    "options": [
+      "Tablo sayısını.",
+      "Belirtilen metindeki karakter sayısını (uzunluğunu).",
+      "Dosya boyutunu.",
+      "Sorgu süresini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Metinlerin uzunluklarını kontrol etmek ve filtrelemek için kullanılır."
+  }
+]

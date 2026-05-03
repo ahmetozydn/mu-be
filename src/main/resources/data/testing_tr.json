@@ -1,0 +1,716 @@
+[
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Yazılım test süreçlerinde 'Regression Test' (Regresyon Testi) temel olarak hangi amaçla yapılır?",
+    "options": [
+      "Uygulamanın ilk kez geliştirilen yeni özelliklerinin hatasız çalıştığını doğrulamak.",
+      "Sisteme yeni bir özellik eklendiğinde veya kodda değişiklik yapıldığında, mevcut özelliklerin bozulmadığından emin olmak.",
+      "Uygulamanın sadece tasarım (UI) bileşenlerinin standartlara uygunluğunu kontrol etmek.",
+      "Veritabanındaki verilerin doğruluğunu ve tutarlılığını test etmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Regresyon testi, yapılan bir değişikliğin sistemin geri kalanında beklenmedik yan etkilere yol açıp açmadığını denetlemek için kritik bir süreçtir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Test otomasyonunda kullanılan 'Page Object Model' (POM) tasarım deseninin sağladığı en büyük avantaj nedir?",
+    "options": [
+      "Testlerin daha hızlı koşmasını sağlayarak toplam test süresini kısaltmak.",
+      "UI değişiklikleri olduğunda sadece ilgili sayfa sınıfını güncelleyerek kodun bakımını (maintenance) kolaylaştırmak.",
+      "Uygulamanın performans metriklerini otomatik olarak raporlamak.",
+      "Tüm test senaryolarını tek bir dosya içinde toplayarak kod karmaşasını önlemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "POM, sayfa elementlerini test senaryolarından ayırarak kod tekrarını önler. Arayüzdeki bir değişiklikte tüm testleri değil, sadece ilgili sayfa objesini güncellemeniz yeterli olur."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Sürekli Entegrasyon (CI) süreçlerinde koşturulan otomasyon testlerinde 'Flaky Test' (istikrarsız test) sorunuyla nasıl mücadele edilmelidir?",
+    "options": [
+      "Hata veren testleri doğrudan silerek CI sürecini hızlandırmak.",
+      "Testlerdeki bekleme sürelerini (Wait) sabit (Hard Wait/Thread.sleep) olarak artırmak.",
+      "Testlerin başarısız olma kök nedenini analiz etmek, dinamik beklemeler (Explicit Wait) kullanmak ve izole edilmiş test ortamları sağlamak.",
+      "Flaky testleri sadece lokal bilgisayarda koşturup CI sürecinden tamamen çıkarmak."
+    ],
+    "correctIndex": 2,
+    "explanation": "Flaky testler otomasyona duyulan güveni sarsar. Sabit beklemeler yerine elementin durumuna odaklanan dinamik beklemeler ve temiz test datası kullanımı en profesyonel çözümdür."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir test senaryosunun 'Bug' (Hata) olarak raporlanabilmesi için raporda bulunması gereken en kritik bilgi hangisidir?",
+    "options": [
+      "Hatanın hangi renk şemasında oluştuğu.",
+      "Hatanın ekran görüntüsü ve adımlarının (Steps to Reproduce) net bir şekilde açıklanması.",
+      "Geliştiricinin hatayı neden yapmış olabileceğine dair kişisel tahminler.",
+      "Uygulamanın toplam indirme sayısı."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bir hatanın çözülebilmesi için geliştiricinin hatayı kendi ortamında yeniden oluşturabilmesi gerekir. Bu yüzden adım adım tarif ve kanıt (log/video/image) vazgeçilmezdir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "API testlerinde 'Status Code 401' ve 'Status Code 403' arasındaki fark nedir?",
+    "options": [
+      "401 sunucu hatasını, 403 ise ağ bağlantı hatasını temsil eder.",
+      "401 kullanıcının kimliğinin doğrulanmadığını (Unauthorized), 403 ise kimlik doğru olsa bile yetkisinin olmadığını (Forbidden) belirtir.",
+      "401 sayfanın bulunamadığını, 403 ise verinin yanlış formatta olduğunu gösterir.",
+      "İkisi de aynı hatayı temsil eder, sadece kullanılan framework'e göre isimleri değişir."
+    ],
+    "correctIndex": 1,
+    "explanation": "401 'kimsin bilmiyorum' (login gerekli), 403 ise 'kim olduğunu biliyorum ama buraya giremezsin' (yetki yetersiz) demektir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Test Piramidi (Test Pyramid) stratejisine göre, sağlıklı bir otomasyon projesinde test sayılarının dağılımı nasıl olmalıdır?",
+    "options": [
+      "En çok UI testi, sonra API testi, en az Unit test bulunmalıdır.",
+      "Eşit miktarda Unit, Integration ve UI testi bulunmalıdır.",
+      "En çok Unit test, orta miktarda Integration/API testi, en az miktarda UI (End-to-End) testi bulunmalıdır.",
+      "Sadece UI testleri yapılmalı, Unit testler geliştiricilere bırakılmalıdır."
+    ],
+    "correctIndex": 2,
+    "explanation": "Unit testler hızlı ve maliyeti düşüktür, bu yüzden piramidin tabanını oluşturur. UI testleri yavaş ve kırılgandır, bu yüzden sadece kritik senaryolar için en tepede az sayıda tutulmalıdır."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Veri odaklı test (Data-Driven Testing) yaklaşımı otomasyona ne kazandırır?",
+    "options": [
+      "Testlerin daha renkli raporlar üretmesini sağlar.",
+      "Aynı test adımlarını farklı veri setleri (farklı kullanıcılar, limitler vb.) ile tekrar tekrar koşturabilme imkanı sunar.",
+      "Veritabanını tamamen temizleyerek testlerin sıfırdan başlamasını sağlar.",
+      "Test kodunun satır sayısını artırarak daha karmaşık görünmesini sağlar."
+    ],
+    "correctIndex": 1,
+    "explanation": "DDT sayesinde mantık (logic) bir kez yazılır, veriler ise dış kaynaklardan (CSV, Excel, JSON) beslenerek kapsam genişletilir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir web uygulamasında bir butona tıklamak için kullanılan 'XPath' kavramı nedir?",
+    "options": [
+      "Butonun üzerine gelindiğinde çıkan yazı.",
+      "HTML dokümanı içinde bir elementi bulmak için kullanılan adresleme/yol belirleme dilidir.",
+      "Butonun arka plan rengini belirleyen CSS kodudur.",
+      "Tarayıcının sürüm numarasını gösteren bilgidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "XPath (XML Path Language), DOM yapısı içinde gezinerek belirli kriterlere uyan elementleri (id, name, text vb.) seçmemize olanak tanır."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Mobil test otomasyonunda 'Appium'un çalışma mimarisinde 'WebDriver Agent'ın (iOS için) rolü nedir?",
+    "options": [
+      "Uygulamanın internet hızını kontrol etmek.",
+      "Appium'dan gelen komutları iOS cihazının anlayabileceği XCUITest komutlarına çevirerek cihazda yürütmek.",
+      "Uygulamanın sadece Android cihazlarda çalışmasını sağlamak.",
+      "iOS cihazının ekran görüntüsünü videoya kaydetmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "WebDriverAgent, Appium ile iOS cihazı arasındaki köprüdür. Appium'un gönderdiği JSON Wire Protocol komutlarını iOS'in yerel test framework'ü olan XCUITest'e iletir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Test otomasyonunda 'Shift-Left Testing' yaklaşımı neyi ifade eder?",
+    "options": [
+      "Testlerin klavyedeki sol shift tuşu ile başlatılmasını.",
+      "Test süreçlerinin yazılım geliştirme yaşam döngüsünün (SDLC) mümkün olduğunca erken aşamalarına kaydırılmasını.",
+      "Sadece tasarım aşamasında test yapıp kodlama aşamasında test yapmamayı.",
+      "Test raporlarını ekranın sol tarafına hizalamayı."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hataları ne kadar erken (analiz/tasarım aşamasında) bulursanız, düzeltme maliyeti o kadar düşük olur. Shift-left, testin sona bırakılmaması prensibidir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "'Black Box Testing' (Kara Kutu Testi) yaklaşımında test uzmanı neye odaklanır?",
+    "options": [
+      "Kodun iç yapısını ve algoritmalarını incelemeye.",
+      "Sadece veritabanındaki tabloların ilişkisine.",
+      "Kodun içeriğini bilmeden, sadece girdiler ve beklenen çıktılar üzerinden fonksiyonelliği doğrulamaya.",
+      "Uygulamanın sunucu tarafındaki CPU kullanım oranına."
+    ],
+    "correctIndex": 2,
+    "explanation": "Kara kutu testinde sistemin iç işleyişi bir gizemdir; test uzmanı sadece kullanıcı gibi davranarak gereksinimlerin karşılanıp karşılanmadığına bakar."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir test uzmanı için 'Boundary Value Analysis' (Sınır Değer Analizi) tekniği ne zaman kullanılır?",
+    "options": [
+      "Uygulamanın ekran sınırlarını test ederken.",
+      "Hataların genellikle giriş aralıklarının uç noktalarında (minimum, maksimum, sınırın bir altı/üstü) oluştuğu varsayımıyla test yaparken.",
+      "Uygulamanın sadece internet hız sınırlarını test ederken.",
+      "Kod satır sayısını sınırlandırmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hatalar genellikle 1-100 arası bir girişte 0, 1, 100 ve 101 gibi sınır değerlerde çıkar. Bu teknik, test vaka sayısını optimize ederken hata bulma olasılığını artırır."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "'Smoke Test' (Duman Testi) hangi aşamada ve ne amaçla yapılır?",
+    "options": [
+      "Uygulamanın tüm detaylarını test etmek için projenin en sonunda.",
+      "Yeni bir build (yapı) alındığında, sistemin en temel fonksiyonlarının çalışıp çalışmadığını anlamak ve büyük engelleri erkenden görmek için.",
+      "Sadece performans sorunlarını tespit etmek için.",
+      "Kullanıcılara anket yapmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eğer 'duman çıkıyorsa' (temel özellikler çalışmıyorsa) detaylı teste geçmeye gerek yoktur; build reddedilir ve geliştiricilere geri gönderilir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Yazılım testinde 'Severity' (Şiddet) ve 'Priority' (Öncelik) arasındaki temel fark nedir?",
+    "options": [
+      "Severity hatanın sisteme etkisini, Priority ise hatanın ne kadar hızlı düzeltilmesi gerektiğini ifade eder.",
+      "Priority hatanın kod üzerindeki etkisidir, Severity ise tasarım üzerindeki etkisidir.",
+      "İkisi de aynı kavramdır, farklı şirketlerde farklı isimler alırlar.",
+      "Severity sadece UI hataları için, Priority sadece API hataları için kullanılır."
+    ],
+    "correctIndex": 0,
+    "explanation": "Örneğin, bir logoda yazım hatası olması (düşük şiddet) markaya zarar vereceği için (yüksek öncelik) olabilir; veya sistemin nadir kullanılan bir yerinde crash olması (yüksek şiddet) ama (düşük öncelik) olabilir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Yazılım geliştirmede 'Static Testing' (Statik Test) neyi kapsar?",
+    "options": [
+      "Uygulamayı çalıştırarak yapılan testleri.",
+      "Kodun çalıştırılmadan, doküman incelemesi (Review) veya statik analiz araçlarıyla kontrol edilmesini.",
+      "Sadece internet bağlantısı yokken yapılan testleri.",
+      "Veritabanının durdurulup yapılan testleri."
+    ],
+    "correctIndex": 1,
+    "explanation": "Statik testler; gereksinim belgeleri, tasarım dökümanları ve kodun kendisinin gözden geçirilmesidir. Hataları kod çalışmadan bulmayı hedefler."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "'Equivalence Partitioning' (Denklik Sınıflarına Ayırma) tekniğinin temel amacı nedir?",
+    "options": [
+      "Tüm olası veri girişlerini tek tek denemek.",
+      "Girdi verilerini benzer sonuçlar üretecek gruplara ayırarak, her gruptan sadece bir temsilci veri ile test yapıp vakit kazanmak.",
+      "Kodun sadece yarısını test etmek.",
+      "Hataları eşit şekilde tüm takıma dağıtmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eğer bir alan 1-1000 arası sayı kabul ediyorsa, 50, 500 ve 800'ü ayrı ayrı denemek yerine 'geçerli aralık'tan bir sayı seçmek yeterlidir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Yazılım test yaşam döngüsünde (STLC) 'Test Case' (Test Vakası) yazımı hangi aşamada gerçekleşir?",
+    "options": [
+      "Uygulama yayına çıktıktan sonra.",
+      "Müşteri şikayetleri geldikten sonra.",
+      "Gereksinimler analiz edildikten ve test planı yapıldıktan sonra, uygulama geliştirilirken veya öncesinde.",
+      "Sadece kodlama tamamen bittiğinde."
+    ],
+    "correctIndex": 2,
+    "explanation": "Test vakaları gereksinimlere dayanır. Uygulama hazır olmadan önce vakaların yazılması, test aşamasına hazırlıklı girilmesini sağlar."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "'Ad-hoc Testing' nedir?",
+    "options": [
+      "Belirli bir plan veya test dökümanı olmadan, tamamen serbest ve plansız bir şekilde sistemi kurcalayarak hata bulma sürecidir.",
+      "Sadece mobil cihazlarda yapılan resmi test sürecidir.",
+      "Testlerin otomatik olarak her gece çalışmasıdır.",
+      "Müşterinin uygulamayı satın almadan önce yaptığı son testtir."
+    ],
+    "correctIndex": 0,
+    "explanation": "Ad-hoc testi, dökümantasyonun eksik olduğu veya hızlıca bir 'monkey testing' yapılması gerektiği durumlarda uzman tecrübesine dayalı yapılır."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "'Defect Life Cycle' (Hata Yaşam Döngüsü) sırasında bir hatanın 'Deferred' durumuna getirilmesi ne anlama gelir?",
+    "options": [
+      "Hatanın anında düzeltildiğini gösterir.",
+      "Hatanın bir hata olmadığına karar verildiğini belirtir.",
+      "Hatanın varlığının kabul edildiği ancak düzeltilmesinin sonraki sürümlere/fazlara ertelendiğini ifade eder.",
+      "Hatanın tekrarlanamadığı (not reproducible) anlamına gelir."
+    ],
+    "correctIndex": 2,
+    "explanation": "Düşük öncelikli veya o anki teslimat takvimini riske sokacak hatalar, proje yönetimi kararıyla bir sonraki release'e ertelenebilir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "'User Acceptance Testing' (UAT) sürecini kim yürütür?",
+    "options": [
+      "Sadece yazılım geliştiriciler.",
+      "Test otomasyon mühendisleri.",
+      "Nihai kullanıcılar veya iş birimi temsilcileri (Product Owner/Business Analyst).",
+      "Sistemi kuran sistem yöneticileri."
+    ],
+    "correctIndex": 2,
+    "explanation": "UAT, yazılımın iş ihtiyaçlarını karşılayıp karşılamadığını ve gerçek dünya senaryolarında kullanıcılar tarafından kabul edilebilir olup olmadığını ölçer."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Selenium WebDriver'da 'Implicit Wait' ve 'Explicit Wait' arasındaki en kritik fark nedir?",
+    "options": [
+      "Implicit wait sadece belirli elementler için, Explicit wait tüm sayfa için geçerlidir.",
+      "Implicit wait bir kez tanımlanır ve driver ömrü boyunca tüm elementleri bekler; Explicit wait ise belirli bir koşul gerçekleşene kadar belirli bir element özelinde bekler.",
+      "Explicit wait daha yavaştır çünkü her saniye kontrol yapar.",
+      "İkisi arasında hiçbir fark yoktur, farklı Selenium versiyonlarında farklı isimler alırlar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Explicit wait (WebDriverWait) çok daha esnektir; bir elementin tıklanabilir olması, görünür olması gibi spesifik 'ExpectedConditions' bekleyebilir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Davranış Odaklı Geliştirme (BDD) süreçlerinde kullanılan 'Gherkin' dilindeki 'Given - When - Then' yapısı neyi ifade eder?",
+    "options": [
+      "Given: Aksiyon, When: Sonuç, Then: Ön koşul.",
+      "Given: Ön koşul, When: Kullanıcı aksiyonu, Then: Beklenen sonuç/doğrulama.",
+      "Given: Hata, When: Düzeltme, Then: Rapor.",
+      "Sadece veritabanı sorguları yazmak için kullanılan bir sözdizimidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Gherkin dili, teknik olmayan paydaşların da anlayabileceği bir dilde test senaryosu yazılmasını sağlayarak ortak bir dil oluşturur."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Test otomasyonunda 'Headless Browser' (Arayüzsüz Tarayıcı) kullanımı neden tercih edilir?",
+    "options": [
+      "Testlerin gerçek kullanıcı gibi görünmesini engellemek için.",
+      "Görsel bir arayüz (GUI) oluşturma yükü olmadığı için testlerin daha hızlı koşmasını ve CI ortamlarında (Linux vb.) kaynak tasarrufu sağlamasını amaçlar.",
+      "Sadece siyah-beyaz web sitelerini test etmek için.",
+      "Kullanıcının ekranını gizlemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Headless mod (Örn: Chrome Headless), tarayıcıyı bellekte çalıştırır. UI render edilmediği için hız artar ve sunucu kaynakları korunur."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir API testinde 'Payload' terimi neyi ifade eder?",
+    "options": [
+      "API'nin cevap verme süresini.",
+      "İsteğin (Request) veya cevabın (Response) gövdesinde (Body) taşınan asıl veriyi.",
+      "API anahtarının (API Key) şifrelenmiş halini.",
+      "Sunucunun fiziksel konumunu."
+    ],
+    "correctIndex": 1,
+    "explanation": "Payload, örneğin bir JSON objesi içindeki kullanıcı bilgileridir. Başlıklar (headers) dışındaki asıl iş yükünü temsil eder."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "SQL bilgisi bir test uzmanına en çok hangi durumda yardımcı olur?",
+    "options": [
+      "UI üzerindeki butonların yerini değiştirmek için.",
+      "Uygulamanın arayüzünde görünen verilerin, veritabanında doğru kaydedilip kaydedilmediğini (Data Integrity) doğrulamak için.",
+      "Bilgisayarın işlemcisini hızlandırmak için.",
+      "Sadece Excel dökümanlarını açmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Backend testlerinde, UI'dan girilen verinin DB'ye doğru yansıyıp yansımadığını sorgularla (Select, Join vb.) kontrol etmek kalitenin temelidir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Test otomasyonunda 'Assert' ve 'Verify' arasındaki temel fark nedir?",
+    "options": [
+      "Assert hata durumunda testi durdurur; Verify ise hata olsa bile testi devam ettirir ve hataları loglar.",
+      "Verify daha güvenlidir çünkü hata vermez.",
+      "Assert sadece sayılar için, Verify sadece metinler için kullanılır.",
+      "İkisi de aynıdır, Java'da Assert, JavaScript'te Verify kullanılır."
+    ],
+    "correctIndex": 0,
+    "explanation": "Assert (Sert doğrulama) kritik adımlarda kullanılır (Örn: Login başarısızsa devam etme). Verify (Yumuşak doğrulama/Soft Assert) ise yan özelliklerin kontrolünde tercih edilir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "RESTful API testlerinde kullanılan 'PUT' ve 'PATCH' metodları arasındaki fark nedir?",
+    "options": [
+      "PUT yeni veri oluşturur, PATCH veriyi siler.",
+      "PUT tüm kaynağı (resource) tamamen günceller/yer değiştirir; PATCH ise kaynağın sadece belirli bir kısmını günceller.",
+      "PUT sadece okuma yapar, PATCH sadece yazma yapar.",
+      "Arada teknik bir fark yoktur, sunucu mimarisine göre biri seçilir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin bir kullanıcının sadece soyadını değiştirecekseniz PATCH, tüm profil bilgilerini yeniden gönderecekseniz PUT kullanılması best practice'dir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Otomasyon kodunda 'Hard Wait' (Thread.sleep) neden bir 'anti-pattern' (kaçınılması gereken durum) olarak görülür?",
+    "options": [
+      "Çünkü testleri çok fazla hızlandırır.",
+      "Gereksiz beklemelere yol açarak test süresini uzatır ve ağ yavaşlığı gibi durumlarda testin kalmasına (flakiness) sebep olur.",
+      "Sadece bilgisayarın RAM'ini bozar.",
+      "Kodun okunabilirliğini artırdığı için tercih edilmez."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dinamik beklemeler (Explicit Wait) koşul gerçekleştiği anda devam ederken, Thread.sleep koşul sağlansa bile sürenin sonuna kadar bekler."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Selenium'da 'CSS Selector' kullanmanın 'XPath'e göre genel avantajı nedir?",
+    "options": [
+      "Daha fazla elemente erişebilmesi.",
+      "Tarayıcılar tarafından daha hızlı parse edilmesi ve sözdiziminin (syntax) genellikle daha okunabilir/kısa olması.",
+      "Sadece renkleri bulabilmesi.",
+      "Veritabanına doğrudan bağlanabilmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "XPath geriye doğru (parent) arama yapabildiği için daha güçlüdür ama CSS selector performans ve okunabilirlik açısından çoğu zaman daha iyidir."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "'Sanity Test' (Sağlık Testi) ne zaman yapılır?",
+    "options": [
+      "Her sprint sonunda tüm sistemi test etmek için.",
+      "Hata düzeltmeleri (bug fix) yapıldıktan sonra, bu düzeltmelerin gerçekten işe yarayıp yaramadığını hızlıca kontrol etmek için.",
+      "Sadece yeni personeller işe başladığında.",
+      "Uygulamanın pil tüketimini ölçmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sanity testi, Smoke testin aksine daha spesifik bir alana odaklanır ve yapılan değişikliğin mantıksal doğruluğunu hedefler."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Test otomasyonunda 'Mocking' (Taklit Etme) neden kullanılır?",
+    "options": [
+      "Kodun daha gerçekçi görünmesi için.",
+      "Henüz hazır olmayan veya test sırasında erişilmesi maliyetli/yavaş olan dış servislerin (Örn: Ödeme sistemi) davranışlarını simüle etmek için.",
+      "Geliştiricilerin yerine kod yazmak için.",
+      "Uygulamayı korsan yazılımlara karşı korumak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Mocking, testin dış bağımlılıklardan (external dependencies) izole edilmesini ve sadece test edilmek istenen birimin (unit) odaklanılmasını sağlar."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Git üzerinde 'Merge Conflict' (Birleştirme Çakışması) ne zaman oluşur?",
+    "options": [
+      "İki farklı kişinin aynı dosyanın aynı satırlarında farklı değişiklikler yapıp bu değişiklikleri birleştirmeye çalışması durumunda.",
+      "İnternet bağlantısı kesildiğinde.",
+      "Aynı anda iki farklı bilgisayardan kod yazıldığında.",
+      "Dosya boyutu çok büyük olduğunda."
+    ],
+    "correctIndex": 0,
+    "explanation": "Git bu durumda hangi değişikliğin doğru olduğuna karar veremez ve kullanıcıdan çakışmayı manuel olarak çözmesini (resolve) bekler."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir web sayfasında 'iframe' içindeki bir elemente Selenium ile erişmek için ne yapılmalıdır?",
+    "options": [
+      "Doğrudan elementin XPath'i kullanılabilir.",
+      "Önce `driver.switchTo().frame()` metodu ile ilgili iframe'e geçiş yapılmalı, sonra element aranmalıdır.",
+      "Sayfa yenilenmelidir.",
+      "İşletim sistemi seviyesinde mouse tıklaması simüle edilmelidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Tarayıcılar iframe'leri ayrı bir döküman olarak görür. Switch işlemi yapılmadan içindeki elementler WebDriver tarafından bulunamaz."
+  },
+  {
+    "category": "testing",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Agile (Çevik) metodolojide 'Definition of Done' (Bitti Tanımı) test ekibi için neyi ifade eder?",
+    "options": [
+      "Sadece kodun yazılmış olması.",
+      "Bir task'ın tamamlanmış sayılması için gerekli olan testlerin koşulması, bugların kapatılması ve kabul kriterlerinin karşılanması gibi tüm standartların listesi.",
+      "Mesai saatinin bittiği an.",
+      "Müşterinin parayı ödediği aşama."
+    ],
+    "correctIndex": 1,
+    "explanation": "DoD, kalitenin standartlaştırılmasını sağlar. 'Bitti' dendiğinde herkesin aynı kalite seviyesini anlamasını garanti eder."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Test otomasyon projesinin Yatırım Getirisi (ROI) analiz edilirken aşağıdakilerden hangisi dikkate alınmaz?",
+    "options": [
+      "Otomasyon araçlarının ve altyapısının maliyeti.",
+      "Manuel testlerin toplam süresi ve maliyeti.",
+      "Geliştiricilerin kullandığı programlama dillerinin popülerliği.",
+      "Testlerin tekrar edilme sıklığı ve hata bulma kapasitesi."
+    ],
+    "correctIndex": 2,
+    "explanation": "ROI, otomasyonun sağladığı zaman ve maliyet tasarrufunu ölçer. Programlama dilinin popülerliği maliyet veya tasarruf üzerinde doğrudan bir metrik değildir."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Büyük ölçekli bir projede 'Test Data Management' (TDM) için en sürdürülebilir yaklaşım nedir?",
+    "options": [
+      "Verileri manuel olarak her testten önce elle girmek.",
+      "Prod (Canlı) veritabanının kopyasını her testte kullanmak.",
+      "API'lar veya veritabanı scriptleri ile her test öncesi gerekli datayı otomatik yaratan ve test sonrası temizleyen (Self-healing/Cleanup) mekanizmalar kurmak.",
+      "Aynı sabit test verisini (Örn: 'testuser1') yıllarca kullanmak."
+    ],
+    "correctIndex": 2,
+    "explanation": "Sabit data kullanımı paralel testleri engeller ve data bozulmasına (pollution) açıktır. Dinamik data üretimi test izolasyonu için kritiktir."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "'Service Virtualization' (Servis Sanallaştırma) ve 'Mocking' arasındaki en büyük fark nedir?",
+    "options": [
+      "Sanallaştırma sadece donanım içindir, Mocking yazılım içindir.",
+      "Mocking kod seviyesinde objeleri taklit ederken; Sanallaştırma, tüm bir servisin (HTTP/MQ vb.) davranışını ağ düzeyinde taklit eder ve birden fazla uygulama tarafından kullanılabilir.",
+      "Mocking daha pahalıdır.",
+      "Arada fark yoktur, ikisi de aynı şeydir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sanallaştırma, örneğin bir mainframe sistemine veya üçüncü parti bir banka API'sine olan bağımlılığı, tüm ağ trafiğini simüle ederek ortadan kaldırır."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Bir 'Lead QA' olarak, takımda 'Quality Culture' (Kalite Kültürü) oluşturmak için hangisini öncelikle yapmalısınız?",
+    "options": [
+      "Hata yapan geliştiricileri cezalandırmak.",
+      "Kaliteyi sadece test ekibinin sorumluluğundan çıkarıp, tüm takımı (Dev/DevOps/PO) kapsayan bir 'Kalite herkesin işidir' bilincini ve süreçlerini (Shift-left, Code reviews) yerleştirmek.",
+      "Tüm manuel testleri yasaklayıp sadece otomasyon istemek.",
+      "Sadece en pahalı test araçlarını satın almak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kalite bir aşama değil, bir yaşam döngüsüdür. Erken geri bildirim döngüleri ve işbirliği, kaliteli ürünün anahtarıdır."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "'Mutation Testing' tekniği neyi ölçmek için kullanılır?",
+    "options": [
+      "Uygulamanın ne kadar hızlı mutasyona uğradığını (değiştiğini).",
+      "Mevcut test senaryolarının (Unit testlerin vb.), koddaki kasıtlı hataları (mutantları) yakalayıp yakalayamadığını, yani test kalitesini ve etkinliğini ölçer.",
+      "Virüslerin kod üzerindeki etkisini.",
+      "Sadece genetik algoritmalarda kullanılan bir testtir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kodda küçük değişiklikler (Örn: '>' yerine '<' koymak) yapılır. Eğer testler hala 'geçiyor' (pass) ise, testleriniz bu değişikliği fark edemeyecek kadar zayıf demektir."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Yük Testi (Load Testing) ve Stres Testi (Stress Testing) arasındaki fark nedir?",
+    "options": [
+      "Load testi performansı, Stress testi güvenliği ölçer.",
+      "Load testi beklenen trafik altında sistemin davranışını ölçer; Stress testi sistemin kırılma noktasını (threshold) ve bu noktadan sonra nasıl toparlandığını bulmayı hedefler.",
+      "Stress testi sadece mobil uygulamalarda yapılır.",
+      "Load testi manuel yapılır, Stress testi otomatik yapılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Load: '1000 kişi gelirse ne olur?', Stress: '100.000 kişi gelirse neresi patlar ve sistem kendini korur mu?' sorularına yanıt arar."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Mikroservis mimarilerinde 'Contract Testing' (Sözleşme Testi) neden kritiktir?",
+    "options": [
+      "Şirketler arasındaki hukuki sözleşmeleri kontrol etmek için.",
+      "Servislerin birbirleriyle iletişim kurarken kullandıkları API arayüzlerinin (Consumer/Provider) birbiriyle uyumlu kaldığını, bir servisteki değişikliğin diğerini bozmadığını garanti etmek için.",
+      "Sadece veritabanı şemasını test etmek için.",
+      "Uygulamanın lisans süresini kontrol etmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Pact gibi araçlarla yapılan bu test, entegrasyon testlerine gerek kalmadan, servislerin 'el sıkışma' (handshake) kuralına uyup uymadığını hızlıca kontrol eder."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Mobil otomasyonda 'Simülatör/Emülatör' yerine 'Real Device' (Gerçek Cihaz) kullanmanın en büyük teknik sebebi nedir?",
+    "options": [
+      "Gerçek cihazların daha ucuz olması.",
+      "Donanım (Kamera, Sensör, GPS), pil tüketimi, ağ çekim gücü ve gerçek işletim sistemi kısıtlamalarını (OS customization) simüle etmenin imkansız olması.",
+      "Simülatörlerin sadece Apple tarafından üretilmesi.",
+      "Real device testlerinin daha hızlı koşması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Uygulama simülatörde mükemmel çalışsa da gerçek bir cihazdaki ısınma, düşük RAM veya özel üretici (Samsung/Huawei vb.) arayüzleri nedeniyle çökebilir."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Test otomasyonunda 'Self-healing' (Kendini İyileştiren) testler neyi ifade eder?",
+    "options": [
+      "Hataları otomatik olarak düzelten kod yazan yapay zeka.",
+      "UI elementlerinin locator'ları (id, xpath vb.) değiştiğinde, AI/ML yardımıyla yeni locator'ı bulup testin kırılmadan devam etmesini sağlayan mekanizma.",
+      "Testin başarısız olduğunda bilgisayarı yeniden başlatması.",
+      "Sadece sağlık sektörü uygulamalarında kullanılan testlerdir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Geleneksel testler küçük bir ID değişikliğinde 'fail' olur. Self-healing, elementin diğer özelliklerine bakarak testi sürdürür ve bakım maliyetini düşürür."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Kaos Mühendisliği (Chaos Engineering) prensiplerinin test süreçlerine dahil edilmesinin ana amacı nedir?",
+    "options": [
+      "Ofis ortamında kaos yaratarak hızı artırmak.",
+      "Sistemdeki zayıf noktaları ve kaskat (zincirleme) hataları bulmak için canlı (veya prod benzeri) sisteme kasti arızalar (Sunucu kapatma, gecikme ekleme vb.) vererek sistemin dayanıklılığını (resilience) ölçmek.",
+      "Kodun okunmasını zorlaştırmak.",
+      "Sadece yeni başlayan yazılımcıları test etmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Netflix'in 'Chaos Monkey' yaklaşımıyla popülerleşen bu yöntem, beklenmedik felaket anlarında sistemin ne kadar 'ayakta kalabildiğini' kanıtlar."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "'Visual Regression Testing' araçları (Applitools, Percy vb.) neyi doğrular?",
+    "options": [
+      "Kodun hızını.",
+      "Uygulamanın ekran görüntüsünü piksel piksel karşılaştırarak; renk, hizalama, font ve layout gibi görsel değişimleri (UI bozulmalarını) tespit eder.",
+      "Sadece video dosyalarının kalitesini.",
+      "Uygulamanın dark mode'da olup olmadığını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Fonksiyonel testler bir butonun 'orada' olduğunu anlar ama 'yanlış yerde' veya 'yanlış renkte' olduğunu anlayamaz. Görsel testler bu açığı kapatır."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Modern bir CI/CD pipeline'ında 'Quality Gate' (Kalite Kapısı) kullanımı neyi ifade eder?",
+    "options": [
+      "Test ofisinin kapısını.",
+      "Kodun prod ortamına geçebilmesi için geçmesi gereken zorunlu kriterlerin (Örn: %80 Code coverage, Sıfır kritik hata, Başarılı performans testi) bütünü.",
+      "Müşterinin onay verdiği aşama.",
+      "Sadece güvenlik duvarı (Firewall) ayarlarını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eğer bu kriterlerden biri sağlanmazsa pipeline otomatik olarak durur ve hatalı kodun yayına gitmesini fiziksel olarak engeller."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Test otomasyon çerçevesi (framework) seçerken 'Total Cost of Ownership' (Toplam Sahip Olma Maliyeti) kapsamında hangisi bir maliyet kalemi değildir?",
+    "options": [
+      "Aracın lisans ücreti (varsa).",
+      "Ekibin aracı öğrenme süresi ve bakım maliyeti.",
+      "Geliştirilen uygulamanın satış fiyatı.",
+      "Testlerin koşulacağı bulut (SauceLabs, BrowserStack vb.) veya yerel altyapı maliyeti."
+    ],
+    "correctIndex": 2,
+    "explanation": "Uygulamanın satış fiyatı bir gelir kalemidir; test aracının getirdiği operasyonel veya doğrudan maliyetlerle ilgisi yoktur."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Erişilebilirlik Testlerinde (Accessibility Testing) WCAG standartları neye odaklanır?",
+    "options": [
+      "Uygulamanın sadece çok hızlı çalışmasına.",
+      "İçeriğin algılanabilir, işletilebilir, anlaşılabilir ve sağlam (Robust) olması prensipleriyle engelli kullanıcılar için uygunluğunu ölçmeye.",
+      "Uygulamanın her dilde çalışmasına.",
+      "Sadece yaşlı kullanıcıların uygulamayı sevmesine."
+    ],
+    "correctIndex": 1,
+    "explanation": "WCAG (Web Content Accessibility Guidelines), global bir standarttır ve yasal uyumluluk (compliance) için çoğu büyük projede zorunludur."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Test otomasyonunda 'Code Coverage' (Kod Kapsamı) ve 'Test Coverage' (Test Kapsamı) arasındaki fark nedir?",
+    "options": [
+      "İkisi de aynı metriği ifade eder.",
+      "Code Coverage kodun ne kadarının (satır/branch) unit testler tarafından çalıştırıldığını gösterir; Test Coverage ise gereksinimlerin ne kadarının test senaryoları ile doğrulandığını ifade eder.",
+      "Test Coverage daha önemlidir çünkü hızı ölçer.",
+      "Code Coverage sadece manuel testlerle ölçülür."
+    ],
+    "correctIndex": 1,
+    "explanation": "%100 kod kapsamı, tüm iş kurallarının (business requirements) test edildiği anlamına gelmez. Bu yüzden her iki metriğin de izlenmesi gerekir."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "'Parallel Execution' (Paralel Koşum) kurgulanırken karşılaşılan en büyük mimari engel genellikle nedir?",
+    "options": [
+      "İşlemcinin yavaşlığı.",
+      "Testlerin aynı paylaşılan datayı (Shared state/data) kullanması sonucu oluşan 'collision' (çakışma) ve birbirini bozma riski.",
+      "İnternet bant genişliğinin yetmemesi.",
+      "Test dökümanlarının okunmaması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Paralel koşum için her testin kendi datasına sahip olması veya datanın dinamik yaratılması (isolation) gerekir; aksi halde test sonuçları güvenilmez olur."
+  },
+  {
+    "category": "testing",
+    "difficulty": "senior",
+    "language": "tr",
+    "question": "Mobil testlerde 'Monkey Testing' yaklaşımı neyi hedefler?",
+    "options": [
+      "Hayvanlar üzerinde yapılan psikolojik testleri.",
+      "Sisteme rastgele (random) girdiler ve tıklamalar göndererek sistemin crash olup olmadığını veya beklenmedik bir duruma girip girmediğini bulmayı.",
+      "Sadece oyun uygulamalarında hile bulmayı.",
+      "Kullanıcının yüz ifadesini kameradan izlemeyi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu yöntem, özellikle karmaşık UI akışlarında öngörülemeyen hataları (Edge cases) yakalamak için stresli bir senaryo oluşturur."
+  }
+]

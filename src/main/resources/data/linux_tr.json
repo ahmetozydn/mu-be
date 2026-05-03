@@ -1,0 +1,842 @@
+[
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux dosya sisteminde `chmod 755` komutu uygulanan bir dosya için yetkiler nasıl dağıtılır?",
+    "options": [
+      "Dosya sahibi her şeyi yapabilir; grup ve diğerleri sadece okuyabilir.",
+      "Dosya sahibi okuyup yazabilir; grup ve diğerleri sadece çalıştırabilir.",
+      "Dosya sahibi her şeyi yapabilir (rwx); grup ve diğer kullanıcılar sadece okuyabilir ve çalıştırabilir (r-x).",
+      "Dosya sahibi sadece okuyabilir; grup ve diğerleri her şeyi yapabilir."
+    ],
+    "correctIndex": 2,
+    "explanation": "7 (4+2+1) tam yetkiyi, 5 (4+1) ise okuma ve çalıştırma yetkisini temsil eder. İlk rakam sahibi, ikinci rakam grubu, üçüncü rakam ise diğerlerini temsil eder."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux terminalinde kullanılan 'Pipe' (`|`) operatörünün temel görevi nedir?",
+    "options": [
+      "İki dosyayı birleştirerek yeni bir dosya oluşturmak.",
+      "Bir komutun çıktısını (stdout), bir sonraki komuta girdi (stdin) olarak aktarmak.",
+      "Bir komutun hata çıktılarını (stderr) tamamen gizlemek.",
+      "Aynı anda iki farklı terminal penceresi açmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Pipe operatörü, komutları birbirine bağlayarak karmaşık işlemleri tek satırda yapmamızı sağlar. Örn: `ls | grep .txt` komutu listeleme çıktısını grep'e aktarır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta 'Hard Link' ve 'Symbolic Link' (Soft Link) arasındaki en temel fark nedir?",
+    "options": [
+      "Hard link sadece dizinler için, Soft link sadece dosyalar için kullanılır.",
+      "Hard link dosyanın içeriğini kopyalar; Soft link ise dosyanın ismini kopyalar.",
+      "Hard link doğrudan dosyanın inode numarasına işaret eder; Soft link ise dosyanın yoluna (path) işaret eden ayrı bir dosyadır.",
+      "Soft link silindiğinde asıl dosya da silinir, Hard link'te asıl dosya silinmez."
+    ],
+    "correctIndex": 2,
+    "explanation": "Hard link, asıl dosya ile ayn inode'u paylaşır; asıl dosya silinse bile veri kalır. Soft link ise bir kısayoldur; asıl dosya silindiğinde link 'kırık' (broken) hale gelir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir süreci sonlandırmak için kullanılan `kill -15` (SIGTERM) ve `kill -9` (SIGKILL) arasındaki fark nedir?",
+    "options": [
+      "SIGTERM süreci anında öldürür; SIGKILL ise sürecin kendi kendine kapanmasını bekler.",
+      "SIGTERM sürece düzgünce kapanması için sinyal gönderir (clean-up yapabilir); SIGKILL süreci işletim sistemi seviyesinde zorla ve anında sonlandırır.",
+      "SIGTERM sadece arka plan süreçleri içindir, SIGKILL sadece ön plan süreçleri içindir.",
+      "İki sinyal arasında fark yoktur, sadece farklı Linux dağıtımlarında farklı isimler alırlar."
+    ],
+    "correctIndex": 1,
+    "explanation": "SIGTERM (15) nazik bir istektir; süreç dosyaları kapatabilir, durumu kaydedebilir. SIGKILL (9) ise sürece söz hakkı tanımaz ve doğrudan yok eder."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir diskte fiziksel olarak boş alan olmasına rağmen 'No space left on device' hatası alınmasının en muhtemel teknik sebebi nedir?",
+    "options": [
+      "İşlemcinin (CPU) çok ısınması sonucu diske yazma işleminin durdurulması.",
+      "Dosya sistemindeki 'Inode' limitine ulaşılmış olması (diskte çok fazla küçük dosya bulunması).",
+      "RAM'in tamamen dolmuş olması.",
+      "Sistemin 'Read-only' moduna geçmiş olması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Linux dosya sistemlerinde her dosya bir inode kaplar. Eğer disk boyutu dolmasa bile inode sayısı dolarsa (milyonlarca boş/küçük dosya varsa), yeni dosya oluşturulamaz."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Load Average' çıktısında görülen üç sayı (Örn: 0.50, 1.20, 2.10) sırasıyla neyi ifade eder?",
+    "options": [
+      "CPU, RAM ve Disk kullanım yüzdelerini.",
+      "Sırasıyla son 1, 5 ve 15 dakikalık sürelerdeki ortalama sistem yükünü.",
+      "Sisteme bağlı olan kullanıcı sayısını.",
+      "Ağ trafiğinin saniyelik, dakikalık ve saatlik ortalamasını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Load average, çalışmaya hazır olan veya bekleyen süreçlerin ortalamasıdır. 1, 5 ve 15 dakikalık trendler, sistemin darboğaza girip girmediğini anlamamızı sağlar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux sistemlerinde `/etc/passwd` dosyasının temel amacı nedir?",
+    "options": [
+      "Kullanıcıların şifrelerini şifreli (hashed) bir şekilde saklamak.",
+      "Sistemdeki kullanıcı hesaplarının listesini, kullanıcı ID'lerini ve ana dizinlerini tutmak.",
+      "İnternet sitelerinin IP adreslerini eşleştirmek.",
+      "Sistemin açılışında çalışacak servisleri belirlemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "`/etc/passwd` her kullanıcının UID, GID, home dizini ve shell bilgisini tutar. Şifreler ise güvenlik nedeniyle genellikle `/etc/shadow` dosyasında tutulur."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "`systemctl start [servis]` ve `systemctl enable [servis]` komutları arasındaki fark nedir?",
+    "options": [
+      "Start servisi kalıcı yapar, Enable ise geçici olarak başlatır.",
+      "Start servisi o an başlatır; Enable ise servisin sistem her açıldığında (boot) otomatik olarak başlamasını sağlar.",
+      "Start sadece root kullanıcısı ile çalışır, Enable herkesle çalışır.",
+      "İkisi de aynı işi yapar, sadece biri eski Linux sürümlerinde kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Start anlık bir eylemdir. Enable ise sistemin açılış (startup) konfigürasyonuna servisi ekler. Bir servisi o an başlatmak ve açılışa eklemek için ikisi de kullanılmalıdır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux kernel parametrelerinden `swappiness` değeri (0-100 arası) neyi kontrol eder?",
+    "options": [
+      "İnternet bağlantısının ne kadar hızlı 'swap' edileceğini (değişeceğini).",
+      "RAM dolmaya başladığında kernel'ın ne kadar agresif bir şekilde RAM'deki verileri diske (Swap alanına) taşıyacağını.",
+      "İşlemci çekirdekleri arasındaki yük dağılımını.",
+      "Dosya sisteminin ne kadar sürede bir 'fsck' ile taranacağını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Düşük değerler (Örn: 10) kernel'ın mümkün olduğunca RAM kullanmasını sağlar. Yüksek değerler (Örn: 60+) kernel'ın daha erken swap yapmasına neden olur; bu da performansı etkileyebilir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Metin işleme araçlarından `grep`, `sed` ve `awk` arasındaki temel kullanım farkı en basit haliyle nasıldır?",
+    "options": [
+      "Üçü de sadece metin aramak için kullanılır.",
+      "Grep arama yapar; Sed metin akışını değiştirir (stream editor); Awk ise sütun bazlı karmaşık raporlama ve veri işleme yapar.",
+      "Grep sadece dosyaları siler, Sed dosyaları kopyalar, Awk dosyaları taşır.",
+      "Awk sadece veritabanı dosyalarıyla çalışır, diğerleri normal metinlerle."
+    ],
+    "correctIndex": 1,
+    "explanation": "Grep satırları filtrelemek için, Sed metin yer değiştirmeleri (search-replace) için, Awk ise veriyi programlanabilir şekilde (sütun/tablo gibi) işlemek için idealdir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta bir dosyanın içeriğini terminale yazdırmak için en sık kullanılan komut hangisidir?",
+    "options": [
+      "print",
+      "show",
+      "cat",
+      "open"
+    ],
+    "correctIndex": 2,
+    "explanation": "`cat` (concatenate) komutu, bir veya birden fazla dosyanın içeriğini standart çıktıya (ekrana) basar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `top` komutu çalışırken işlemci kullanımına göre sıralama yapmak için hangi tuşa basılır?",
+    "options": [
+      "M",
+      "P",
+      "T",
+      "Q"
+    ],
+    "correctIndex": 1,
+    "explanation": "`P` tuşu CPU kullanımına göre, `M` tuşu ise bellek (Memory) kullanımına göre sıralama yapar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux kernel'da 'OOM Killer' (Out Of Memory Killer) mekanizması ne işe yarar?",
+    "options": [
+      "Bellek dolduğunda sistemi tamamen kapatır.",
+      "Sistem belleği (RAM + Swap) tamamen bittiğinde, sistemi ayakta tutmak için en çok kaynak tüketen veya en 'uygun' görülen süreci (process) zorla sonlandırır.",
+      "İnternet hızını yapay olarak artırır.",
+      "Virüsleri temizler."
+    ],
+    "correctIndex": 1,
+    "explanation": "OOM Killer, sistemin tamamen kilitlenmesini önlemek için son çare olarak çalışan bir koruma mekanizmasıdır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta gizli dosyaların (adı nokta `.` ile başlayanlar) listelenmesi için `ls` komutuna hangi parametre eklenmelidir?",
+    "options": [
+      "-h",
+      "-l",
+      "-a",
+      "-v"
+    ],
+    "correctIndex": 2,
+    "explanation": "`-a` (all) parametresi, gizli dosyalar dahil tüm dizin içeriğini gösterir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `tar` komutu ile bir dizini sıkıştırmadan sadece paketlemek (archive) için hangi parametreler kullanılır?",
+    "options": [
+      "-xvf",
+      "-cvf",
+      "-czvf",
+      "-cjvf"
+    ],
+    "correctIndex": 1,
+    "explanation": "`c` (create), `v` (verbose), `f` (file) anlamına gelir. Eğer `z` (gzip) veya `j` (bzip2) eklenmezse sadece paketleme yapılır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Zombie Process' (Zombi Süreç) nedir?",
+    "options": [
+      "Sistemi ele geçiren virüslü bir süreçtir.",
+      "Çalışması bitmiş (terminated) ancak ebeveyn (parent) süreci tarafından henüz `wait()` çağrısı ile sistemden tamamen temizlenmemiş süreçtir.",
+      "RAM'i çok fazla tüketen süreçtir.",
+      "Sadece geceleri çalışan arka plan sürecidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Zombi süreçler CPU veya RAM tüketmezler ancak süreç tablosunda (process table) bir giriş kaplarlar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta o an hangi dizinde olduğunuzu görmek için hangi komut kullanılır?",
+    "options": [
+      "whereami",
+      "pwd",
+      "location",
+      "path"
+    ],
+    "correctIndex": 1,
+    "explanation": "`pwd` (Print Working Directory) komutu, o anki tam dosya yolu dizinini ekrana basar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `find` komutu ile sadece ismi 'config' ile biten dosyaları aramak için doğru sözdizimi hangisidir?",
+    "options": [
+      "find . -type f -name '*config'",
+      "find . -search config",
+      "find config",
+      "find --file config"
+    ],
+    "correctIndex": 0,
+    "explanation": "`.` aramanın başlayacağı dizini, `-type f` sadece dosyaları, `-name` ise ismi temsil eder."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Sticky Bit' yetkisi bir dizine uygulandığında ne sağlar?",
+    "options": [
+      "Dizindeki dosyaların silinmesini tamamen engeller.",
+      "Dizindeki dosyaların sadece dosya sahibi veya root tarafından silinebilmesini sağlar (Başkası yazma yetkisi olsa bile silemez).",
+      "Dizini sistem açılışında otomatik bağlar.",
+      "Dizini gizli hale getirir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Genellikle `/tmp` dizininde kullanılır; böylece her kullanıcı dosya oluşturabilir ama başkasının dosyasını silemez."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta bir komutun manuel (yardım) sayfasını okumak için ne kullanılır?",
+    "options": [
+      "help [komut]",
+      "info [komut]",
+      "man [komut]",
+      "guide [komut]"
+    ],
+    "correctIndex": 2,
+    "explanation": "`man` (manual) komutu, Linux komutları hakkında detaylı kullanım kılavuzunu açar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `alias` komutu ne işe yarar?",
+    "options": [
+      "Kullanıcı şifresini değiştirmeye.",
+      "Uzun veya karmaşık komutlara kısa takma isimler atamaya.",
+      "Bilgisayarın ağ adını değiştirmeye.",
+      "Dosyaları şifrelemeye."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin `alias ll='ls -la'` komutu ile her seferinde uzun yazmak yerine sadece `ll` kullanılabilir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux kernel mimarisinde 'Monolithic Kernel' ve 'Microkernel' arasındaki temel fark nedir?",
+    "options": [
+      "Monolithic kernel daha küçüktür.",
+      "Monolithic kernel'da tüm temel servisler (file system, drivers vb.) kernel alanında (kernel space) çalışırken; Microkernel'da bunlar kullanıcı alanında (user space) çalışır.",
+      "Microkernel sadece mobil cihazlarda kullanılır.",
+      "Linux bir microkernel örneğidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Linux aslında bir monolithic kernel'dır ancak modüler yapısı sayesinde sürücüler dinamik olarak yüklenebilir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta bir dosyayı taşımak veya adını değiştirmek için hangi komut kullanılır?",
+    "options": [
+      "cp",
+      "rm",
+      "mv",
+      "rn"
+    ],
+    "correctIndex": 2,
+    "explanation": "`mv` (move) komutu hem dosya taşımak hem de aynı dizinde farklı isimle kaydederek ad değiştirmek için kullanılır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `/etc/hosts` dosyasının birincil görevi nedir?",
+    "options": [
+      "Sistemdeki tüm dosyaların listesini tutmak.",
+      "IP adreslerini alan adlarıyla (hostname) eşleştirmek (Yerel bir DNS gibi).",
+      "Uzak sunucuların şifrelerini saklamak.",
+      "İnternet hızını sınırlamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sistem bir web sitesine gitmeden önce önce bu dosyaya bakar; eğer orada bir IP tanımı varsa DNS'e sormadan o IP'ye gider."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux kernel'da 'Nice' değeri ( -20 ile 19 arası) neyi ifade eder?",
+    "options": [
+      "Kullanıcının sisteme ne kadar nazik olduğunu.",
+      "Bir sürecin (process) öncelik değerini; düşük değerler daha yüksek önceliği temsil eder.",
+      "İnternet bağlantısının kalitesini.",
+      "Diskin dönüş hızını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Nice değeri -20 olan bir süreç 'en bencil' (yüksek öncelikli) süreçtir ve işlemci zamanından daha fazla pay alır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta yeni bir boş dosya oluşturmak için en kısa komut hangisidir?",
+    "options": [
+      "newfile",
+      "create",
+      "touch",
+      "mkfile"
+    ],
+    "correctIndex": 2,
+    "explanation": "`touch` komutu dosya yoksa boş oluşturur, varsa dosyanın erişim/değiştirme zamanını günceller."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `df -h` komutu neyi gösterir?",
+    "options": [
+      "Dosya ve dizinlerin listesini.",
+      "Disk kullanım oranlarını insan tarafından okunabilir (GB, MB) formatta.",
+      "RAM kullanım detaylarını.",
+      "İşlemci sıcaklığını."
+    ],
+    "correctIndex": 1,
+    "explanation": "`df` (disk free) komutu bağlı olan tüm dosya sistemlerinin doluluk oranlarını raporlar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Context Switch' (Bağlam Değişimi) terimi neyi ifade eder?",
+    "options": [
+      "Kullanıcının bir terminalden diğerine geçmesini.",
+      "İşlemcinin (CPU) bir süreci durdurup, durumunu kaydedip başka bir sürece geçiş yapması eylemini.",
+      "İnternet sağlayıcısının değişmesini.",
+      "Dosya sisteminin ext4'ten xfs'e dönüştürülmesini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Çok fazla context switch olması sistem performansını düşürebilir çünkü her geçiş bir işlem maliyeti gerektirir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta boş bir dizin oluşturmak için hangi komut kullanılır?",
+    "options": [
+      "newdir",
+      "mkdir",
+      "createdir",
+      "folder"
+    ],
+    "correctIndex": 1,
+    "explanation": "`mkdir` (make directory) komutu belirtilen isimde bir dizin oluşturur."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `uptime` komutu hangi bilgileri döner?",
+    "options": [
+      "Sadece saati.",
+      "Sistemin ne kadar süredir açık olduğu, kullanıcı sayısı ve load average bilgileri.",
+      "Gelecek olan güncellemeleri.",
+      "İşlemcinin markasını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Sistemin kararlılığını ve yük durumunu hızlıca görmek için kullanılan temel bir komuttur."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Page Fault' (Sayfa Hatası) tam olarak ne zaman oluşur?",
+    "options": [
+      "İnternet sayfası açılmadığında.",
+      "Bir süreç, o an fiziksel bellekte (RAM) bulunmayan bir bellek sayfasına erişmeye çalıştığında.",
+      "Dosya kopyalama işlemi yarım kaldığında.",
+      "Klavye dili değiştiğinde."
+    ],
+    "correctIndex": 1,
+    "explanation": "Minor fault verinin RAM'de başka bir yerde olması, Major fault ise verinin diskten (Swap) getirilmesi gerektiği durumdur."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta terminal ekranını temizlemek için hangi komut kullanılır?",
+    "options": [
+      "reset",
+      "cls",
+      "clear",
+      "clean"
+    ],
+    "correctIndex": 2,
+    "explanation": "`clear` komutu terminaldeki önceki çıktıları yukarı kaydırarak temiz bir ekran sunar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta bir dosyanın ilk 10 satırını okumak için hangi komut kullanılır?",
+    "options": [
+      "first",
+      "top10",
+      "head",
+      "begin"
+    ],
+    "correctIndex": 2,
+    "explanation": "`head` komutu varsayılan olarak ilk 10 satırı gösterir. `-n` parametresi ile satır sayısı değiştirilebilir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'I/O Wait' değerinin yüksek olması genellikle neye işaret eder?",
+    "options": [
+      "İşlemcinin çok hızlı çalıştığına.",
+      "İşlemcinin veriyi işlemek için diskten (veya ağdan) gelecek cevabı bekleyerek boşta kaldığına (Disk darboğazı).",
+      "RAM'in çok hızlı temizlendiğine.",
+      "Sistemin çok güvenli olduğuna."
+    ],
+    "correctIndex": 1,
+    "explanation": "I/O wait yüksekse işlemci güçlü olsa bile disk yavaş olduğu için sistem genelinde donmalar hissedilir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta bir dosyayı silmek için hangi komut kullanılır?",
+    "options": [
+      "del",
+      "erase",
+      "rm",
+      "remove"
+    ],
+    "correctIndex": 2,
+    "explanation": "`rm` (remove) komutu dosyaları siler. Dikkatli kullanılmalıdır çünkü genellikle geri dönüşüm kutusu yoktur."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta bir dosyanın son 10 satırını canlı olarak takip etmek (log izlemek) için hangi komut kullanılır?",
+    "options": [
+      "watch",
+      "tail -f",
+      "follow",
+      "cat --live"
+    ],
+    "correctIndex": 1,
+    "explanation": "`tail -f` (follow) komutu dosya sonuna yeni satır eklendikçe anında ekranda gösterir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Chroot Jail' (Chroot Hapishanesi) kavramı ne amaçla kullanılır?",
+    "options": [
+      "Korsan yazılımları yakalamak için.",
+      "Bir sürecin erişebileceği kök dizini (root directory) değiştirerek, onu sistemin geri kalanından izole etmek için.",
+      "Dosyaları şifreli klasörlere kilitlemek için.",
+      "Sadece şifre hatalarında kullanıcıyı engellemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Güvenlik veya test amaçlı kullanılır; süreç kendini sadece belirtilen dizin içindeymiş gibi görür ve dışarı çıkamaz."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta `sudo` komutu ne anlama gelir?",
+    "options": [
+      "Sistemi durdur.",
+      "Bir komutu yetkili kullanıcı (superuser/root) haklarıyla çalıştırmayı sağlar.",
+      "Hızlı dosya araması yap.",
+      "İnterneti aç."
+    ],
+    "correctIndex": 1,
+    "explanation": "`sudo` (substitute user do), normal bir kullanıcının kısıtlı yetkilerini aşarak yönetimsel işlemler yapmasına izin verir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `whoami` komutu hangi bilgiyi verir?",
+    "options": [
+      "Bilgisayarın markasını.",
+      "O anki terminal oturumunu açan kullanıcının ismini.",
+      "Tüm kayıtlı kullanıcıların listesini.",
+      "İşlemcinin ID numarasını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Özellikle farklı kullanıcılar arası geçiş yapıldığında hangi yetkide olduğunuzu anlamak için kullanılır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Kernel Panic' neyi ifade eder?",
+    "options": [
+      "İşlemcinin aşırı ısınmasını.",
+      "İşletim sisteminin kurtarılamayacak bir iç hata ile karşılaşması sonucu sistemi tamamen durdurması (Windows'taki mavi ekranın dengi).",
+      "Kullanıcının yanlış komut girmesini.",
+      "İnternetin kopmasını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Donanım arızaları veya hatalı kernel modülleri kernel panic oluşmasına neden olabilir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta `history` komutu ne işe yarar?",
+    "options": [
+      "Dünya tarihini gösterir.",
+      "O kullanıcının terminalde daha önce yazdığı komutların listesini döner.",
+      "Sadece silinen dosyaları gösterir.",
+      "Gelecek güncellemelerin tarihini gösterir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eski komutları hatırlamak ve tekrar çalıştırmak için çok kullanışlıdır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `scp` komutu ne amaçla kullanılır?",
+    "options": [
+      "Sistem şifrelerini değiştirmek için.",
+      "Dosyaları ağ üzerinden (SSH kullanarak) güvenli bir şekilde başka bir bilgisayara kopyalamak için.",
+      "Ekran görüntüsü almak için.",
+      "İşlemciyi taramak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "`scp` (secure copy), iki makine arasında şifreli bir kanal üzerinden veri transferi sağlar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Hard Limit' ve 'Soft Limit' (ulimit) arasındaki fark nedir?",
+    "options": [
+      "Hard limit sadece disk içindir.",
+      "Soft limit kullanıcının aşabileceği bir sınırdır; Hard limit ise ancak root tarafından artırılabilen mutlak sınırı ifade eder.",
+      "Soft limit sadece geçicidir.",
+      "Arada fark yoktur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin bir kullanıcının açabileceği maksimum dosya sayısı (open files) bu limitlerle kontrol altına alınır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta bir metin dosyası içindeki kelimeleri saymak için hangi komut kullanılır?",
+    "options": [
+      "count",
+      "wc",
+      "words",
+      "total"
+    ],
+    "correctIndex": 1,
+    "explanation": "`wc` (word count) komutu; satır, kelime ve karakter sayısını raporlar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `grep -v` parametresi ne işe yarar?",
+    "options": [
+      "Aramayı daha hızlı yapar.",
+      "Belirtilen kelimeyi içermeyen (tersine arama/invert) satırları listeler.",
+      "Sadece rakamları arar.",
+      "Hataları gizler."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin `grep -v 'error' log.txt` komutu, içinde error geçmeyen tüm satırları gösterir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Procfs' (`/proc`) dizini ne tür veriler barındırır?",
+    "options": [
+      "Kullanıcıların kişisel dosyalarını.",
+      "Çalışan süreçler, donanım bilgileri ve kernel parametreleri hakkında çalışma zamanı (runtime) bilgilerini barındıran sanal bir dosya sistemidir.",
+      "Sadece kurulum dosyalarını.",
+      "Uygulama loglarını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu dizindeki dosyalar diskte yer kaplamaz, doğrudan kernel'dan gelen verileri dosya gibi okumamızı sağlar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta yardım almak için komutun sonuna genellikle hangi parametre eklenir?",
+    "options": [
+      "-h veya --help",
+      "-s",
+      "-x",
+      "-a"
+    ],
+    "correctIndex": 0,
+    "explanation": "Çoğu standart Linux komutu bu parametreyle kısa bir kullanım özeti sunar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `du -sh` komutu neyi ifade eder?",
+    "options": [
+      "Sistemin ne kadar süredir açık olduğunu.",
+      "Bir dizinin toplam kapladığı alanı özet (summary) ve okunabilir (human-readable) formatta gösterir.",
+      "İnternet bağlantı hızını.",
+      "En büyük dosyayı bulur."
+    ],
+    "correctIndex": 1,
+    "explanation": "`du` (disk usage), spesifik klasörlerin diskte ne kadar yer tuttuğunu anlamak için kullanılır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'Signal' (Sinyal) kavramı nedir?",
+    "options": [
+      "İnternet bağlantı gücü.",
+      "Süreçler arası iletişimde (IPC) kullanılan, bir sürece belirli bir olayın gerçekleştiğini bildiren asenkron bir bildirim mekanizmasıdır.",
+      "Ekran parlaklığı uyarısı.",
+      "Klavye giriş hızı."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: SIGINT (Ctrl+C), SIGKILL (Zorla kapat) gibi sinyallerle süreçlerin davranışları yönlendirilir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta sistemden çıkış yapmak için hangi komut kullanılır?",
+    "options": [
+      "stop",
+      "exit",
+      "bye",
+      "end"
+    ],
+    "correctIndex": 1,
+    "explanation": "`exit` veya `logout` komutu o anki terminal oturumunu sonlandırır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `ln -s` komutu ne oluşturur?",
+    "options": [
+      "Yeni bir dosya.",
+      "Sembolik bir link (soft link/kısayol).",
+      "Gizli bir dizin.",
+      "Sıkıştırılmış bir paket."
+    ],
+    "correctIndex": 1,
+    "explanation": "Soft linkler, başka bir dosya veya dizine işaret eden ve asıl dosya silindiğinde bozulan 'kısayol' yapılardır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux kernel modülleri hangi komutla dinamik olarak yüklenebilir?",
+    "options": [
+      "loadmod",
+      "insmod veya modprobe",
+      "kernel-add",
+      "run-driver"
+    ],
+    "correctIndex": 1,
+    "explanation": "`modprobe` komutu bağımlılıkları da otomatik çözdüğü için `insmod`'a göre daha sık tercih edilir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta dosya yetkilerini değiştirmek için hangi komut kullanılır?",
+    "options": [
+      "change",
+      "chmod",
+      "perm",
+      "access"
+    ],
+    "correctIndex": 1,
+    "explanation": "`chmod` (change mode) komutu; r, w, x yetkilerini rakamsal veya harfsel olarak ayarlar."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta bir dosyanın sahibini (owner) değiştirmek için hangi komut kullanılır?",
+    "options": [
+      "own",
+      "chown",
+      "setowner",
+      "user-change"
+    ],
+    "correctIndex": 1,
+    "explanation": "`chown` (change owner) komutu, sadece root tarafından dosya sahipliğini başka bir kullanıcıya devretmek için kullanılır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'OverlayFS' ne tür bir dosya sistemidir?",
+    "options": [
+      "Sadece video dosyaları için.",
+      "Birden fazla dizini üst üste bindirerek tek bir dizin gibi gösteren (özellikle Docker konteynerlerinde kullanılan) bir birleşik (union) dosya sistemidir.",
+      "Dosyaları otomatik yedekleyen sistem.",
+      "İnternet üzerinden çalışan sistem."
+    ],
+    "correctIndex": 1,
+    "explanation": "Alt katman (lower) salt okunur kalırken, yapılan değişiklikler üst katmana (upper) yazılır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta sistem saatini ve tarihini görmek için hangi komut kullanılır?",
+    "options": [
+      "time",
+      "clock",
+      "date",
+      "now"
+    ],
+    "correctIndex": 2,
+    "explanation": "`date` komutu o anki sistem saatini ve tarihini farklı formatlarda gösterebilir."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `diff` komutu ne işe yarar?",
+    "options": [
+      "İki dosyayı birleştirir.",
+      "İki metin dosyası arasındaki farkları satır satır karşılaştırarak listeler.",
+      "Dosyaları şifreler.",
+      "Sadece sayıları karşılaştırır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kod değişikliklerini veya konfigürasyon dosyalarındaki farkları bulmak için temel bir araçtır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Linux'ta 'User Space' ve 'Kernel Space' arasındaki geçiş nasıl adlandırılır?",
+    "options": [
+      "Fast switch",
+      "System Call (Syscall)",
+      "Bridge crossing",
+      "Data tunnel"
+    ],
+    "correctIndex": 1,
+    "explanation": "Kullanıcı uygulamaları donanıma doğrudan erişemez; bu erişim için kernel'dan 'syscall' (Sistem çağrısı) aracılığıyla istekte bulunur."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Linux'ta bir dosya içinde belirli bir metni aramak için hangi komut kullanılır?",
+    "options": [
+      "find",
+      "search",
+      "grep",
+      "look"
+    ],
+    "correctIndex": 2,
+    "explanation": "`grep` (Global Regular Expression Print) dosya içeriğinde arama yapmak için en güçlü Linux aracıdır."
+  },
+  {
+    "category": "linux",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Linux'ta `ps aux` komutu neyi listeler?",
+    "options": [
+      "Bağlı olan donanımları.",
+      "Sistemde o an çalışan tüm süreçleri (processes) detaylarıyla birlikte.",
+      "İnternet trafiğini.",
+      "Tüm yüklü kütüphaneleri."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hangi kullanıcının hangi süreci ne kadar kaynakla çalıştırdığını görmek için kullanılır."
+  }
+]

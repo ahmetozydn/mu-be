@@ -1,0 +1,842 @@
+[
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir Data Engineer için ETL sürecindeki 'Extract' adımının temel amacı nedir?",
+    "options": [
+      "Veriyi son kullanıcı ekranında görselleştirmek.",
+      "Kaynak sistemlerden veriyi alıp işleme hattına taşımak.",
+      "Veritabanındaki tüm tabloları silmek.",
+      "Makine öğrenmesi modelini yeniden eğitmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Extract adımı verinin üretildiği kaynaklardan güvenli ve tutarlı biçimde alınmasını sağlar. Sonraki dönüşüm ve yükleme adımlarının doğruluğu büyük ölçüde bu aşamadaki veri kalitesine bağlıdır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi yapılandırılmış (structured) veriye örnektir?",
+    "options": [
+      "Serbest metin halde müşteri e-postaları.",
+      "Kolon ve satırlardan oluşan sipariş tablosu.",
+      "Ham video dosyaları.",
+      "Ses kaydı transkript edilmemiş podcast arşivi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Structured data, önceden tanımlı şema ile tablo benzeri biçimde saklanan veridir. Bu yapı sorgulama, doğrulama ve dönüştürme işlemlerini daha öngörülebilir hale getirir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir SQL sorgusunda `GROUP BY` kullanımının temel amacı nedir?",
+    "options": [
+      "Kayıtları fiziksel olarak başka tabloya taşımak.",
+      "Veriyi belirli kolonlara göre gruplayıp agregasyon yapmak.",
+      "Tablonun index yapısını silmek.",
+      "Sadece string kolonları filtrelemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "`GROUP BY`, aynı anahtar değerine sahip kayıtları bir araya getirir. Genellikle `COUNT`, `SUM`, `AVG` gibi agregasyon fonksiyonlarıyla birlikte kullanılır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir veri hattında schema'nın beklenmedik şekilde değişmesi en çok hangi probleme yol açar?",
+    "options": [
+      "Dashboard renklerinin bozulmasına.",
+      "Downstream job'ların parse veya mapping hatası vermesine.",
+      "CPU'nun fiziksel olarak zarar görmesine.",
+      "Verinin otomatik olarak şifrelenmesine."
+    ],
+    "correctIndex": 1,
+    "explanation": "Schema drift, alan adı, veri tipi veya alan zorunluluğu değişikliği gibi durumlarda downstream süreçleri kırabilir. Bu yüzden veri kontratları ve schema doğrulama kritik önemdedir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi batch processing için doğru bir örnektir?",
+    "options": [
+      "Her kullanıcının tıklamasını milisaniye seviyesinde tek tek işlemek.",
+      "Gün sonu tüm sipariş kayıtlarını topluca işleyip rapor üretmek.",
+      "Canlı chat mesajını anında ekranda göstermek.",
+      "API isteğine gerçek zamanlı skor dönmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Batch processing veriyi toplu halde, belirli aralıklarla işler. Gerçek zamanlı gereksinimi düşük, hacmi yüksek raporlama ve mutabakat senaryolarında yaygındır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Data pipeline içinde 'idempotent' bir job ne anlama gelir?",
+    "options": [
+      "Aynı input ile tekrar çalıştığında yan etkiyi çoğaltmadan aynı sonucu üretebilmesi.",
+      "Sadece bir kez çalıştırılabilmesi.",
+      "Her çalışmada farklı veri üretmesi.",
+      "Yalnızca gece saatlerinde tetiklenmesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "Idempotency, retry veya yeniden çalıştırma durumlarında duplikasyon ve tutarsızlık riskini azaltır. Özellikle dağıtık sistemlerde güvenilir veri işleme için kritik bir özelliktir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir veri ambarında fact table için en tipik örnek aşağıdakilerden hangisidir?",
+    "options": [
+      "Ülke kodları sözlüğü.",
+      "Kullanıcı yetki rolleri listesi.",
+      "Satış miktarı ve tutarı içeren işlem kayıtları.",
+      "Uygulama tema ayarları."
+    ],
+    "correctIndex": 2,
+    "explanation": "Fact table ölçülebilir olayları ve metrikleri taşır; satış, tıklama, sipariş gibi olay tabanlı veriler bunun tipik örneğidir. Boyut tabloları ise bu olaylara bağlam sağlayan tanımsal bilgileri tutar."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Dimension table'ın temel rolü nedir?",
+    "options": [
+      "Ham logları sıkıştırmadan saklamak.",
+      "Fact verisine açıklayıcı bağlam sağlayan tanımsal bilgileri tutmak.",
+      "Yalnızca geçici hata kayıtlarını barındırmak.",
+      "Veri hattını scheduler olarak çalıştırmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dimension tabloları ürün, müşteri, tarih gibi bağlamsal bilgileri içerir. Analitik sorgularda fact veriyi anlamlı dilimlere ayırmak için kullanılır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi `LEFT JOIN` davranışını doğru açıklar?",
+    "options": [
+      "Sadece iki tablodaki eşleşen kayıtları döndürür.",
+      "Sol tablodaki tüm kayıtları, eşleşme yoksa sağ tarafı `NULL` olacak şekilde döndürür.",
+      "Sağ tablodaki tüm kayıtları döndürür, solu atar.",
+      "Join yerine tabloları fiziksel olarak birleştirir."
+    ],
+    "correctIndex": 1,
+    "explanation": "`LEFT JOIN`, sol taraftaki kayıtları korur. Sağ tabloda eşleşme yoksa ilgili kolonlar `NULL` gelir; bu, eksik ilişkiyi kaybetmeden analiz yapmayı sağlar."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir tabloda primary key tanımlamanın ana faydası nedir?",
+    "options": [
+      "Tüm sorguları otomatik cache'lemek.",
+      "Her satırı benzersiz şekilde tanımlamak ve veri bütünlüğünü desteklemek.",
+      "Kolon isimlerini kısaltmak.",
+      "Veritabanını şemadan bağımsız hale getirmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Primary key duplike kayıt riskini azaltır ve satır seviyesinde benzersizlik sağlar. Join ilişkileri ve değişiklik takibi için de temel referans noktasıdır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi veri kalitesi problemi örneğidir?",
+    "options": [
+      "Aynı müşteri için birden fazla farklı doğum tarihi görünmesi.",
+      "Dashboard'da mavi yerine yeşil renk kullanılması.",
+      "Sunucunun SSD kullanması.",
+      "Sorgu editöründe koyu tema seçilmesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "Tutarsız veya çelişkili alan değerleri veri kalitesi sorunudur. Bu tür hatalar raporlama, segmentasyon ve karar destek süreçlerinde yanlış sonuç üretebilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "CSV dosyalarının veri hattında dikkat gerektirmesinin yaygın sebeplerinden biri nedir?",
+    "options": [
+      "Şema, delimiter ve encoding konularında tutarsızlık riski taşımaları.",
+      "Sadece binary veri taşıyabilmeleri.",
+      "Hiçbir ETL aracı tarafından desteklenmemeleri.",
+      "Sadece bellek içinde saklanabilmeleri."
+    ],
+    "correctIndex": 0,
+    "explanation": "CSV basit görünür ama satır sonu, kaçış karakteri, encoding ve eksik kolon gibi ayrıntılar işleme hatası yaratabilir. Özellikle çoklu kaynaklardan gelen dosyalarda doğrulama önemlidir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi partitioning kullanımının temel faydalarından biridir?",
+    "options": [
+      "Tüm veriyi tek dosyada tutarak yönetimi zorlaştırmak.",
+      "Sorguların ilgili veri alt kümesine erişmesini sağlayarak tarama maliyetini düşürmek.",
+      "Schema ihtiyacını tamamen ortadan kaldırmak.",
+      "Veriyi otomatik olarak normalize etmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Partitioning, özellikle tarih gibi doğal ayrımlar üzerinden veri tarama alanını küçültür. Bu hem sorgu süresini hem de maliyeti azaltabilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Veri hattında watermark kavramı genellikle ne için kullanılır?",
+    "options": [
+      "UI üzerinde logo göstermek için.",
+      "Hangi veriye kadar güvenle işlendiğini takip etmek için.",
+      "Veritabanı şifresini saklamak için.",
+      "CPU frekansını ölçmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Watermark veya high-water mark, artımlı işleme akışlarında son başarılı işlenen sınırı tutar. Böylece bir sonraki çalışmada sadece yeni veya değişmiş veri alınabilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir data engineer için orchestration aracı kullanmanın temel amacı nedir?",
+    "options": [
+      "Sadece SQL renklendirmesi yapmak.",
+      "Job bağımlılıklarını, zamanlamayı ve retry akışını yönetmek.",
+      "Ham veriyi manuel olarak düzenlemek.",
+      "Sunucu donanımını overclock etmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Orchestration araçları job'ların hangi sırayla ve hangi koşullarda koşacağını yönetir. Retry, alerting ve dependency takibi operasyonel güvenilirlik açısından önemli katkı sağlar."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "CDC (Change Data Capture) yaklaşımının en önemli faydası nedir?",
+    "options": [
+      "Her seferinde tüm tabloyu yeniden yüklemek.",
+      "Kaynak sistemdeki değişiklikleri artımlı yakalayarak veri gecikmesini ve yük maliyetini azaltmak.",
+      "Sadece raporların rengini değiştirmek.",
+      "Veritabanı şemasını otomatik silmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "CDC, insert/update/delete değişikliklerini log tabanlı veya trigger tabanlı biçimde izler. Full refresh yerine yalnızca değişen veriyi taşımak daha hızlı ve daha ucuzdur."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir veri ambarında slowly changing dimension Type 2 kullanımının amacı nedir?",
+    "options": [
+      "Eski boyut değerlerinin geçmişini satır bazında korumak.",
+      "Tüm boyut tablolarını tek satıra düşürmek.",
+      "Dimension tablolarını fact table'a çevirmek.",
+      "Sadece son değeri saklayıp geçmişi tamamen silmek."
+    ],
+    "correctIndex": 0,
+    "explanation": "SCD Type 2, boyut kaydında değişiklik olduğunda yeni satır açarak tarihsel iz bırakır. Bu sayede geçmiş raporlar o dönemde geçerli olan boyut değerleriyle analiz edilebilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi streaming sistemlerinde event-time ile processing-time arasındaki farkı doğru açıklar?",
+    "options": [
+      "İkisi her zaman aynıdır.",
+      "Event-time olayın gerçekten üretildiği zamanı, processing-time ise sistemin olayı işlediği zamanı ifade eder.",
+      "Processing-time sadece veri ambarlarında kullanılır.",
+      "Event-time yalnızca batch job'larda anlamlıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Gecikmeli veya sıradan çıkmış event'lerde bu iki zaman farklı olabilir. Özellikle pencereleme ve doğruluk gerektiren gerçek zamanlı analizlerde bu ayrım kritik önemdedir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Late arriving data için pencere tabanlı bir streaming işinde hangi yaklaşım daha uygundur?",
+    "options": [
+      "Geç gelen tüm event'leri koşulsuz silmek.",
+      "Allowed lateness ve yeniden hesaplama stratejisi belirlemek.",
+      "Sadece processing-time kullanıp gecikmeyi yok saymak.",
+      "Tüm state'i her event'te sıfırlamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Geç gelen veri kaçınılmaz olabilir; önemli olan bunun ürün beklentisine uygun şekilde yönetilmesidir. Allowed lateness, state retention ve yeniden çıktı üretme kararı tasarımın parçasıdır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir partitioned tabloda tarih filtresi olmadan geniş tarama yapmak neden pahalı olabilir?",
+    "options": [
+      "Çünkü optimizer tüm partition'ları gereksiz taramak zorunda kalabilir.",
+      "Çünkü tarih kolonları SQL'de yasaktır.",
+      "Çünkü partition'lı tablolar index kullanamaz.",
+      "Çünkü sorgu sonucu her zaman boş döner."
+    ],
+    "correctIndex": 0,
+    "explanation": "Partition pruning çalışmıyorsa sorgu gereğinden fazla veri okur. Büyük hacimli sistemlerde bu hem gecikmeyi hem de hesaplama veya depolama okuma maliyetini artırır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Data lake ile data warehouse arasındaki temel farklardan biri aşağıdakilerden hangisidir?",
+    "options": [
+      "Data lake yalnızca yapılandırılmış veri tutar, warehouse her şeyi tutar.",
+      "Data lake genelde ham veya yarı işlenmiş veriyi saklarken, warehouse analitik için modellenmiş ve daha sıkı yönetişimli veri sunar.",
+      "Warehouse hiçbir zaman SQL desteklemez.",
+      "İkisi teknik olarak tamamen aynıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Data lake esnek ve düşük maliyetli saklama alanı sunarken, warehouse analitik tüketim için optimize edilir. Kurumlar çoğu zaman bu iki yaklaşımı birlikte kullanır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Parquet gibi kolon bazlı formatların analitik iş yüklerinde avantajlı olmasının başlıca nedeni nedir?",
+    "options": [
+      "Her satırı ayrı ayrı resim olarak tutmaları.",
+      "Sadece ihtiyaç duyulan kolonları okuyarak I/O maliyetini düşürmeleri.",
+      "JSON'dan daha az şema bilgisi taşımaları.",
+      "Sadece streaming sistemlerinde çalışmaları."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kolon bazlı depolama, geniş tablolarda birkaç alanın okunacağı analitik sorgularda çok verimlidir. Sıkıştırma verimliliği de çoğu durumda satır bazlı formatlara göre daha iyidir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir ETL job'ında full refresh yerine incremental load tercih etmenin en büyük avantajı nedir?",
+    "options": [
+      "Her çalışmada daha fazla duplikasyon üretmesi.",
+      "Yalnızca değişen veri işlendiği için süre ve maliyetin düşmesi.",
+      "Schema ihtiyacını kaldırması.",
+      "Hata ayıklamayı imkansız hale getirmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Incremental load özellikle büyük tablolarda ciddi kaynak tasarrufu sağlar. Ancak doğru değişim sinyali, watermark ve veri düzeltme stratejisi yoksa eksik veri riski oluşturabilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir pipeline'da backfill yapma ihtiyacını en çok doğurur?",
+    "options": [
+      "Eski tarihli verinin bug fix sonrası yeniden üretilmesi gerekmesi.",
+      "Dashboard'a yeni bir renk eklenmesi.",
+      "Sunucu fan hızının artması.",
+      "Sorgu editörünün kapanıp açılması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Backfill, geçmiş veriyi yeni mantıkla veya düzeltilmiş iş kurallarıyla tekrar üretmek için kullanılır. Özellikle veri kaybı, bug veya şema değişikliği sonrası kritik hale gelir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir kaynak tablodan duplicate kayıtlar geldiğinde veri hattında en sağlıklı yaklaşım hangisidir?",
+    "options": [
+      "Duplikasyon ihtimalini tamamen yok saymak.",
+      "İş anahtarı ve kurallara göre deterministic deduplication stratejisi uygulamak.",
+      "Tüm kayıtları silmek.",
+      "Sadece ilk gelen kaydı manuel seçmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Deduplication iş kuralına bağlıdır; 'aynı kayıt' tanımı net olmalıdır. Timestamp, versiyon veya event id gibi alanlar doğru stratejinin temelini oluşturur."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Veri hattında 'exactly-once' semantiği neden zordur?",
+    "options": [
+      "Çünkü tüm dağıtık sistemler varsayılan olarak exactly-once verir.",
+      "Retry, ağ hatası ve durum yönetimi nedeniyle tekrar işleme ile veri kaybını aynı anda dengelemek karmaşıktır.",
+      "Çünkü sadece küçük veri setlerinde çalışır.",
+      "Çünkü SQL bunu desteklemez."
+    ],
+    "correctIndex": 1,
+    "explanation": "Dağıtık sistemlerde teslimat ve işleme garantileri ayrıdır. Exactly-once etkisi genellikle idempotent yazım, transaction veya deduplication ile tasarlanır; doğal olarak 'bedava' gelmez."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi veri kalitesi testine iyi bir örnektir?",
+    "options": [
+      "Sipariş tutarının negatif olmamasını doğrulamak.",
+      "Sunucu kasasının sıcaklığını ölçmek.",
+      "Notebook arka plan rengini değiştirmek.",
+      "Sadece sorgu sonucunu CSV'ye indirmek."
+    ],
+    "correctIndex": 0,
+    "explanation": "Alan kısıtları, null oranı, benzersizlik ve referential integrity kontrolleri veri kalitesi testlerinin temel örnekleridir. Bu testler bozuk verinin downstream'a sızmasını azaltır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir orchestration sisteminde upstream job başarısızken downstream job'ı zorla koşturmanın en büyük riski nedir?",
+    "options": [
+      "Daha hızlı bitmesi.",
+      "Eksik veya bozuk input ile yanlış veri üretmesi.",
+      "CPU kullanımının otomatik düşmesi.",
+      "Retry ihtiyacını tamamen kaldırması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bağımlılık zincirini yok saymak veri hattında sessiz veri bozulmasına yol açabilir. Operasyonel olarak 'job çalıştı' görünmesi ama içeriğin yanlış olması en tehlikeli senaryolardandır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Metadata catalog kullanımının büyük organizasyonlardaki en önemli faydası nedir?",
+    "options": [
+      "Veriyi otomatik olarak sıkıştırması.",
+      "Hangi veri setinin ne anlama geldiğini, kim tarafından kullanıldığını ve soy ağacını görünür kılması.",
+      "Yalnızca BI lisans maliyetini düşürmesi.",
+      "Tüm ETL kodunu tek dosyada toplaması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Data discovery ve lineage görünürlüğü yoksa ekipler aynı işi tekrar üretir veya yanlış veri setini kullanır. Catalog araçları veri yönetişimi ve güven oluşturmak için kritiktir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Data lineage bilgisinin eksik olması en çok hangi problemi zorlaştırır?",
+    "options": [
+      "Ekran çözünürlüğü ayarlamayı.",
+      "Bir metrik bozulduğunda kök neden analizi yapmayı.",
+      "Klavyede Türkçe karakter yazmayı.",
+      "Sunucuya SSH ile bağlanmayı."
+    ],
+    "correctIndex": 1,
+    "explanation": "Lineage, bir veri ürününün hangi kaynaklardan ve dönüşümlerden geçtiğini gösterir. Bu görünürlük olmadan etki analizi ve incident müdahalesi çok daha yavaş olur."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir event stream'de anahtar bazlı partitioning kullanmanın tipik sebebi nedir?",
+    "options": [
+      "Aynı anahtara ait event'leri aynı partition'a yönlendirip sıralı işlemeyi kolaylaştırmak.",
+      "Her event'i rastgele silmek.",
+      "Schema registry kullanımını kaldırmak.",
+      "Mesaj boyutunu otomatik düşürmek."
+    ],
+    "correctIndex": 0,
+    "explanation": "User id veya order id gibi anahtarlar üzerinden partitioning, ilgili olayların aynı işleme yoluna gitmesini sağlar. Bu, stateful stream işlerinde özellikle önemlidir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Kafka benzeri bir sistemde consumer lag artıyorsa en olası anlamlardan biri nedir?",
+    "options": [
+      "Consumer üretim hızına yetişemiyordur.",
+      "Mesajlar otomatik olarak veritabanına yazılmıştır.",
+      "Schema değişikliği imkansız hale gelmiştir.",
+      "Tüm topic'ler silinmiştir."
+    ],
+    "correctIndex": 0,
+    "explanation": "Lag, üretilen ve tüketilen offset arasındaki farkı gösterir. Artış, kapasite yetersizliği, yavaş iş mantığı veya downstream bağımlılıklardaki sorunlara işaret edebilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Veri ambarında surrogate key kullanmanın yaygın gerekçesi nedir?",
+    "options": [
+      "İş anahtarındaki değişimlerden bağımsız, stabil ilişki anahtarı sağlamak.",
+      "Tüm tabloları şemasız yapmak.",
+      "Sadece index boyutunu büyütmek.",
+      "Join ihtiyacını tamamen kaldırmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Surrogate key, iş anahtarlarının değişebilir veya çok alanlı olduğu durumlarda ilişkileri sadeleştirir. Özellikle dimension modellemede tarihsel versiyonlama ile birlikte kullanımı yaygındır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir tabloda null oranının beklenmedik şekilde yükselmesi neden alarm sebebi olabilir?",
+    "options": [
+      "Kaynak sistem, mapping veya join mantığında veri kaybı olduğuna işaret edebilir.",
+      "Sorguların daha hızlı çalışacağını garanti eder.",
+      "Disk ihtiyacını sıfırlar.",
+      "Schema doğrulama ihtiyacını ortadan kaldırır."
+    ],
+    "correctIndex": 0,
+    "explanation": "Null oranı veri kalitesinin önemli sinyallerinden biridir. Ani artışlar çoğu zaman kaynak değişikliği, join uyumsuzluğu veya transform hatasına işaret eder."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi replay edilebilir event log yaklaşımının önemli avantajıdır?",
+    "options": [
+      "Geçmiş olayları yeniden işleyip yeni iş mantığıyla sonuç üretmeye imkan vermesi.",
+      "Tüm veri kalitesi problemlerini otomatik çözmesi.",
+      "Veritabanı ihtiyacını kalıcı olarak kaldırması.",
+      "Her sorguyu sabit O(1) yapması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Immutable event log, geçmişin tekrar işlenebilmesini sağlar. Bu, backfill, audit ve yeni türev veri ürünleri üretme açısından güçlü bir özelliktir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir data platformunda schema evolution desteklenirken en kritik mühendislik konusu nedir?",
+    "options": [
+      "Tüm producer ve consumer'ların her değişikliği aynı anda deploy etmesini zorunlu kılmak.",
+      "Geriye ve ileriye dönük uyumluluk kurallarını net tanımlamak.",
+      "Şema bilgisini tamamen kaldırmak.",
+      "Yalnızca manuel test ile ilerlemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Schema evolution, yalnızca yeni alan eklemekten ibaret değildir; mevcut tüketicilerin kırılmaması gerekir. Backward/forward compatibility kuralları ve registry politikaları bu yüzden kritik hale gelir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir veri hattında 'bronze-silver-gold' katmanlı tasarımın temel avantajı nedir?",
+    "options": [
+      "Tüm veriyi tek tabloda toplaması.",
+      "Ham veri, temizlenmiş veri ve tüketim amaçlı veri ürünlerini sorumluluklara göre ayrıştırması.",
+      "Sadece depolama maliyetini artırması.",
+      "Schema kontrolünü devre dışı bırakması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Katmanlı yaklaşım ham veriyi korurken dönüşüm aşamalarını görünür kılar. Bu yapı hem veri kalitesi denetimini hem de yeniden işleme ve debugging süreçlerini kolaylaştırır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Tamamen append-only bir veri modeli kullanmanın önemli trade-off'larından biri nedir?",
+    "options": [
+      "Audit ve replay kolaylaşırken güncel state'i üretmek için ek hesaplama veya compaction ihtiyacı doğabilir.",
+      "Veri geçmişi tamamen kaybolur.",
+      "Yalnızca küçük veri setlerinde çalışır.",
+      "Join işlemleri yasaklanır."
+    ],
+    "correctIndex": 0,
+    "explanation": "Append-only model izlenebilirlik sağlar ancak 'şu anki doğru durum' için event birleştirme, snapshot veya compaction mekanizması gerekebilir. Bu seçim performans ve operasyon maliyetini etkiler."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir stream processing işinde state store boyutunun sürekli büyümesi hangi mimari riske işaret eder?",
+    "options": [
+      "State TTL, pencere kapanışı veya anahtar kardinalitesi stratejisinin yetersiz olabileceğine.",
+      "Sorguların tamamen doğru çalıştığına.",
+      "Verinin otomatik arşivlendiğine.",
+      "Backpressure'ın imkansız hale geldiğine."
+    ],
+    "correctIndex": 0,
+    "explanation": "Stateful işler uygun temizleme stratejisine sahip değilse bellek ve disk baskısı yaratır. Anahtar kardinalitesi ve retention politikası tasarımın erken safhasında düşünülmelidir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aynı metriğin farklı ekipler tarafından farklı SQL ile hesaplanması organizasyonel olarak en çok hangi sorunu doğurur?",
+    "options": [
+      "Metric trust erozyonu ve karar alma süreçlerinde tutarsızlık.",
+      "Disklerin daha parlak çalışması.",
+      "Şema değişikliğinin imkansız hale gelmesi.",
+      "Her sorgunun otomatik hızlanması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Tek metrik için birden fazla gerçek tanım oluşursa ekipler aynı sayıya güvenmez hale gelir. Semantic layer, ortak tanım ve veri sözlüğü bu sorunu azaltmak için kullanılır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir data lakehouse mimarisinde ACID tablo formatlarının önemli katkısı nedir?",
+    "options": [
+      "Sadece görsel dashboard oluşturması.",
+      "Büyük dosya tabanlı depolamada transaction, versioning ve güvenli upsert/delete kabiliyeti sağlaması.",
+      "CSV desteğini kaldırması.",
+      "Partition ihtiyacını sıfırlaması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Delta, Iceberg veya Hudi benzeri formatlar dosya tabanlı gölde daha güvenilir tablo semantiği sağlar. Bu, incremental işleme ve eşzamanlı okuma-yazma senaryolarında büyük avantajdır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir incident sırasında yalnızca job başarı/başarısızlık bilgisini izlemek neden yetersiz olabilir?",
+    "options": [
+      "Çünkü veri içeriği bozulmuş olsa bile job teknik olarak başarılı görünebilir.",
+      "Çünkü tüm job'lar zaten başarısız olur.",
+      "Çünkü orkestrasyon araçları log üretmez.",
+      "Çünkü SQL hataları yalnızca UI'da görünür."
+    ],
+    "correctIndex": 0,
+    "explanation": "Operational success ile data correctness aynı şey değildir. Row count, null oranı, freshness ve business metric kontrolleri olmadan sessiz veri bozulması gözden kaçabilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Yüksek hacimli bir veri hattında küçük dosya problemi neden önemlidir?",
+    "options": [
+      "Metadata yükünü ve okuma başlatma maliyetini artırarak performansı düşürebilir.",
+      "Sadece ekran çözünürlüğünü etkiler.",
+      "Veriyi daha güvenli hale getirir.",
+      "Schema değişikliğini engeller."
+    ],
+    "correctIndex": 0,
+    "explanation": "Çok sayıda küçük dosya, dosya listeleme ve açma maliyetini büyütür. Özellikle object storage tabanlı sistemlerde compaction stratejileri bu yüzden kritik hale gelir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi data contract yaklaşımının en güçlü faydalarından biridir?",
+    "options": [
+      "Kaynak ekip ile tüketici ekip arasında schema ve kalite beklentilerini açık sözleşmeye dönüştürmesi.",
+      "Tüm veri testlerini gereksiz hale getirmesi.",
+      "Sadece BI araçları için çalışması.",
+      "Orchestration ihtiyacını ortadan kaldırması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Data contract, üretici ve tüketici arasındaki belirsizliği azaltır. Alan anlamı, nullability, tazelik ve kırıcı değişiklik kuralları yazılı hale geldiğinde operasyonel sürprizler azalır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir pipeline'da replay sonrası sonuçların farklı çıkmasının en olası teknik nedenlerinden biri nedir?",
+    "options": [
+      "Dönüşüm mantığının deterministic olmaması veya dış bağımlı veri kullanması.",
+      "CPU'nun yeni olması.",
+      "SQL editörünün açık tema kullanması.",
+      "Tablo adlarının kısa olması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Replay süreçlerinin güvenilir olması için aynı input'un aynı output'u üretmesi beklenir. Saat bilgisi, rastgelelik veya değişen referans veri kullanımı sonucu bozabilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir metrik tablosunda gün sonu toplamları ile event-level tablo arasında sürekli fark çıkıyorsa ilk teknik yaklaşım ne olmalıdır?",
+    "options": [
+      "Farkı manuel override etmek.",
+      "Lineage, zaman kesimi, dedup ve geç gelen veri kurallarını sistematik olarak incelemek.",
+      "Tüm tabloları silip yeniden başlamak.",
+      "Sadece dashboard başlığını değiştirmek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Metrik tutarsızlığı çoğu zaman tek bir nedenden değil, veri sözleşmesi veya işleme semantiğinden kaynaklanır. Kök neden analizi için veri akışını ve hesaplama katmanlarını sistematik izlemek gerekir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi PII içeren veri setleri için en doğru veri mühendisliği yaklaşımıdır?",
+    "options": [
+      "Tüm ekiplerin raw veriye koşulsuz erişmesi.",
+      "Erişim kontrolü, maskeleme/tokenization ve audit mekanizmalarını veri katmanında uygulamak.",
+      "PII veriyi ayrı işaretlemeden her yere kopyalamak.",
+      "Sadece dosya isimlerini gizlemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kişisel veri güvenliği yalnızca uygulama katmanına bırakılmamalıdır. Yetkilendirme, sınıflandırma ve denetlenebilir erişim modeli veri platformunun çekirdek sorumluluklarındandır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aynı kaynak sistemden hem batch snapshot hem CDC akışı alan bir mimaride en büyük risklerden biri nedir?",
+    "options": [
+      "İki akışın çakışıp aynı değişikliği iki kez veya yanlış sırayla yansıtması.",
+      "SQL'in tamamen çalışmaması.",
+      "Partition kavramının silinmesi.",
+      "Dashboard'ların sadece mobilde açılması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Snapshot ve CDC birlikte kullanıldığında bootstrap, cutover ve ordering stratejisi net olmalıdır. Aksi halde duplicate, missing veya out-of-order state problemleri oluşabilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir distributed SQL motorunda veri skew yaşanması neye yol açar?",
+    "options": [
+      "Tüm worker'ların eşit yük altında kusursuz çalışmasına.",
+      "Bazı worker'ların aşırı yüklenip tüm job süresini uzatmasına.",
+      "Schema registry'nin kapanmasına.",
+      "Sorgu sonucunun her zaman boş gelmesine."
+    ],
+    "correctIndex": 1,
+    "explanation": "Skew, verinin bazı anahtarlarda yoğunlaşmasıdır. Paralel işlerde birkaç node darboğaz olduğunda cluster genelindeki toplam süre ve kaynak verimi ciddi şekilde bozulur."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir veri ürününü yalnızca teknik tablo olarak değil, ürün gibi yönetmenin temel avantajı nedir?",
+    "options": [
+      "Sahiplik, SLA, kalite ve kullanıcı beklentilerini netleştirerek veri güvenini artırması.",
+      "SQL yazmayı tamamen gereksiz kılması.",
+      "Sadece veri boyutunu küçültmesi.",
+      "Tüm analistleri aynı sorguya zorlaması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Data product yaklaşımı, veri setinin tüketicisi ve amacı olduğunu kabul eder. Sahiplik ve kalite beklentileri netleştiğinde sürdürülebilirlik ve organizasyonel güven artar."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Büyük ölçekli bir backfill operasyonunda en kritik tasarım kararlarından biri hangisidir?",
+    "options": [
+      "Üretim akışını ve maliyeti bozmayacak şekilde izolasyon, chunking ve gözlemlenebilirlik planı yapmak.",
+      "Tüm cluster kaynaklarını tek seferde kullanmak.",
+      "Sadece sonucun güzel görünmesine odaklanmak.",
+      "Log toplamayı tamamen kapatmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Backfill, geçmişi düzeltirken canlı sistemi de etkileme potansiyeli taşır. Parçalara bölme, idempotency, izleme ve rollback yaklaşımı olmadan yüksek riskli hale gelir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir veri platformunda freshness SLA takibi neden sadece teknik metrik değil, ürün metriği olarak da önemlidir?",
+    "options": [
+      "Çünkü verinin gecikmesi iş kararlarını, alarm sistemlerini ve kullanıcı deneyimini doğrudan etkileyebilir.",
+      "Çünkü tüm taze veri daha küçük boyutludur.",
+      "Çünkü SLA yalnızca rapor başlığında kullanılır.",
+      "Çünkü freshness ile kalite arasında hiçbir ilişki yoktur."
+    ],
+    "correctIndex": 0,
+    "explanation": "Veri zamanında gelmiyorsa teknik olarak job çalışmış olsa bile iş değeri düşebilir. Özellikle operasyonel dashboard'lar ve aksiyon üreten sistemler için freshness doğrudan ürün davranışını etkiler."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir tabloda `COUNT(*)` neyi hesaplar?",
+    "options": [
+      "Sadece `NULL` olmayan ilk kolonu.",
+      "Sorgu sonucundaki toplam satır sayısını.",
+      "Yalnızca benzersiz kayıtları.",
+      "Sadece numeric kolonları."
+    ],
+    "correctIndex": 1,
+    "explanation": "`COUNT(*)`, satırları sayar ve belirli bir kolona bağlı değildir. Filtre veya join sonrası oluşan sonuç kümesi üzerinde çalışır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi `WHERE` ile `HAVING` arasındaki farkı doğru açıklar?",
+    "options": [
+      "`WHERE` gruplamadan önce satırları, `HAVING` gruplamadan sonra agregasyon sonuçlarını filtreler.",
+      "`HAVING` yalnızca string kolonlarda çalışır.",
+      "`WHERE` yalnızca agregasyon sonrası kullanılır.",
+      "İkisi tamamen aynı amaçla kullanılır."
+    ],
+    "correctIndex": 0,
+    "explanation": "`WHERE`, ham satır seviyesinde filtre uygular. `HAVING` ise genelde `GROUP BY` sonrası oluşan gruplar üzerinde koşul koymak için kullanılır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Veri hattında retry mekanizması neden gereklidir?",
+    "options": [
+      "Geçici ağ veya servis hatalarında manuel müdahale olmadan toparlanmak için.",
+      "Her hatayı kalıcı hale getirmek için.",
+      "Sadece log boyutunu artırmak için.",
+      "Schema doğrulamayı kapatmak için."
+    ],
+    "correctIndex": 0,
+    "explanation": "Birçok altyapı hatası geçicidir; retry bunlara karşı dayanıklılık sağlar. Ancak retry stratejisi idempotency ile birlikte tasarlanmazsa duplicate veya yan etki sorunu yaratabilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi veri tazeliği (freshness) metriğini en iyi açıklar?",
+    "options": [
+      "Verinin son başarılı güncellenme zamanı ile beklenen zaman arasındaki güncellik durumu.",
+      "Tablodaki kolon sayısı.",
+      "Sorgu editörünün açılma süresi.",
+      "Sunucu RAM boyutu."
+    ],
+    "correctIndex": 0,
+    "explanation": "Freshness, verinin ne kadar güncel olduğunu ölçer. Özellikle zaman hassas rapor ve alarm sistemlerinde bu metrik kritik kabul edilir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir Data Engineer için loglama neden önemlidir?",
+    "options": [
+      "Sadece kodu daha uzun göstermek için.",
+      "Hata ayıklama, gözlemlenebilirlik ve incident çözüm süresini kısaltmak için.",
+      "Veri kalitesini tamamen gereksiz hale getirmek için.",
+      "Sorguları otomatik optimize etmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Yeterli log olmadan hangi aşamada, hangi input ile hata oluştuğunu anlamak zorlaşır. Operasyonel güvenilirlik için anlamlı ve ölçülü loglama temel pratiktir."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir dbt modelinin `incremental` tasarlanmasında en kritik risk aşağıdakilerden hangisidir?",
+    "options": [
+      "Geç gelen veya güncellenen kayıtların filtre mantığı nedeniyle atlanabilmesi.",
+      "SQL yazımını güzelleştirmesi.",
+      "Sadece küçük tablolarda çalışması.",
+      "Orchestration ile çalışamaması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Incremental model yanlış watermark veya filtre kullanıyorsa sessiz veri kaybı yaratabilir. Özellikle update alan kayıtlar ve late-arriving data için strateji net olmalıdır."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi analytical query performansını iyileştirmek için mantıklı bir yaklaşımdır?",
+    "options": [
+      "Gereksiz kolonları seçmemek ve partition pruning'i mümkün kılmak.",
+      "Her sorguda `SELECT *` kullanmak.",
+      "Bütün tabloları tek partition'da tutmak.",
+      "Null kontrolünü tamamen kaldırmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Analitik motorlarda okunan veri miktarı maliyeti doğrudan etkiler. Yalnızca gereken kolonları okumak ve filtreleri doğru kullanmak çoğu zaman büyük kazanç sağlar."
+  },
+  {
+    "category": "data-engineer",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir veri platformunda testleri sadece kod seviyesinde değil, veri seviyesi beklentilerle de yazmanın nedeni nedir?",
+    "options": [
+      "Çünkü job başarılı olsa bile üretilen verinin iş kuralına uygun olup olmadığı ayrıca doğrulanmalıdır.",
+      "Çünkü SQL syntax hataları imkansızdır.",
+      "Çünkü veri her zaman doğrudur.",
+      "Çünkü monitoring tüm sorunları önceden çözer."
+    ],
+    "correctIndex": 0,
+    "explanation": "Teknik başarı ile iş doğruluğu ayrıdır. Veri testi, beklenen dağılım, referans bütünlüğü veya kritik metrik eşikleri gibi alanlara bakarak sessiz bozulmaları yakalar."
+  }
+]

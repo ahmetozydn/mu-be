@@ -1,0 +1,702 @@
+[
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C# dilinde 'value type' (değer tipi) ve 'reference type' (referans tipi) değişkenler belleğin hangi bölgelerinde tutulur?",
+    "options": [
+      "Value typelar Heap'te, Reference typelar Stack'te tutulur.",
+      "Her iki tip de sadece Stack bölgesinde saklanır.",
+      "Value typelar genellikle Stack'te, Reference typelar ise Heap'te (referansları Stack'te olacak şekilde) tutulur.",
+      "Value typelar veritabanında, Reference typelar RAM'de tutulur."
+    ],
+    "correctIndex": 2,
+    "explanation": "int, bool gibi değer tipleri Stack'te doğrudan veriyi tutarken; class, string gibi referans tiplerinin asıl verisi Heap'te saklanır, Stack'te ise bu verinin adresi (pointer) tutulur."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta bir sınıfın (class) birden fazla sınıftan türetilememesi (multiple inheritance desteği olmaması) durumunda, bir sınıfa birden fazla yetenek kazandırmak için ne kullanılır?",
+    "options": [
+      "Abstract sınıflar kullanarak tüm yetenekler orada toplanır.",
+      "Interface (Arayüz) yapısı kullanılarak birden fazla kontrat implemente edilir.",
+      "Static sınıflar yardımıyla metodlar paylaşılır.",
+      "Struct yapısı kullanılarak sınıflar birbirine bağlanır."
+    ],
+    "correctIndex": 1,
+    "explanation": "C#'ta bir sınıf sadece bir sınıftan kalıtım alabilir ancak sınırsız sayıda Interface implemente edebilir. Bu, multiple inheritance'ın karmaşıklığını önlerken esneklik sağlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": ".NET ekosisteminde 'LINQ' (Language Integrated Query) kullanmanın en büyük avantajı nedir?",
+    "options": [
+      "Kodun daha hızlı derlenmesini sağlamak.",
+      "Farklı veri kaynaklarını (Array, SQL, XML vb.) ortak ve okunabilir bir sorgulama sözdizimi ile yönetebilmek.",
+      "Veritabanı bağlantılarını otomatik olarak şifrelemek.",
+      "Uygulamanın görsel arayüzünü (UI) tasarlamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "LINQ, koleksiyonlar üzerinde SQL benzeri sorgular yazmamızı sağlar. Veri kaynağı ne olursa olsun (in-memory veya DB), aynı C# metodları ile filtreleme ve dönüşüm yapılabilir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta `using` bloklarının (statement) temel kullanım amacı nedir?",
+    "options": [
+      "Kodun içinde başka kütüphaneleri çağırmak.",
+      "IDisposable arayüzüne sahip nesnelerin (dosya, DB bağlantısı vb.) işi bittiğinde otomatik olarak Dispose edilmesini (kaynakların serbest bırakılmasını) sağlamak.",
+      "Değişkenlerin tipini otomatik olarak belirlemek (var keywordü gibi).",
+      "Hata yönetimini (try-catch) tamamen devre dışı bırakmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "`using` bloğu bittiğinde nesne üzerindeki Dispose() metodu otomatik çağrılır. Bu, bellek dışındaki sistem kaynaklarının (unmanaged resources) sızmasını önlemek için kritiktir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": ".NET Garbage Collector (GC) mekanizmasındaki 'Generations' (Nesil) yapısı performans açısından neyi hedefler?",
+    "options": [
+      "Nesnelerin isimlerine göre gruplandırılmasını sağlamak.",
+      "Yeni oluşturulan nesnelerin çoğunun kısa ömürlü olduğu varsayıluyla, sadece Gen 0'ı sık temizleyerek tüm Heap'i tarama yükünü azaltmak.",
+      "Belleği sadece uygulama kapatıldığında temizlemek.",
+      "İşlemcinin (CPU) ısınmasını önlemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "GC; nesneleri Gen 0, Gen 1 ve Gen 2 olarak ayırır. Çoğu nesne Gen 0'da temizlenir; hayatta kalanlar üst nesillere aktarılır. Bu, her seferinde tüm belleği taramaktan çok daha verimlidir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "C#'ta `async` ve `await` anahtar kelimeleri kullanıldığında, arka planda (compiler seviyesinde) ne tür bir yapı oluşturulur?",
+    "options": [
+      "Kod doğrudan makine diline (ASM) çevrilir.",
+      "Bir State Machine (Durum Makinesi) yapısı oluşturularak işlemin nerede kaldığı ve sonuçlandığında nereden devam edeceği yönetilir.",
+      "Her async metod için yeni bir işletim sistemi thread'i (OS Thread) yaratılır.",
+      "Metodlar sadece paralel olarak çalışmaya zorlanır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Async/await 'magic' değildir; derleyici kodu karmaşık bir State Machine'e dönüştürür. Bu sayede thread'ler bloklanmaz ve sistem kaynakları çok daha verimli kullanılır."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta bir değişkeni `readonly` olarak tanımlamak ile `const` olarak tanımlamak arasındaki temel fark nedir?",
+    "options": [
+      "ReadOnly sadece sayılar için, Const tüm tipler için kullanılır.",
+      "Const değerine sadece derleme zamanında (compile-time) atanabilirken, ReadOnly değerine çalışma zamanında (constructor içinde) atanabilir.",
+      "ReadOnly değişkenler daha fazla bellek kaplar.",
+      "Const değişkenler çalışma zamanında değiştirilebilir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Const değerleri derleme anında koda gömülür ve statiktir. ReadOnly ise çalışma anında (runtime) bir kez atanıp sonra değiştirilemez hale gelir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Entity Framework'te 'Lazy Loading' ve 'Eager Loading' arasındaki temel fark nedir?",
+    "options": [
+      "Lazy loading veriyi hemen getirir, Eager loading ise sadece istendiğinde getirir.",
+      "Eager loading `Include` metodunu kullanarak ilişkili verileri tek sorguda getirirken; Lazy loading, veriye erişildiği anda arka planda ek sorgu atar.",
+      "Lazy loading veritabanını yormazken, Eager loading sunucuyu kilitler.",
+      "Sadece Eager loading şifreli verileri okuyabilir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Lazy loading kodun okunabilirliğini artırsa da 'N+1 problemine' yol açabilir. Eager loading ise performansı optimize etmek için ilişkili tabloları JOIN ile tek seferde çeker."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": ".NET Core mimarisindeki 'Middleware' (Ara Yazılım) kavramı neyi ifade eder?",
+    "options": [
+      "Veritabanı tabloları arasındaki ilişkiyi kuran sınıflardır.",
+      "HTTP istek ve cevap (Request-Response) hattı üzerinde çalışan, isteği işleyip bir sonraki bileşene aktaran veya cevabı dönen kod bloklarıdır.",
+      "Uygulamanın masaüstü veya web olmasını belirleyen ayardır.",
+      "Sadece kullanıcı giriş (Login) ekranı için tasarlanmış özel bir kütüphanedir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Middleware'ler (Örn: Auth, Logging, Routing) bir zincir (pipeline) oluşturur. Gelen her istek bu zincirden geçer ve her middleware isteğe müdahale edebilir veya akışı durdurabilir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Delegate' yapısının temel amacı nedir?",
+    "options": [
+      "Bir metodun adresini (referansını) tutarak, metodun parametre gibi taşınmasını veya sonradan tetiklenmesini (callback) sağlamak.",
+      "Veritabanındaki tablo isimlerini saklamak.",
+      "Uygulamanın sadece belirli bir thread üzerinde çalışmasını zorlamak.",
+      "Hafızadaki nesneleri silmek için GC'ye emir vermek."
+    ],
+    "correctIndex": 0,
+    "explanation": "Delegate'ler tip güvenli (type-safe) fonksiyon işaretçileridir. Event tabanlı programlamanın ve LINQ'in temelini oluştururlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta 'String' ve 'StringBuilder' sınıfları arasındaki temel fark nedir?",
+    "options": [
+      "String sınıfı sadece büyük harflerle çalışır.",
+      "String immutable (değiştirilemez) olduğu için her eklemede yeni bir nesne yaratır; StringBuilder ise mutable (değiştirilebilir) olduğu için mevcut bellek üzerinde işlem yapar.",
+      "StringBuilder sadece veritabanı sorguları için kullanılır.",
+      "String daha hızlıdır çünkü daha az bellek kaplar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Çok sayıda string birleştirme işlemi yapılacaksa StringBuilder kullanmak, binlerce geçici nesne oluşumunu engelleyerek performansı ciddi oranda artırır."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Exception Handling' yaparken `throw` ve `throw ex` arasındaki fark nedir?",
+    "options": [
+      "`throw ex` hatayı daha hızlı iletir.",
+      "`throw` orijinal stack trace bilgisini korurken; `throw ex` stack trace'i o noktadan itibaren yeniden başlatır ve hatanın asıl kaynağını gizler.",
+      "`throw` sadece sistem hataları için kullanılır.",
+      "İkisi de aynı işi yapar, sadece yazım farkı vardır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Hatanın gerçek kaynağını (source) kaybetmemek için her zaman sadece `throw;` kullanılması önerilir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta 'Constructor' (Yapıcı Metod) ne zaman çalışır?",
+    "options": [
+      "Sınıfın içindeki bir metod çağrıldığında.",
+      "Sınıftan bir nesne (instance) `new` anahtar kelimesi ile oluşturulduğu anda.",
+      "Uygulama kapatıldığında.",
+      "Sadece hata oluştuğunda."
+    ],
+    "correctIndex": 1,
+    "explanation": "Constructor, bir sınıfın örneği oluşturulurken başlangıç değerlerini atamak ve gerekli hazırlıkları yapmak için otomatik çağrılan özel bir metoddur."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Extension Methods' (Genişletme Metodları) nasıl tanımlanır?",
+    "options": [
+      "Sadece abstract sınıflar içinde.",
+      "Statik bir sınıf (static class) içerisinde, metodun ilk parametresinin önüne `this` kelimesi getirilerek.",
+      "Sınıfın kendi kodunu değiştirerek.",
+      "Sadece veritabanı kütüphaneleriyle."
+    ],
+    "correctIndex": 1,
+    "explanation": "Extension metodlar, mevcut bir sınıfın (Örn: string) kaynak kodunu değiştirmeden ona yeni metodlar eklememizi sağlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "C#'ta 'Reflection' kütüphanesi ne amaçla kullanılır?",
+    "options": [
+      "Ekran kartı yansımalarını hesaplamak için.",
+      "Çalışma zamanında (runtime) assembly, modül ve tipler hakkında bilgi almak veya dinamik olarak nesne oluşturup metod çağırmak için.",
+      "Kodun aynalanarak (backup) yedeklenmesi için.",
+      "Veritabanı indexlerini optimize etmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Reflection, kodun kendi yapısını (metadata) incelemesine ve dinamik davranışlar sergilemesine olanak tanır (Örn: Automapper, DI kütüphaneleri)."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta 'Namespace' kavramının temel amacı nedir?",
+    "options": [
+      "Kodun daha hızlı derlenmesini sağlamak.",
+      "Sınıfları mantıksal gruplara ayırmak ve aynı isimdeki sınıfların çakışmasını (naming collision) önlemek.",
+      "Sadece internet bağlantısı ayarları için kullanılır.",
+      "Değişkenlerin isimlerini şifrelemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Namespace'ler, büyük projelerde binlerce sınıfın düzenli tutulmasını ve isim çakışmalarının engellenmesini sağlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta `virtual` ve `override` anahtar kelimeleri ne zaman kullanılır?",
+    "options": [
+      "Sadece statik sınıflarda.",
+      "Temel sınıftaki (base class) bir metodun, türetilmiş sınıfta (derived class) yeniden tanımlanabilmesi (polymorphism) için.",
+      "Metodların hızını artırmak için.",
+      "Değişkenlerin değerini sabitlemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "`virtual` metod türetilen sınıfta değiştirilmeye açık demektir; `override` ise bu metodun yeni davranışını tanımlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": ".NET'teki 'Task' ve 'Thread' arasındaki temel fark nedir?",
+    "options": [
+      "Thread sadece masaüstü uygulamalarında çalışır.",
+      "Thread işletim sistemi düzeyinde bir birimdir; Task ise Task Parallel Library (TPL) tarafından yönetilen, bir thread üzerinde çalışan daha üst seviye ve esnek bir iş birimidir.",
+      "Task daha yavaştır çünkü daha çok özellik sunar.",
+      "Thread'ler her zaman asenkron çalışır, Task'lar her zaman senkron çalışır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Task'lar thread havuzunu (thread pool) daha verimli kullanır, iptal edilebilir (cancellation) ve birbirine bağlanabilir (continuation) özelliklere sahiptir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta 'Try-Catch-Finally' bloğundaki `finally` kısmının görevi nedir?",
+    "options": [
+      "Sadece hata oluştuğunda çalışmak.",
+      "Hata oluşsun ya da oluşmasın, her durumda mutlaka çalışacak olan kod bloğunu (Örn: Kaynak kapatma) tanımlamak.",
+      "Hatayı görmezden gelmek.",
+      "Uygulamayı kapatmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Finally bloğu, veritabanı bağlantısı veya dosya akışları gibi serbest bırakılması gereken kaynakların güvenli bir şekilde kapatılmasını garanti eder."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Generic' (Genel) tiplerin (Örn: `List<T>`) en büyük faydası nedir?",
+    "options": [
+      "Sadece tam sayılarla çalışabilmesi.",
+      "Tip güvenliği (type-safety) sağlaması ve boxing/unboxing işlemlerini ortadan kaldırarak performansı artırması.",
+      "Kodun satır sayısını artırması.",
+      "Sadece web uygulamalarında kullanılması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Generic yapılar, farklı tipler için aynı mantığı tekrar yazmadan, derleme zamanında tip kontrolü yapılarak kullanmamızı sağlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta `foreach` döngüsünün çalışabilmesi için ilgili koleksiyonun hangi arayüzü (interface) implemente etmesi gerekir?",
+    "options": [
+      "IDisposable",
+      "IEnumerable",
+      "IComparable",
+      "ICloneable"
+    ],
+    "correctIndex": 1,
+    "explanation": "`IEnumerable` arayüzü, bir koleksiyonun elemanları üzerinde tek tek gezinilmesini (iteration) sağlayan bir 'enumerator' döner."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "C#'ta 'Covariance' ve 'Contravariance' kavramları neyi ifade eder?",
+    "options": [
+      "Verilerin şifrelenme biçimlerini.",
+      "Generic tiplerin veya delegelerin, türetilmiş (sub) ve temel (base) tipler arasındaki dönüşüm esnekliğini.",
+      "İşlemci üzerindeki yük dağılımını.",
+      "Bellek temizleme algoritmalarını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin `IEnumerable<string>` tipinin `IEnumerable<object>` olarak kullanılabilmesi Covariance sayesinde gerçekleşir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta 'Property' (Özellik) yapısı ile 'Field' (Alan) arasındaki temel fark nedir?",
+    "options": [
+      "Field her zaman statiktir.",
+      "Property, field'a erişimi kontrol eden (get/set metodları ile) bir sarmalayıcıdır (encapsulation).",
+      "Property daha yavaştır çünkü veritabanına bağlanır.",
+      "İkisi de tamamen aynıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Property'ler aracılığıyla veriye değer atanırken veya okunurken doğrulama (validation) veya farklı mantıklar (logic) çalıştırılabilir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Yield' anahtar kelimesi ne amaçla kullanılır?",
+    "options": [
+      "Döngüyü tamamen durdurmak için.",
+      "Bir koleksiyonun elemanlarını hafızada tümünü oluşturmadan, her seferinde bir tanesini 'tembel' (lazy) bir şekilde dönmek (stateful iteration) için.",
+      "Metodun hızını artırmak için.",
+      "Sadece async metodlarda kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "`yield return` kullanıldığında, metod o anki durumunu korur ve bir sonraki istekte kaldığı yerden devam eder; bu da bellek tasarrufu sağlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": ".NET'teki 'Expression Trees' (İfade Ağaçları) nerelerde karşımıza çıkar?",
+    "options": [
+      "Sadece dosya sistemi dizin yapısında.",
+      "LINQ to SQL veya Entity Framework gibi sağlayıcılarda, C# kodunu SQL gibi başka bir dile dinamik olarak çevirmek için.",
+      "Uygulamanın görsel temasını değiştirmek için.",
+      "Hata ayıklama (debug) sırasında değişken izleme için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Expression trees, kodun bir veri yapısı (ağaç) olarak temsil edilmesini sağlar; böylece bu ağaç taranarak çalışma zamanında farklı çıktılar üretilebilir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta `static` bir sınıfın en önemli özelliği nedir?",
+    "options": [
+      "İçindeki her şeyin `static` olması zorunluluğu ve bu sınıftan nesne oluşturulamaması (instantiate edilememesi).",
+      "Sadece bir kez kullanılabilmesi.",
+      "Daha az bellek kaplaması.",
+      "İnternet bağlantısı olmadan çalışamaması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Statik sınıflar genellikle yardımcı (utility/helper) metodları barındırmak için kullanılır ve doğrudan sınıf ismi üzerinden erişilirler."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Lambda Expressions' (Lambda İfadeleri) neyi temsil eder?",
+    "options": [
+      "Yeni bir sınıf tanımlama biçimini.",
+      "Kısa ve anonim metod tanımlarını (Örn: `x => x * x`).",
+      "Veritabanındaki tablo ilişkilerini.",
+      "Uygulamanın başlangıç parametrelerini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Lambda ifadeleri, delegelerin ve LINQ sorgularının çok daha okunabilir ve kısa bir şekilde yazılmasına olanak tanır."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "ASP.NET Core'da 'Dependency Injection' (DI) konteynerindeki `AddScoped`, `AddTransient` ve `AddSingleton` arasındaki fark nedir?",
+    "options": [
+      "Üçü de aynı işi yapar, sadece isimleri farklıdır.",
+      "Transient her istekte yeni; Scoped her HTTP isteğinde bir adet; Singleton ise uygulama ömrü boyunca tek bir instance oluşturur.",
+      "Singleton sadece veritabanı bağlantıları içindir.",
+      "Scoped sadece mobil cihazlarda çalışır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu 'lifetime' ayarları, nesnelerin ne kadar süre hayatta kalacağını belirleyerek bellek yönetimini ve veri tutarlılığını kontrol eder."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta `is` ve `as` operatörleri arasındaki temel fark nedir?",
+    "options": [
+      "`is` sadece sayılar içindir.",
+      "`is` bir tip kontrolü yapar ve bool döner; `as` ise güvenli bir cast (dönüşüm) yapar, başarısız olursa `null` döner.",
+      "`as` daha hızlıdır.",
+      "İkisi de aynı hatayı verir."
+    ],
+    "correctIndex": 1,
+    "explanation": "`is` ile tip kontrolü yaptıktan sonra cast yapmak yerine, `as` kullanarak tek adımda güvenli dönüşüm yapmak yaygın bir pratiktir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Attributes' (Öznitelikler - Örn: `[Serializable]`) ne amaçla kullanılır?",
+    "options": [
+      "Kodun rengini değiştirmek için.",
+      "Sınıflara, metodlara veya özelliklere çalışma zamanında okunabilen ek bilgiler (metadata) eklemek için.",
+      "Kodu şifrelemek için.",
+      "Sadece veritabanı tablolarını eşleştirmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Attribute'ler sayesinde çalışma zamanında (Reflection ile) kodun davranışı yönlendirilebilir (Örn: `[Authorize]` ile yetki kontrolü)."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": ".NET'teki 'ValueTask' ne zaman 'Task' yerine tercih edilmelidir?",
+    "options": [
+      "Her zaman ValueTask kullanılmalıdır.",
+      "İşlemin genellikle senkron olarak sonuçlandığı ve gereksiz Heap allocation'dan (bellek tahsisi) kaçınılmak istendiği durumlarda.",
+      "Task daha yavaş olduğunda.",
+      "Sadece veritabanı sorgularında."
+    ],
+    "correctIndex": 1,
+    "explanation": "ValueTask bir struct'tır. Eğer asenkron metodun sonucu zaten belliyse, yeni bir Task objesi yaratmayarak GC yükünü azaltır."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta `null-coalescing` (`??`) operatörü ne işe yarar?",
+    "options": [
+      "İki değişkeni toplamak için.",
+      "Soldaki değer `null` ise sağdaki varsayılan değeri dönmek için.",
+      "Hataları gizlemek için.",
+      "İnternet bağlantısını kontrol etmek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "`var name = user?.Name ?? \"Anonim\";` örneğindeki gibi, null kontrollerini çok daha temiz bir şekilde yapmamızı sağlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Partial Classes' ne amaçla kullanılır?",
+    "options": [
+      "Sınıfın sadece bir kısmını derlemek için.",
+      "Büyük bir sınıfın kodlarını birden fazla dosyaya bölerek daha düzenli çalışmak (veya otomatik üretilen kodla geliştiricinin kodunu ayırmak) için.",
+      "Sınıfın hızını artırmak için.",
+      "Sadece veritabanı modellerinde kullanılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "WPF veya Entity Framework gibi araçlar kod üretirken `partial` kullanır, böylece sizin yazdığınız kodlar her güncellemede silinmez."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "C#'ta 'Unmanaged Code' (Yönetilmeyen Kod) ne anlama gelir?",
+    "options": [
+      "İnternetten indirilen güvensiz kodlar.",
+      ".NET Common Language Runtime (CLR) tarafından yönetilmeyen (Örn: C++ ile yazılmış DLL'ler, doğrudan Windows API çağrıları) kodlar.",
+      "Hata vermeyen kodlar.",
+      "Sadece Linux üzerinde çalışan kodlar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Yönetilmeyen kodlarla çalışırken bellek yönetimi geliştiricinin sorumluluğundadır ve genellikle P/Invoke (Platform Invoke) kullanılarak çağrılırlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta 'Enum' yapısı ne amaçla kullanılır?",
+    "options": [
+      "Sınırsız sayıda sayı saklamak için.",
+      "Birbiriyle ilişkili sabit değerleri (Örn: Haftanın Günleri, Sipariş Durumları) isimlendirerek kodun okunabilirliğini artırmak için.",
+      "Metinleri şifrelemek için.",
+      "Daha hızlı döngüler oluşturmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Magic numberlar (Örn: `status = 1`) yerine enumlar (Örn: `status = OrderStatus.Shipped`) kullanmak kodun bakımını kolaylaştırır."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Action' ve 'Func' arasındaki temel fark nedir?",
+    "options": [
+      "`Action` parametre alamaz.",
+      "`Action` değer döndürmez (void); `Func` ise mutlaka bir değer döndürür.",
+      "`Func` sadece sayılar için kullanılır.",
+      "İkisi de tamamen aynıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Her ikisi de generic delegelerdir. Eğer bir geri dönüş değeri gerekiyorsa `Func<T, TResult>`, gerekmiyorsa `Action<T>` tercih edilir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": ".NET'teki 'In-Process' ve 'Out-of-Process' barındırma (hosting) arasındaki fark nedir?",
+    "options": [
+      "İşlemcinin içinde veya dışında çalışması.",
+      "Uygulamanın web sunucusuyla (IIS) aynı işlem (process) içinde çalışması veya ayrı bir işlem (Kestrel) olarak çalışıp IIS üzerinden proxy edilmesi.",
+      "Sadece veritabanı bağlantılarını etkiler.",
+      "İnternet hızını etkiler."
+    ],
+    "correctIndex": 1,
+    "explanation": "In-process barındırma genellikle daha yüksek performans sunar çünkü isteklerin bir işlemden diğerine aktarılma maliyeti (overhead) yoktur."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta `params` anahtar kelimesi metod parametrelerinde ne işe yarar?",
+    "options": [
+      "Metodun şifreli parametre almasını sağlar.",
+      "Bir metoda değişken sayıda (virgülle ayrılmış şekilde) aynı tipten argüman gönderilmesine olanak tanır.",
+      "Metodu sadece belirli bir kullanıcı için çalıştırır.",
+      "Parametrelerin değerini sıfırlar."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örn: `public void Log(params string[] messages)` metoduna ister 1 ister 10 mesajı yan yana göndererek çağrı yapabilirsiniz."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Sealed' (Mühürlü) anahtar kelimesi bir sınıf için neyi ifade eder?",
+    "options": [
+      "Sınıfın şifrelendiğini.",
+      "Bu sınıftan başka bir sınıfın türetilemeyeceğini (kalıtım alınamayacağını).",
+      "Sınıfın sadece bir kez kullanılabileceğini.",
+      "Sınıfın veritabanına kaydedilemeyeceğini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Güvenlik veya tasarım nedeniyle bir sınıfın genişletilmesini (inheritance) engellemek için `sealed` kullanılır."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "C#'ta 'MemoryBarrier' veya 'volatile' keywordü ne zaman gereklidir?",
+    "options": [
+      "Uygulamanın daha az RAM tüketmesi istendiğinde.",
+      "Çok çekirdekli sistemlerde, farklı threadlerin değişkenlerin en güncel değerini işlemci cache'i yerine ana bellekten okumasını garanti etmek için.",
+      "İnternet bağlantısı kesildiğinde.",
+      "Metodların hızını artırmak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu yapılar 'instruction reordering'i (işlemci/derleyici seviyesinde komutların sırasının değişmesi) önleyerek multi-threaded ortamlarda tutarlılık sağlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta bir sınıfa 'Indexer' (Dizinleyici) eklemek ne sağlar?",
+    "options": [
+      "Veritabanı indexlerini yönetmeyi.",
+      "Sınıfın bir dizi (array) gibi köşeli parantez `[]` ile kullanılmasına olanak tanır (Örn: `myClass[0]`).",
+      "Metodların alfabetik sıralanmasını.",
+      "Sadece rakamlarla işlem yapılmasını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Indexer'lar koleksiyon benzeri sınıflar yaratırken kullanıcıya daha doğal ve kolay bir erişim sözdizimi sunar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Explicit' ve 'Implicit' tip dönüşümü (conversion) arasındaki fark nedir?",
+    "options": [
+      "Explicit otomatik, Implicit manueldir.",
+      "Implicit veri kaybı riski olmadığında otomatik gerçekleşir; Explicit ise veri kaybı riski olduğunda manuel cast `(type)` gerektirir.",
+      "Implicit daha yavaştır.",
+      "Sadece sayılarda geçerlidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Örneğin `int`'ten `double`'a geçiş Implicit; ancak `double`'dan `int`'e geçiş veri kaybı olabileceği için Explicit'tir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": ".NET'teki 'Common Intermediate Language' (CIL) nedir?",
+    "options": [
+      "C#'ın doğrudan konuştuğu donanım dili.",
+      "C# kodunun derlendikten sonra dönüştüğü, platform bağımsız ve Common Language Runtime (CLR) tarafından çalıştırılan ara dildir.",
+      "Veritabanları arasındaki ortak sorgu dili.",
+      "Sadece web tarayıcılarında çalışan dil."
+    ],
+    "correctIndex": 1,
+    "explanation": "CIL (eski adıyla MSIL), .NET dillerinin (C#, VB.NET, F#) ortak noktasıdır; bu sayede farklı diller birbiriyle sorunsuz çalışabilir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta bir metodun 'Signature'ı (İmzası) neleri kapsar?",
+    "options": [
+      "Sadece metodun ismini.",
+      "Metodun ismi, parametre sayısı ve parametre tiplerini.",
+      "Metodun geri dönüş tipini (return type) ve ismini.",
+      "Kodun tamamını."
+    ],
+    "correctIndex": 1,
+    "explanation": "Metod overloading yapılırken derleyici metodun 'imzasına' bakarak hangisini çağıracağına karar verir (Geri dönüş tipi imzaya dahil değildir)."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'Tuples' yapısı ne amaçla kullanılır?",
+    "options": [
+      "İki dosyayı birleştirmek için.",
+      "Bir metoddan birden fazla değer dönmek için geçici ve hafif bir veri yapısı oluşturmak amacıyla.",
+      "Sadece 3 elemanlı diziler oluşturmak için.",
+      "Hataları raporlamak için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Özellikle C# 7.0 ile gelen yeni tuple sözdizimi (`(int, string)`) kodun okunabilirliğini artırarak küçük veri gruplarını taşımayı kolaylaştırır."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": ".NET Core'daki 'Generic Host' (IHost) kavramı neyi hedefler?",
+    "options": [
+      "Sadece web uygulamalarını çalıştırmayı.",
+      "Uygulamanın logging, dependency injection, configuration ve lifetime gibi temel servislerini tek bir çatı altında toplayarak yönetmeyi.",
+      "Tüm veritabanlarını ortak bir sunucuda barındırmayı.",
+      "Kodun şifrelenmesini."
+    ],
+    "correctIndex": 1,
+    "explanation": "Generic Host, ASP.NET Core dışındaki (Örn: Console apps, Worker services) uygulamaların da aynı standart altyapıyı kullanmasına olanak tanır."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta `static` bir constructor ne zaman çalışır?",
+    "options": [
+      "Nesne her oluşturulduğunda.",
+      "Sınıfa ilk kez erişildiğinde (herhangi bir statik üye çağrıldığında veya nesne oluşturulduğunda) sadece bir kez.",
+      "Sadece hata anında.",
+      "Uygulama her 10 dakikada bir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Statik yapıcı metodlar, statik verileri başlatmak için kullanılır ve uygulama ömrü boyunca en fazla bir kez tetiklenir."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "C#'ta 'IComparable' ve 'IComparer' arasındaki temel fark nedir?",
+    "options": [
+      "Biri sayılar biri metinler içindir.",
+      "IComparable sınıfın kendisine varsayılan bir sıralama yeteneği kazandırır; IComparer ise dışarıdan farklı sıralama mantıkları enjekte etmek için kullanılır.",
+      "IComparer daha hızlıdır.",
+      "İkisi de tamamen aynıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bir nesneyi isme göre mi, fiyata göre mi sıralayacağınıza karar verirken farklı `IComparer` sınıfları oluşturarak esneklik sağlarsınız."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "C#'ta 'Expression-bodied members' (Örn: `public int Age => 25;`) ne amaçla kullanılır?",
+    "options": [
+      "Kodun daha hızlı çalışması için.",
+      "Sadece tek bir ifade (expression) içeren metod veya propertyleri daha kısa ve temiz bir sözdizimi ile yazmak için.",
+      "Metinleri şifrelemek için.",
+      "Hataları gizlemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Bu sözdizimi, kodun 'boilerplate' kısımlarını azaltarak asıl iş mantığına odaklanılmasını sağlar."
+  },
+  {
+    "category": "csharp",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "C#'ta 'Array' ve 'List' arasındaki temel fark nedir?",
+    "options": [
+      "Array sadece sayılar içindir.",
+      "Array sabit boyutludur (fixed size); List ise dinamik olarak büyüyüp küçülebilen bir yapıdadır.",
+      "List daha yavaştır çünkü veritabanına bağlanır.",
+      "İkisi de tamamen aynıdır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Eleman sayısı önceden biliniyorsa Array daha performanslı olabilir; ancak esneklik gerekiyorsa `List<T>` standart tercihtir."
+  }
+]

@@ -1,0 +1,842 @@
+[
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir Business Analyst için requirement gathering sürecinin temel amacı nedir?",
+    "options": [
+      "Yalnızca proje bütçesini düşürmek.",
+      "İhtiyaçları, beklentileri ve iş hedeflerini netleştirmek.",
+      "Geliştiricilerin yerine kod yazmak.",
+      "Tüm kararları tek başına vermek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Requirement gathering, çözülmek istenen problemi doğru anlamak için yapılır. Eksik veya yanlış toplanan ihtiyaçlar projenin ilerleyen aşamalarında maliyetli yeniden işlere yol açar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi functional requirement örneğidir?",
+    "options": [
+      "Sistemin 2 saniye altında yanıt vermesi.",
+      "Kullanıcının e-posta ve parola ile giriş yapabilmesi.",
+      "Sunucunun haftalık yedeklenmesi.",
+      "Uygulamanın %99.9 erişilebilir olması."
+    ],
+    "correctIndex": 1,
+    "explanation": "Functional requirement, sistemin ne yapacağını tanımlar. Performans ve erişilebilirlik gibi beklentiler ise genellikle non-functional requirement kapsamında değerlendirilir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Non-functional requirement için en uygun örnek aşağıdakilerden hangisidir?",
+    "options": [
+      "Kullanıcının sipariş oluşturabilmesi.",
+      "Yöneticinin rapor indirebilmesi.",
+      "Sistemin yoğun yük altında stabil çalışması.",
+      "Müşterinin adres güncellemesi yapabilmesi."
+    ],
+    "correctIndex": 2,
+    "explanation": "Non-functional requirement, sistem davranışının kalite özelliklerini tanımlar. Performans, güvenlik, erişilebilirlik ve ölçeklenebilirlik bu kapsamdadır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Stakeholder analysis neden önemlidir?",
+    "options": [
+      "Sadece toplantı sayısını artırmak için.",
+      "Kimlerin projeden etkilendiğini ve kimlerin kararları etkilediğini anlamak için.",
+      "Tüm teknik detayları gizlemek için.",
+      "Gereksinimleri dokümante etmemek için."
+    ],
+    "correctIndex": 1,
+    "explanation": "Farklı paydaşların öncelikleri ve beklentileri farklı olabilir. Bu farkların erken anlaşılması çatışmaları ve yanlış önceliklendirmeyi azaltır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi bir acceptance criterion için en uygun örnektir?",
+    "options": [
+      "Ekran güzel görünmelidir.",
+      "Kullanıcı giriş yaptığında ana sayfaya yönlendirilmelidir.",
+      "Sistem mümkün olduğunca hızlı çalışmalıdır.",
+      "Müşteriler uygulamayı sevmelidir."
+    ],
+    "correctIndex": 1,
+    "explanation": "Acceptance criteria ölçülebilir ve test edilebilir olmalıdır. Belirsiz ifadeler geliştirme ve test ekipleri arasında farklı yorumlara yol açar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "User story'nin temel amacı nedir?",
+    "options": [
+      "Teknik mimariyi ayrıntılı tarif etmek.",
+      "Kullanıcı ihtiyacını kısa ve değer odaklı biçimde ifade etmek.",
+      "Tüm veritabanı şemasını göstermek.",
+      "Sadece test senaryosu yazmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "User story, kullanıcının kim olduğu, ne istediği ve neden istediği üzerine odaklanır. Böylece çözüm değil ihtiyaç merkezde tutulur."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi iyi yazılmış bir user story'nin önemli özelliğidir?",
+    "options": [
+      "Sadece geliştiriciye hitap etmesi.",
+      "İş değerini açıkça göstermesi.",
+      "Mutlaka onlarca sayfa uzunluğunda olması.",
+      "Hiç acceptance criterion içermemesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "İyi bir user story, neden yapıldığını görünür kılar. İş değeri net değilse ekip doğru önceliklendirme yapmakta zorlanır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Business Analyst için süreç akış diyagramı hazırlamanın temel faydası nedir?",
+    "options": [
+      "Kod derleme süresini düşürmek.",
+      "İş adımlarını ve karar noktalarını görsel olarak netleştirmek.",
+      "Sunucu maliyetini otomatik azaltmak.",
+      "Tüm hataları ortadan kaldırmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Akış diyagramları süreçteki boşlukları, gereksiz adımları ve bağımlılıkları görünür hale getirir. Görsel iletişim, farklı ekipler arasında ortak anlayış kurmayı kolaylaştırır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "AS-IS ve TO-BE analizi arasındaki temel fark nedir?",
+    "options": [
+      "AS-IS mevcut durumu, TO-BE hedeflenen gelecekteki durumu tanımlar.",
+      "İkisi tamamen aynı amaçla kullanılır.",
+      "AS-IS sadece teknik ekip içindir.",
+      "TO-BE yalnızca finans ekiplerinde kullanılır."
+    ],
+    "correctIndex": 0,
+    "explanation": "AS-IS mevcut süreci anlamak için, TO-BE ise iyileştirilmiş veya tasarlanan süreci göstermek için kullanılır. Bu ayrım değişim etkisini analiz etmeyi kolaylaştırır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi scope creep riskine örnektir?",
+    "options": [
+      "Onaylı kapsam dışına küçük görünen ama sürekli yeni istekler eklenmesi.",
+      "Test senaryolarının yazılması.",
+      "Paydaşlarla haftalık durum toplantısı yapılması.",
+      "Kullanıcı araştırması yapılması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Scope creep, kontrolsüz kapsam genişlemesidir. Küçük eklemeler bile zamanla bütçe, takvim ve kalite üzerinde ciddi baskı yaratabilir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir BA için meeting notes tutmak neden değerlidir?",
+    "options": [
+      "Kararları, aksiyonları ve açık noktaları izlenebilir hale getirmek için.",
+      "Toplantıları gereksiz uzatmak için.",
+      "Yalnızca katılımcı sayısını artırmak için.",
+      "Teknik borcu otomatik kapatmak için."
+    ],
+    "correctIndex": 0,
+    "explanation": "Yazılı kayıtlar yanlış hatırlamayı ve sorumluluk belirsizliğini azaltır. Özellikle çok paydaşlı projelerde karar geçmişi kritik hale gelir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi iş kuralı (business rule) örneğidir?",
+    "options": [
+      "Sipariş tutarı 1000 TL üzerindeyse yönetici onayı gereklidir.",
+      "Sunucu RAM'i 32 GB olmalıdır.",
+      "Buton mavi renkte görünmelidir.",
+      "API yanıtı JSON olmalıdır."
+    ],
+    "correctIndex": 0,
+    "explanation": "Business rule, organizasyonun işlem mantığını yöneten kuraldır. Teknik tercih veya görsel tasarım kararı ile karıştırılmamalıdır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi bir paydaşın 'influence' seviyesi yüksek ama 'interest' seviyesi düşük olduğu duruma uygun yaklaşımdır?",
+    "options": [
+      "Tamamen görmezden gelmek.",
+      "Düzenli ama hedefli şekilde bilgilendirmek.",
+      "Sadece teknik detay göndermek.",
+      "Her gün uzun toplantı yapmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Yüksek etkili paydaşlar projeyi yön değiştirebilir. İlgi seviyesi düşük olsa da doğru anda doğru özet bilgiyle hizalı tutulmaları önemlidir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "UAT (User Acceptance Test) sürecinin ana amacı nedir?",
+    "options": [
+      "Kod stilini kontrol etmek.",
+      "Son kullanıcı veya iş biriminin çözümün ihtiyacı karşılayıp karşılamadığını doğrulaması.",
+      "Sadece veritabanı yedeği almak.",
+      "Sunucuya patch yüklemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "UAT, teknik olarak çalışan bir çözümün iş açısından da kabul edilebilir olup olmadığını test eder. Bu, ürünün gerçek kullanım amacına uygunluğunu doğrulamak için kritik adımdır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi MoSCoW prioritization'da 'Must Have' için uygundur?",
+    "options": [
+      "Olmasa da olur, sadece deneyimi iyileştirir.",
+      "Yasal veya temel işleyiş için vazgeçilmezdir.",
+      "Belki ileride düşünülür.",
+      "Takvim uygunsa yapılır."
+    ],
+    "correctIndex": 1,
+    "explanation": "Must Have, çözümün çalışması veya iş hedefinin karşılanması için kritik olan ihtiyaçtır. Nice-to-have öğelerle karıştırılması planlamayı bozar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir gereksinimin 'ambiguous' olması neden risklidir?",
+    "options": [
+      "Farklı ekiplerin aynı ihtiyacı farklı yorumlamasına yol açabilir.",
+      "Sadece doküman boyutunu küçültür.",
+      "Her zaman teslim süresini azaltır.",
+      "Test ihtiyacını ortadan kaldırır."
+    ],
+    "correctIndex": 0,
+    "explanation": "Belirsiz gereksinimler yeniden iş, yanlış geliştirme ve kabul anlaşmazlıkları doğurur. BA'nin önemli sorumluluklarından biri dili olabildiğince netleştirmektir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Traceability matrix kullanımının temel faydası nedir?",
+    "options": [
+      "Gereksinimleri testler, tasarım ve teslimatlar ile ilişkilendirip izlenebilirlik sağlamak.",
+      "Sadece toplantı takvimi tutmak.",
+      "Kod performansını ölçmek.",
+      "UI renk paleti seçmek."
+    ],
+    "correctIndex": 0,
+    "explanation": "Traceability, hangi gereksinimin hangi çözüm ve test ile karşılandığını görünür kılar. Eksik kapsam veya test boşluklarını erken tespit etmeye yardımcı olur."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir gereksinim workshop'unda en sık görülen risklerden biri hangisidir?",
+    "options": [
+      "Yalnızca tek bir paydaş grubunun görüşünün baskın çıkması.",
+      "Fazla not alınması.",
+      "Açık aksiyon maddesi olması.",
+      "Toplantı davetinin önceden gönderilmesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "Baskın katılımcılar diğer ihtiyaçların görünmez kalmasına neden olabilir. Kolaylaştırıcılık becerisi, BA için bu noktada çok önemlidir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Business case hazırlarken en kritik unsurlardan biri hangisidir?",
+    "options": [
+      "Yalnızca teknik detayları derinleştirmek.",
+      "Maliyet, fayda, risk ve beklenen iş sonucunu netleştirmek.",
+      "Sadece rakiplerin logosunu toplamak.",
+      "Kod örneği eklemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "Business case, neden yatırım yapılması gerektiğini anlatır. Faydası ölçülemeyen veya riski görünmeyen girişimlerin önceliklendirilmesi zorlaşır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir BRD (Business Requirements Document) ile FRD (Functional Requirements Document) arasındaki fark nedir?",
+    "options": [
+      "BRD iş ihtiyacına, FRD çözümün fonksiyonel davranışına odaklanır.",
+      "İkisi yalnızca isim farkıdır.",
+      "FRD sadece finans ekipleri içindir.",
+      "BRD yalnızca UI ekran görüntülerinden oluşur."
+    ],
+    "correctIndex": 0,
+    "explanation": "BRD 'neden ve ne' düzeyinde iş ihtiyacını özetler. FRD ise çözümün ne yapacağını daha ayrıntılı ve operasyonel düzeyde tanımlar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir BA'nin root cause analysis yapmasının amacı nedir?",
+    "options": [
+      "Sadece semptomları belgelemek.",
+      "Sorunun yüzeydeki etkisini değil, temel nedenini anlamak.",
+      "Yeni scope eklemek.",
+      "Toplantıyı uzatmak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Kök neden anlaşılmadan yapılan çözümler geçici olur. Sorunun gerçek kaynağı bulunursa tekrar eden hata ve operasyonel maliyet azaltılabilir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi KPI ile metric arasındaki farkı en iyi açıklar?",
+    "options": [
+      "Her metric mutlaka stratejik öneme sahiptir.",
+      "KPI iş hedefiyle doğrudan ilişkili kritik göstergedir; metric ise daha geniş ölçüm kümesini kapsayabilir.",
+      "KPI sadece teknik ekip içindir.",
+      "Metric yalnızca finansal verilerden oluşur."
+    ],
+    "correctIndex": 1,
+    "explanation": "Tüm ölçümler önemli olabilir ama hepsi stratejik karar göstergesi değildir. KPI, doğrudan iş başarısı veya hedef takibi için seçilen kritik ölçüdür."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "A/B test sonucu yorumlanırken BA'nin dikkat etmesi gereken kritik konu nedir?",
+    "options": [
+      "Sadece daha güzel görünen varyantı seçmek.",
+      "Örneklem yeterliliği ve anlamlı etkiyi değerlendirmek.",
+      "Test süresini mümkün olduğunca kısa tutmak.",
+      "Sonucu yalnızca tek müşteri yorumuna göre belirlemek."
+    ],
+    "correctIndex": 1,
+    "explanation": "A/B testlerinde küçük veya yanlı örnekler yanıltıcı olabilir. İstatistiksel anlamlılık ve iş etkisi birlikte değerlendirilmelidir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir süreçte handoff sayısının fazla olması genellikle neye işaret eder?",
+    "options": [
+      "Potansiyel gecikme, hata ve sahiplik belirsizliği riskine.",
+      "Mutlaka daha yüksek kaliteye.",
+      "Süreçte hiç darboğaz olmadığına.",
+      "Dokümantasyon ihtiyacının olmadığına."
+    ],
+    "correctIndex": 0,
+    "explanation": "Bir iş çok fazla ekip veya kişi arasında el değiştiriyorsa bilgi kaybı ve gecikme ihtimali artar. Süreç iyileştirme çalışmalarında bu noktalar özellikle incelenir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir 'happy path' dışı senaryoya örnektir?",
+    "options": [
+      "Kullanıcının doğru bilgilerle giriş yapması.",
+      "Ödemenin reddedilmesi durumunda hata akışının ele alınması.",
+      "Siparişin başarıyla tamamlanması.",
+      "Raporun sorunsuz indirilmesi."
+    ],
+    "correctIndex": 1,
+    "explanation": "Happy path dışında kalan hata ve istisna akışları çoğu zaman gözden kaçar. Oysa gerçek kullanıcı deneyiminde bu senaryolar ürün kalitesini ciddi biçimde etkiler."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir BA için data mapping çalışmasının amacı nedir?",
+    "options": [
+      "Alanlar arasındaki veri eşleşmesini ve dönüşüm mantığını netleştirmek.",
+      "Sunucu ağ topolojisini çizmek.",
+      "Yalnızca UI butonlarını adlandırmak.",
+      "Toplantı odası planlamak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Data mapping, farklı sistemlerdeki alanların nasıl taşınacağını ve dönüştürüleceğini tanımlar. Eksik mapping, entegrasyon hataları ve veri tutarsızlıklarına yol açabilir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir entegrasyon projesinde BA için en kritik risklerden biri hangisidir?",
+    "options": [
+      "Kaynak ve hedef sistemler arasındaki veri ve iş kuralı farklılıklarının yeterince anlaşılmaması.",
+      "Çok fazla acceptance criterion yazılması.",
+      "Toplantı odasının küçük olması.",
+      "Doküman başlığının uzun olması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Entegrasyon projeleri çoğu zaman veri sözlüğü ve süreç uyumsuzlukları yüzünden zorlaşır. BA bu farkları görünür hale getirmezse sessiz iş hataları ortaya çıkabilir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi RACI matrisinin kullanım amacını en iyi açıklar?",
+    "options": [
+      "Sorumluluk ve karar rollerini netleştirmek.",
+      "Sadece bütçe hesaplamak.",
+      "Kod kalitesini ölçmek.",
+      "Müşteri memnuniyetini otomatik hesaplamak."
+    ],
+    "correctIndex": 0,
+    "explanation": "RACI, kimin işi yaptığı, kimin onay verdiği, kimin danışıldığı ve kimin bilgilendirildiğini görünür kılar. Bu netlik, proje içi sürtünmeyi azaltır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir BA'nin backlog refinement sırasında en büyük katkılarından biri nedir?",
+    "options": [
+      "İhtiyaçları netleştirip belirsizlikleri azaltmak.",
+      "Yalnızca sprint velocity hesaplamak.",
+      "Prod ortamına deploy yapmak.",
+      "Sunucu firewall kuralı yazmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Refinement sırasında gereksinimler daha anlaşılır ve uygulanabilir hale gelir. Bu da sprint içine alınan işlerin daha öngörülebilir ilerlemesini sağlar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir gereksinimin test edilebilir olmadığını gösterir?",
+    "options": [
+      "'Sistem kullanıcı dostu olmalıdır' gibi ölçülemeyen ifade içermesi.",
+      "Net giriş ve çıkış koşulları olması.",
+      "Açık acceptance criteria bulunması.",
+      "İş kuralıyla ilişkilendirilmesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "Test edilemeyen gereksinimler doğrulanamaz. Belirsiz kalite ifadeleri yerine ölçülebilir veya gözlemlenebilir koşullar yazılmalıdır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Change request değerlendirilirken BA için ilk sorulardan biri hangisi olmalıdır?",
+    "options": [
+      "Bu değişikliğin iş değeri ve etki alanı nedir?",
+      "Buton rengi neden değişmedi?",
+      "Kaç kişi toplantıya katıldı?",
+      "Kod hangi editörde yazılacak?"
+    ],
+    "correctIndex": 0,
+    "explanation": "Her değişiklik yalnızca efor değil, etki ve değer açısından da değerlendirilmelidir. Kapsam, zaman ve bağımlılık analizi olmadan karar vermek risklidir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir BA için 'definition of done' neden önemlidir?",
+    "options": [
+      "İşin hangi koşullarda gerçekten tamamlanmış sayılacağını netleştirmek için.",
+      "Sadece ekip moralini yükseltmek için.",
+      "Scope'u belirsiz bırakmak için.",
+      "Test sürecini iptal etmek için."
+    ],
+    "correctIndex": 0,
+    "explanation": "Done kriteri net değilse ekipler teslim edilmiş işi farklı yorumlar. Bu durum kabul tartışmalarına ve kalite düşüşüne yol açabilir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir sürecin cycle time'ının yüksek olması en çok neyi düşündürür?",
+    "options": [
+      "İşin baştan sona tamamlanmasının gereğinden uzun sürdüğünü.",
+      "Mutlaka kalite artışı olduğunu.",
+      "Sadece teknik borcun sıfırlandığını.",
+      "Tüm paydaşların memnun olduğunu."
+    ],
+    "correctIndex": 0,
+    "explanation": "Cycle time, süreç verimliliği hakkında önemli sinyal verir. Yüksek olması darboğaz, bekleme veya gereksiz onay adımlarına işaret edebilir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir dashboard metriğinin yanlış yorumlanmasına yol açabilir?",
+    "options": [
+      "Metric tanımının ekipler arasında farklı anlaşılması.",
+      "Tanımın veri sözlüğünde yer alması.",
+      "Zaman aralığının açıkça belirtilmesi.",
+      "Kaynağın doğrulanmış olması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Aynı metriğin farklı yorumlanması karar kalitesini bozar. İş tanımı, hesaplama mantığı ve kapsamı yazılı değilse sayılar güven kaybeder."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir organizasyonda farklı paydaşların aynı problemi farklı tanımlaması BA açısından neyi gerektirir?",
+    "options": [
+      "İlk duyulan tanımı doğrudan kabul etmeyi.",
+      "Ortak problem tanımı oluşturmak için kolaylaştırıcılık ve hizalama çalışması yürütmeyi.",
+      "Yalnızca teknik ekibin karar vermesini.",
+      "Dokümantasyonu tamamen kaldırmayı."
+    ],
+    "correctIndex": 1,
+    "explanation": "Problemin tanımı net değilse doğru çözüm seçilemez. Kıdemli BA, paydaş dilini ortak hedef ve net başarı ölçütüne dönüştürme sorumluluğu taşır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir dönüşüm programında BA'nin yalnızca gereksinim yazarı gibi konumlandırılması neden eksik bir yaklaşımdır?",
+    "options": [
+      "Çünkü BA aynı zamanda süreç, değer, etki ve değişim yönetimi bakışı getirir.",
+      "Çünkü BA mutlaka geliştirici olmalıdır.",
+      "Çünkü BA yalnızca test yapmalıdır.",
+      "Çünkü dokümantasyon artık gereksizdir."
+    ],
+    "correctIndex": 0,
+    "explanation": "Kıdemli BA rolü yalnızca yazım değil, problem çerçeveleme ve karar destek üretmeyi de içerir. İş etkisini anlamayan bir analiz çıktısı yüzeyde kalır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi requirement prioritization'da en doğru kıdemli yaklaşımı yansıtır?",
+    "options": [
+      "En yüksek sesle talep eden paydaşı otomatik önceliklendirmek.",
+      "İş değeri, risk, bağımlılık ve teslim maliyetini birlikte değerlendirmek.",
+      "Tüm gereksinimleri eşit öncelikli kabul etmek.",
+      "Yalnızca geliştirme kolaylığına göre sıralamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Önceliklendirme tek boyutlu yapılırsa ürün ve proje dengesi bozulur. Kıdemli BA, farklı kriterleri bir araya getirerek savunulabilir karar zemini oluşturur."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir ürün metriğinde iyileşme görünürken müşteri şikayetleri artıyorsa BA'nin ilk yaklaşımı ne olmalıdır?",
+    "options": [
+      "Metric kesin doğrudur deyip şikayetleri göz ardı etmek.",
+      "Ölçüm tanımı, segment farkı ve yan etkileri yeniden incelemek.",
+      "Hemen tüm sistemi kapatmak.",
+      "Yalnızca tasarım ekibini suçlamak."
+    ],
+    "correctIndex": 1,
+    "explanation": "Tek bir metriğin yükselmesi her zaman genel başarı anlamına gelmez. Yan etki, ölçüm kör noktası veya yanlış optimizasyon ihtimali sistematik olarak analiz edilmelidir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir enterprise entegrasyon projesinde BA için en kritik başarısızlık riski aşağıdakilerden hangisidir?",
+    "options": [
+      "Sistemler arası sahiplik, veri tanımı ve süreç istisnalarının yeterince modellenmemesi.",
+      "Toplantı notlarının kısa tutulması.",
+      "Sunum şablonunun sade olması.",
+      "Çok fazla acceptance criterion bulunması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Kurumsal entegrasyonlar çoğu zaman teknikten çok süreç ve veri anlamı farklarından kırılır. İstisnalar modellenmediyse üretimde beklenmedik hata ve manuel iş yükü oluşur."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi bir BA'nin strategy-to-execution boşluğunu kapatmadaki rolünü en iyi anlatır?",
+    "options": [
+      "Üst düzey hedefleri uygulanabilir iş akışları, gereksinimler ve ölçülebilir sonuçlara çevirmek.",
+      "Sadece toplantı organize etmek.",
+      "Her kararı ürün sahibine bırakmak.",
+      "Teknik borcu tek başına kapatmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Stratejik hedefler operasyonel dile çevrilmezse ekipler farklı yönlere gider. BA bu çeviriyi yaparak hedef ile teslimat arasında hizalama kurar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir BA'nin süreç iyileştirme önerisi sunarken yalnızca mevcut darboğaza odaklanması neden riskli olabilir?",
+    "options": [
+      "Yerel optimizasyon yapıp toplam sistem performansında yeni sorunlar yaratabilir.",
+      "Çünkü süreçler asla ölçülmemelidir.",
+      "Çünkü darboğazlar önemli değildir.",
+      "Yalnızca tasarım kalitesini etkiler."
+    ],
+    "correctIndex": 0,
+    "explanation": "Bir adımı hızlandırmak başka adımda kuyruk veya kalite sorunu oluşturabilir. Kıdemli analiz, uçtan uca sistem etkisini birlikte değerlendirir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi senior BA seviyesinde paydaş yönetimine daha uygun bir davranıştır?",
+    "options": [
+      "Çatışmalı beklentileri görünür kılıp karar alternatiflerini net trade-off'larla sunmak.",
+      "Karar anlaşmazlıklarını tamamen toplantı dışında bırakmak.",
+      "Herkese aynı ayrıntı seviyesinde bilgi göndermek.",
+      "Sessiz kalan paydaşları otomatik onay vermiş saymak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Kıdemli BA, sadece bilgi taşımaz; karar kalitesini artırır. Çatışmaları görünür kılmak ve karar seçeneklerini çerçevelemek bu rolün önemli parçasıdır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir ürün geliştirme sürecinde BA'nin discovery aşamasına erken dahil olması neden değerlidir?",
+    "options": [
+      "Problemin ve başarı kriterlerinin çözüm sabitlenmeden önce netleşmesini sağlar.",
+      "Kod yazımını tamamen BA'ye devreder.",
+      "Testleri gereksiz hale getirir.",
+      "Yalnızca maliyet raporu üretir."
+    ],
+    "correctIndex": 0,
+    "explanation": "Discovery sırasında yanlış problem tanımı erken yakalanabilir. Çözüm kararı verilmeden önce problem, kullanıcı ve değer netleşirse gereksiz geliştirme riski azalır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir BA için karar alma kalitesini artıran en güçlü yaklaşımlardan biri hangisidir?",
+    "options": [
+      "Görüşleri veri, süreç gerçekliği ve paydaş bağlamıyla birlikte değerlendirmek.",
+      "En kıdemli kişinin fikrini otomatik kabul etmek.",
+      "Sadece geçmişte yapılana bağlı kalmak.",
+      "Belirsizliği hiç konuşmamak."
+    ],
+    "correctIndex": 0,
+    "explanation": "İyi analiz yalnızca veri değil, veri yorumunun bağlamını da içerir. Kıdemli BA, nitel ve nicel girdileri birlikte okuyarak daha sağlam öneri üretir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir kurumda aynı iş teriminin farklı ekiplerde farklı anlamlara gelmesi ne tür bir risktir?",
+    "options": [
+      "Semantic misalignment nedeniyle rapor, süreç ve kararların tutarsızlaşması.",
+      "Sadece doküman başlıklarının uzaması.",
+      "Uygulamanın mutlaka daha hızlı çalışması.",
+      "Toplantı sayısının otomatik azalması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Ortak sözlük yoksa aynı kelime farklı operasyonel sonuçlara yol açabilir. Bu durum özellikle raporlama ve entegrasyon projelerinde maliyetli hatalar üretir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir değişim girişiminde kullanıcı benimsemesinin düşük kalması, iş çözümü teknik olarak doğru olsa bile BA açısından neyi gösterir?",
+    "options": [
+      "Değişim etkisi, eğitim ve süreç adaptasyonunun yeterince ele alınmamış olabileceğini.",
+      "Teknik çözümün mutlaka kusursuz olduğunu.",
+      "Yalnızca tasarım renginin yanlış olduğunu.",
+      "Acceptance criteria'nin gereksiz olduğunu."
+    ],
+    "correctIndex": 0,
+    "explanation": "Başarılı çözüm yalnızca teslim edilmiş çözüm değildir; kullanılan çözümdür. Değişim yönetimi, eğitim ve operasyonel adaptasyon bu nedenle BA bakışında kritik yer tutar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi bir persona çalışmasının temel faydasıdır?",
+    "options": [
+      "Kullanıcı tiplerini ve ihtiyaçlarını daha somut düşünmeye yardımcı olması.",
+      "Veritabanı performansını artırması.",
+      "Sunucu maliyetini düşürmesi.",
+      "Kod incelemesini otomatik yapması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Persona, kullanıcıyı soyut bir kalabalık olmaktan çıkarır. Bu sayede ihtiyaç ve öncelikler daha empatik ve odaklı tartışılabilir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir BA için open question list tutmanın amacı nedir?",
+    "options": [
+      "Karara bağlanmamış noktaları görünür tutmak.",
+      "Sadece dokümanı uzatmak.",
+      "Toplantı iptal etmek.",
+      "Scope'u otomatik artırmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Açık sorular kaybolursa ekipler varsayımla ilerler. Bu liste, belirsizlikleri kontrollü şekilde kapatmayı sağlar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi bir karar log'u için uygun içeriktir?",
+    "options": [
+      "Ne karar alındığı, neden alındığı ve kimlerin onayladığı.",
+      "Yalnızca toplantı odasının adı.",
+      "Sadece ekran görüntüleri.",
+      "İlgisiz teknik loglar."
+    ],
+    "correctIndex": 0,
+    "explanation": "Karar log'u, karar geçmişinin tekrar izlenebilmesini sağlar. Özellikle daha sonra değişiklik veya itiraz olduğunda bağlam koruyucu rol oynar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Bir rapor ihtiyacında BA'nin ilk sorularından biri neden 'Bu rapor hangi kararı destekleyecek?' olmalıdır?",
+    "options": [
+      "Çünkü raporun kullanım amacı net değilse gereksiz veri üretilebilir.",
+      "Çünkü tüm raporlar aynıdır.",
+      "Çünkü grafik seçimi tek önemli konudur.",
+      "Çünkü teknik ekip karar veremez."
+    ],
+    "correctIndex": 0,
+    "explanation": "Raporun hangi kararı desteklediği bilinirse gerçekten gerekli bilgiye odaklanılır. Aksi halde raporlar veri kalabalığı üretip düşük kullanım görür."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi bir BA'nin fasilitasyon becerisine örnektir?",
+    "options": [
+      "Tartışmayı hedefte tutup farklı görüşleri dengeli şekilde toplamak.",
+      "Sadece kendi çözümünü dayatmak.",
+      "Sessiz katılımcıları tamamen dışlamak.",
+      "Kararları yazılı kayda almamak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Fasilitasyon, toplantı yönetiminden daha fazlasıdır; ortak anlayış üretmeyi amaçlar. Dengeli katılım, sağlıklı analiz çıktısının önemli ön koşuludur."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "junior",
+    "question": "Aşağıdakilerden hangisi bir BA'nin başarısını ölçmek için daha anlamlı bir göstergedir?",
+    "options": [
+      "Teslim edilen çözümün iş ihtiyacını ne kadar doğru karşıladığı.",
+      "Yalnızca yazılan sayfa sayısı.",
+      "Gönderilen e-posta adedi.",
+      "Toplantı süresinin uzunluğu."
+    ],
+    "correctIndex": 0,
+    "explanation": "Doküman hacmi tek başına değer üretmez. Gerçek başarı, doğru problemin doğru kapsam ve netlikte çözüme dönüştürülmesidir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi bir requirement'in atomic olmadığını gösterir?",
+    "options": [
+      "Tek maddede birden fazla bağımsız davranış istemesi.",
+      "Tek bir iş kuralını açıkça tanımlaması.",
+      "Ayrı acceptance criteria ile desteklenmesi.",
+      "İzlenebilir referans numarası taşıması."
+    ],
+    "correctIndex": 0,
+    "explanation": "Atomic gereksinimler daha kolay anlaşılır, uygulanır ve test edilir. Bir maddede çok sayıda davranış toplandığında kapsam ve sorumluluk bulanıklaşır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir süreçte SLA ihlalleri artıyorsa BA'nin analizinde öncelikle ne görünür hale getirilmelidir?",
+    "options": [
+      "Bekleme süreleri, onay noktaları ve darboğazlar.",
+      "Sadece UI metinleri.",
+      "Renk paleti seçimleri.",
+      "Kod editörü tercihleri."
+    ],
+    "correctIndex": 0,
+    "explanation": "SLA problemleri çoğu zaman görünmeyen kuyruklar ve onay gecikmelerinden kaynaklanır. Süreç adımlarının zaman bazlı haritalanması kök nedeni bulmayı kolaylaştırır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Aşağıdakilerden hangisi workshop sonunda mutlaka netleştirilmesi gereken çıktılardan biridir?",
+    "options": [
+      "Kararlar, açık sorular ve sorumlular.",
+      "Yalnızca katılımcıların unvan listesi.",
+      "Sadece kullanılan sunum teması.",
+      "Toplantı odasının sıcaklığı."
+    ],
+    "correctIndex": 0,
+    "explanation": "Workshop'tan çıktı üretilemiyorsa toplantı bilgi tüketir ama ilerleme sağlamaz. Kararlar ve açık noktaların sahipleri netleşmelidir."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir BA için dependency management neden kritiktir?",
+    "options": [
+      "Bir gereksinimdeki değişikliğin başka ekip ve teslimatları etkileyebileceğini görünür kılmak için.",
+      "Sadece doküman sayısını artırmak için.",
+      "Sprint planlamasını gereksiz kılmak için.",
+      "Test kapsamını küçültmek için."
+    ],
+    "correctIndex": 0,
+    "explanation": "Bağımlılıklar gözden kaçarsa teslim tarihleri gerçekçi olmaz. Özellikle entegrasyon ve ortak platform projelerinde bu analiz doğrudan plan kalitesini etkiler."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir kurumda aynı iş akışını farklı ekipler farklı araçlarla yürütüyorsa BA açısından en doğru ilk yaklaşım nedir?",
+    "options": [
+      "Ortak süreç varyasyonlarını ve bunların gerekçelerini haritalamak.",
+      "Hemen tüm araçları kapatmak.",
+      "Yalnızca en yüksek sesli ekibi dinlemek.",
+      "Mevcut durumu ölçmeden standartlaştırmaya gitmek."
+    ],
+    "correctIndex": 0,
+    "explanation": "Standartlaşma fırsatı olabilir, ancak varyasyonların neden var olduğu anlaşılmadan yapılan birleşim yeni operasyonel risk yaratabilir. Kıdemli BA önce süreç gerçekliğini görünür kılar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Aşağıdakilerden hangisi senior BA'nin yöneticilere sunduğu öneriyi güçlü kılar?",
+    "options": [
+      "Alternatiflerin trade-off'larını ve karar etkisini açıkça göstermesi.",
+      "Yalnızca tek çözümü tartışmasız doğru ilan etmesi.",
+      "Riskleri sunumdan çıkarması.",
+      "Belirsizlikleri gizlemesi."
+    ],
+    "correctIndex": 0,
+    "explanation": "Yönetim seviyesinde karar kalitesi, seçeneklerin etkilerinin görünürlüğüyle artar. Kıdemli BA, öneriyi yalnızca fikir değil, savunulabilir analiz olarak sunar."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "senior",
+    "question": "Bir organizasyonda BA pratiğinin olgunlaşması için hangi yaklaşım daha doğrudur?",
+    "options": [
+      "Ortak terminoloji, şablon, kalite kriteri ve öğrenme döngüsü oluşturmak.",
+      "Her BA'nin tamamen farklı yöntem kullanmasını teşvik etmek.",
+      "Tüm dokümantasyonu sözlü bırakmak.",
+      "Yalnızca bireysel hafızaya güvenmek."
+    ],
+    "correctIndex": 0,
+    "explanation": "Olgun BA pratiği kişiye bağlı olmaktan çıkıp kurumsal hale gelir. Standartlar kaliteyi yükseltirken öğrenme döngüsü de ekip içi tutarlılığı artırır."
+  },
+  {
+    "category": "business-analyst",
+    "language": "tr",
+    "difficulty": "mid",
+    "question": "Bir BA için süreçteki manuel adımları haritalamak neden önemlidir?",
+    "options": [
+      "Operasyonel risk, gecikme ve otomasyon fırsatlarını görünür kılmak.",
+      "Sadece dokümanda daha fazla kutu çizmek.",
+      "Teknik tasarımı tamamen gereksiz hale getirmek.",
+      "Paydaş sayısını azaltmak."
+    ],
+    "correctIndex": 0,
+    "explanation": "Manuel adımlar çoğu zaman hata, bekleme ve izlenebilirlik sorunlarının kaynağıdır. Bu noktaların haritalanması süreç iyileştirme ve otomasyon kararları için güçlü girdi sağlar."
+  }
+]
