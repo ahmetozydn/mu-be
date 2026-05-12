@@ -46,6 +46,14 @@ public class QuizController {
         return ResponseEntity.ok(quizService.getCurrentQuestion(sessionId));
     }
 
+    @PostMapping("/{sessionId}/continue")
+    public ResponseEntity<StartQuizResponse> continueQuiz(
+            @PathVariable UUID sessionId,
+            @AuthenticationPrincipal User user
+    ) {
+        return ResponseEntity.ok(quizService.continueFromPreview(sessionId, user));
+    }
+
     @PostMapping("/{sessionId}/answer")
     public ResponseEntity<AnswerResponse> answer(
             @PathVariable UUID sessionId,

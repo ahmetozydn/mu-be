@@ -193,6 +193,69 @@ public class QuizService {
         return new StartQuizResponse(session.getId(), session.getTotalQuestions(), 0, toDto(first));
     }
 
+    @Transactional
+    public StartQuizResponse continueFromPreview(UUID sessionId, User user) {
+        QuizSession session = sessionRepository.findById(sessionId)
+                .orElseThrow(() -> ApiException.notFound("SESSION_NOT_FOUND", "Oturum bulunamadi."));
+
+        if (!session.isGuest()) {
+            throw ApiException.badRequest("ALREADY_UPGRADED", "Bu oturum zaten bir kullaniciya ait.");
+        }
+
+        // 1. Session'i guncelle
+        session.setUserId(user.getId());
+        session.setGuest(false);
+        session.setStatus(QuizStatus.IN_PROGRESS);
+        session.setExpiresAt(null);
+
+        int currentTotal = session.getTotalQuestions();
+        int targetTotal = DEFAULT_QUESTION_COUNT;
+        int needed = targetTotal - currentTotal;
+
+        if (needed > 0) {
+            // 2. Mevcut sorulari bul (tekrar etmemesi icin)
+            List<UUID> existingIds = sessionQuestionRepository.findBySessionIdOrderByPosition(sessionId)
+                    .stream().map(QuizSessionQuestion::getQuestionId).toList();
+
+            List<String> newIds;
+            if (session.getDifficulty() != null) {
+                newIds = questionRepository.findRandomIdsExcluding(
+                        session.getCategoryId(),
+                        session.getLanguage(),
+                        session.getDifficulty(),
+                        needed,
+                        existingIds
+                );
+            } else {
+                newIds = questionRepository.findRandomIdsExcluding(
+                        session.getCategoryId(),
+                        session.getLanguage(),
+                        needed,
+                        existingIds
+                );
+            }
+
+            // 3. Yeni sorulari ekle
+            for (int i = 0; i < newIds.size(); i++) {
+                sessionQuestionRepository.save(QuizSessionQuestion.builder()
+                        .sessionId(session.getId())
+                        .questionId(UUID.fromString(newIds.get(i)))
+                        .position((short) (currentTotal + i))
+                        .build());
+            }
+
+            session.setTotalQuestions((short) (currentTotal + newIds.size()));
+        }
+
+        sessionRepository.save(session);
+
+        // 4. Kalinan yerden devam et
+        // Eger currentIndex == totalQuestions ise (yani 3 soruyu da bitirdiyse), 
+        // currentIndex hala 3'tur ve yeni eklenen 4. soruya (index 3) isaret eder.
+        Question nextQuestion = getQuestionAt(session.getId(), session.getCurrentIndex());
+        return new StartQuizResponse(session.getId(), session.getTotalQuestions(), session.getCurrentIndex(), toDto(nextQuestion));
+    }
+
     private QuizSession findActiveSession(UUID sessionId) {
         QuizSession session = sessionRepository.findById(sessionId)
                 .orElseThrow(() -> ApiException.notFound("SESSION_NOT_FOUND", "Oturum bulunamadi."));
