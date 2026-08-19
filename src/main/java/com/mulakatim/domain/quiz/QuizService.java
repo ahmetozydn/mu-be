@@ -162,7 +162,7 @@ public class QuizService {
             int questionLimit = request.questionLimit() != null ? request.questionLimit() : DEFAULT_QUESTION_COUNT;
             questionIds = questionRepository.findRandomIdsFromCategories(catIds, lang, questionLimit)
                     .stream().map(UUID::fromString).toList();
-            sessionCategoryId = "karma";
+            sessionCategoryId = null;
         } else {
             if (request.categoryId() == null || request.categoryId().isBlank()) {
                 throw ApiException.badRequest("INVALID_REQUEST", "categoryId zorunludur.");
