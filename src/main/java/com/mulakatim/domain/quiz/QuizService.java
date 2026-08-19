@@ -151,16 +151,30 @@ public class QuizService {
     }
 
     private StartQuizResponse createSession(StartQuizRequest request, User user, int limit, boolean guest) {
-        categoryRepository.findByIdAndActiveTrue(request.categoryId())
-                .orElseThrow(() -> ApiException.notFound("CATEGORY_NOT_FOUND", "Kategori bulunamadi."));
-
         String lang = request.language().toUpperCase();
         String diff = request.difficulty() != null ? request.difficulty().toUpperCase() : null;
+        String sessionCategoryId;
+        List<UUID> questionIds;
 
-        List<UUID> questionIds = (diff != null
-                ? questionRepository.findRandomIds(request.categoryId(), lang, diff, limit)
-                : questionRepository.findRandomIds(request.categoryId(), lang, limit))
-                .stream().map(UUID::fromString).toList();
+        if (request.isKarma() && request.categoryIds() != null && !request.categoryIds().isEmpty()) {
+            // Karma mode: fetch from multiple categories
+            List<String> catIds = request.categoryIds();
+            int questionLimit = request.questionLimit() != null ? request.questionLimit() : DEFAULT_QUESTION_COUNT;
+            questionIds = questionRepository.findRandomIdsFromCategories(catIds, lang, questionLimit)
+                    .stream().map(UUID::fromString).toList();
+            sessionCategoryId = "karma";
+        } else {
+            if (request.categoryId() == null || request.categoryId().isBlank()) {
+                throw ApiException.badRequest("INVALID_REQUEST", "categoryId zorunludur.");
+            }
+            categoryRepository.findByIdAndActiveTrue(request.categoryId())
+                    .orElseThrow(() -> ApiException.notFound("CATEGORY_NOT_FOUND", "Kategori bulunamadi."));
+            questionIds = (diff != null
+                    ? questionRepository.findRandomIds(request.categoryId(), lang, diff, limit)
+                    : questionRepository.findRandomIds(request.categoryId(), lang, limit))
+                    .stream().map(UUID::fromString).toList();
+            sessionCategoryId = request.categoryId();
+        }
 
         if (questionIds.isEmpty()) {
             throw ApiException.badRequest("NO_QUESTIONS", "Bu filtreler icin soru bulunamadi.");
@@ -169,7 +183,7 @@ public class QuizService {
         Instant now = Instant.now();
         QuizSession session = QuizSession.builder()
                 .userId(user != null ? user.getId() : null)
-                .categoryId(request.categoryId())
+                .categoryId(sessionCategoryId)
                 .language(lang)
                 .difficulty(diff)
                 .karma(request.isKarma())

@@ -51,6 +51,18 @@ public interface QuestionRepository extends JpaRepository<Question, UUID> {
 
     @Query(value = """
             SELECT id FROM questions
+            WHERE category_id IN (:categoryIds)
+              AND UPPER(language) = UPPER(:language)
+              AND active = true
+            ORDER BY RANDOM()
+            LIMIT :limit
+            """, nativeQuery = true)
+    List<String> findRandomIdsFromCategories(@Param("categoryIds") List<String> categoryIds,
+                                             @Param("language") String language,
+                                             @Param("limit") int limit);
+
+    @Query(value = """
+            SELECT id FROM questions
             WHERE category_id = :categoryId
               AND UPPER(language) = UPPER(:language)
               AND UPPER(difficulty) = UPPER(:difficulty)
