@@ -50,7 +50,14 @@ public class AuthService {
         User user = userRepository.findByEmail(request.email())
                 .orElseThrow(() -> ApiException.unauthorized("INVALID_CREDENTIALS", "E-posta veya sifre hatali."));
 
-        if (user.getPasswordHash() == null || !passwordEncoder.matches(request.password(), user.getPasswordHash())) {
+        if (user.getPasswordHash() == null) {
+            if (user.getGoogleId() != null) {
+                throw ApiException.badRequest("GOOGLE_ACCOUNT", "Bu hesap Google ile olusturuldu. Google ile giris yapin.");
+            }
+            throw ApiException.unauthorized("INVALID_CREDENTIALS", "E-posta veya sifre hatali.");
+        }
+
+        if (!passwordEncoder.matches(request.password(), user.getPasswordHash())) {
             throw ApiException.unauthorized("INVALID_CREDENTIALS", "E-posta veya sifre hatali.");
         }
 
