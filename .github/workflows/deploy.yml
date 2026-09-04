@@ -55,8 +55,8 @@ jobs:
             docker run -d \
               --name interview-be \
               --network mynet \
+              --restart unless-stopped \
               -p 8083:8080 \
               interview-be
-            
-            # Clean up old unused images
-            # docker image prune -f
+
+            docker image prune -f
